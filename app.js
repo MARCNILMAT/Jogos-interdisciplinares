@@ -198,6 +198,17 @@ function setupEventListeners() {
         switchScreen('login');
     });
 
+    // Botão Voltar do Jogo
+    const btnGameBack = document.getElementById('btn-game-back');
+    if (btnGameBack) {
+        btnGameBack.addEventListener('click', () => {
+            if (confirm("Tem certeza que quer encerrar a batalha?")) {
+                switchScreen('dashboard');
+                loadDashboard(); // Recarrega dados atualizados
+            }
+        });
+    }
+
     // Jogo
     btnNextQuestion.addEventListener('click', handleNextQuestion);
 
@@ -294,8 +305,11 @@ function startNewGame() {
         }
     }
 
+    // 3. Limitar a 15 questões (NOVO)
+    questions = shuffleArray([...questions]).slice(0, 15);
+
     state.game = {
-        questions: shuffleArray([...questions]),
+        questions: [...questions], // Já está embaralhado e limitado
         currentIndex: 0,
         score: s.score,
         lives: 3,
