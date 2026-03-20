@@ -271,12 +271,27 @@ function loadDashboard() {
 // --- LÓGICA DO JOGO ---
 function startNewGame() {
     const s = state.currentStudent;
-    // Filtrar questões pela série e disciplina do aluno
-    const questions = QUESTIONS_DB.filter(q => q.grade === s.grade && q.discipline === s.discipline);
+    if (!s.answeredQuestions) s.answeredQuestions = [];
 
+    // 1. Filtrar questões livres (não respondidas)
+    let questions = QUESTIONS_DB.filter(q => 
+        q.grade === s.grade && 
+        q.discipline === s.discipline && 
+        !s.answeredQuestions.includes(q.id)
+    );
+
+    // 2. Fallback: Se acabaram as perguntas novas, avisa e reinicia o ciclo
     if (questions.length === 0) {
-        alert("Desculpe, ainda não temos questões para essa matéria/série.");
-        return;
+        const totalAvail = QUESTIONS_DB.filter(q => q.grade === s.grade && q.discipline === s.discipline).length;
+        if (totalAvail > 0) {
+            alert("🎉 Você respondeu todos os desafios! Reiniciando o ciclo para você treinar mais!");
+            s.answeredQuestions = []; // Limpa histórico para recomeçar
+            saveStudent(s); // Salva a limpeza
+            questions = QUESTIONS_DB.filter(q => q.grade === s.grade && q.discipline === s.discipline);
+        } else {
+            alert("Desculpe, ainda não temos questões para essa matéria/série.");
+            return;
+        }
     }
 
     state.game = {
@@ -314,6 +329,16 @@ function renderQuestion() {
 
 function checkAnswer(selected, correct, explanation) {
     state.currentStudent.totalAnswers = (state.currentStudent.totalAnswers || 0) + 1;
+
+    const q = state.game.questions[state.game.currentIndex];
+    
+    // Adiciona ID da questão aos respondidos (Não repetir)
+    if (!state.currentStudent.answeredQuestions) {
+        state.currentStudent.answeredQuestions = [];
+    }
+    if (!state.currentStudent.answeredQuestions.includes(q.id)) {
+        state.currentStudent.answeredQuestions.push(q.id);
+    }
 
     if (selected === correct) {
         // Acerto
@@ -417,8 +442,9 @@ async function saveStudent(student) {
                     score: student.score,
                     medals: student.medals,
                     correct_answers: student.correctAnswers || 0,
-                    total_answers: student.totalAnswers || 0
-                }, { onConflict: 'name,grade' }); // Requer que 'name' e 'grade' sejam chaves únicas ou combinadas
+                    total_answers: student.totalAnswers || 0,
+                    answered_questions: student.answeredQuestions || [] // NOVO
+                }, { onConflict: 'name,grade' });
 
             if (error) console.error("Erro ao salvar no Supabase:", error);
             else console.log("Dados sincronizados com Supabase!");
@@ -453,7 +479,8 @@ async function loadAdminData() {
                     score: d.score,
                     medals: d.medals,
                     correctAnswers: d.correct_answers || 0,
-                    totalAnswers: d.total_answers || 0
+                    totalAnswers: d.total_answers || 0,
+                    answeredQuestions: d.answered_questions || [] // NOVO
                 }));
             }
         } catch (e) {
