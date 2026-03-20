@@ -1,9 +1,28 @@
 import { QUESTIONS_DB } from './questions.js';
 
+// --- CONFIGURAÇÃO SUPABASE ---
+// PREENCHA ESTAS VARIÁVEIS COM SUA CONTA SUPABASE
+const SUPABASE_URL = 'https://thjrggyochdirwnhrwzr.supabase.co'; 
+const SUPABASE_KEY = ''; // Vocé deve colar a ANON KEY aqui
+
+let supabaseClient = null;
+
+if (SUPABASE_URL && SUPABASE_KEY) {
+    try {
+        supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+        console.log("Supabase inicializado com sucesso!");
+    } catch (e) {
+        console.error("Erro ao inicializar Supabase:", e);
+    }
+} else {
+    console.warn("Supabase não configurado. Os dados serão salvos APENAS no LocalStorage (Navegador).");
+}
+
 // --- ESTADO DA APLICAÇÃO ---
 const state = {
     view: 'login', // 'login', 'dashboard', 'game', 'admin'
     currentStudent: null, // { name, grade, class, discipline, score, medals }
+    adminFilter: 'all', // 'all' ou 'Disciplina'
     game: {
         questions: [],
         currentIndex: 0,
@@ -57,6 +76,16 @@ const adminBackBtn = document.getElementById('admin-back');
 const adminTableBody = document.querySelector('#admin-table tbody');
 const admTotalStudents = document.getElementById('adm-total-students');
 const admAvgSuccess = document.getElementById('adm-avg-success');
+
+// Componentes Modal Admin Auth
+const modalAdminAuth = document.getElementById('modal-admin-auth');
+const adminAuthForm = document.getElementById('admin-auth-form');
+const btnModalAdminClose = document.getElementById('modal-admin-close');
+const adminActiveFilterText = document.getElementById('admin-active-filter');
+
+// Novos Botões Admin
+const btnExportPdf = document.getElementById('btn-export-pdf');
+const btnClearResults = document.getElementById('btn-clear-results');
 
 
 // --- ÁUDIO (Web Audio API) ---
@@ -174,10 +203,41 @@ function setupEventListeners() {
 
     // Admin
     gotoAdminBtn.addEventListener('click', () => {
-        switchScreen('admin');
-        loadAdminData();
+        // Agora exibe o Modal em vez de mudar de tela
+        modalAdminAuth.classList.remove('hidden');
     });
+
     adminBackBtn.addEventListener('click', () => switchScreen('login'));
+
+    // Modal Admin Auth (Fechar)
+    btnModalAdminClose.addEventListener('click', () => {
+        modalAdminAuth.classList.add('hidden');
+        document.getElementById('admin-password').value = ''; // Limpa senha
+    });
+
+    // Submissão do Formulário de Auth Admin
+    adminAuthForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const content = document.getElementById('admin-content').value;
+        const password = document.getElementById('admin-password').value;
+
+        if (password === '8840') {
+            state.adminFilter = content;
+            adminActiveFilterText.innerText = content === 'all' ? 'Todas as Disciplinas' : content;
+            
+            modalAdminAuth.classList.add('hidden');
+            document.getElementById('admin-password').value = ''; // Limpa senha
+            
+            switchScreen('admin');
+            loadAdminData();
+        } else {
+            alert("Senha Incorreta!");
+        }
+    });
+
+    // Novos Botões Admin
+    if (btnExportPdf) btnExportPdf.addEventListener('click', exportToPDF);
+    if (btnClearResults) btnClearResults.addEventListener('click', clearResults);
 }
 
 // --- NAVEGAÇÃO ---
@@ -331,9 +391,10 @@ function updateHUD() {
 }
 
 // --- LÓGICA DE PERSISTÊNCIA (LOCALSTORAGE) ---
-function saveStudent(student) {
+// --- LÓGICA DE PERSISTÊNCIA (SUPABASE / LOCALSTORAGE) ---
+async function saveStudent(student) {
+    // 1. Salvar no LocalStorage (Sempre como Fallback/Cache)
     let students = JSON.parse(localStorage.getItem('sabermg_students')) || [];
-    // Atualiza se existir, senão adiciona
     const index = students.findIndex(s => s.name === student.name && s.grade === student.grade);
     
     if (index !== -1) {
@@ -341,15 +402,75 @@ function saveStudent(student) {
     } else {
         students.push(student);
     }
-
     localStorage.setItem('sabermg_students', JSON.stringify(students));
+
+    // 2. Salvar no Supabase
+    if (supabaseClient) {
+        try {
+            const { error } = await supabaseClient
+                .from('results')
+                .upsert({
+                    name: student.name,
+                    grade: student.grade,
+                    class: student.class,
+                    discipline: student.discipline,
+                    score: student.score,
+                    medals: student.medals,
+                    correct_answers: student.correctAnswers || 0,
+                    total_answers: student.totalAnswers || 0
+                }, { onConflict: 'name,grade' }); // Requer que 'name' e 'grade' sejam chaves únicas ou combinadas
+
+            if (error) console.error("Erro ao salvar no Supabase:", error);
+            else console.log("Dados sincronizados com Supabase!");
+        } catch (e) {
+            console.error("Erro na requisição Supabase:", e);
+        }
+    }
 }
 
 // --- LÓGICA DO ADMIN ---
-function loadAdminData() {
-    const students = JSON.parse(localStorage.getItem('sabermg_students')) || [];
-    adminTableBody.innerHTML = '';
+async function loadAdminData() {
+    let students = [];
 
+    // 1. Carregar Dados
+    if (supabaseClient) {
+        try {
+            const { data, error } = await supabaseClient
+                .from('results')
+                .select('*');
+
+            if (error) {
+                console.error("Erro ao buscar dados do Supabase:", error);
+                // Fallback
+                students = JSON.parse(localStorage.getItem('sabermg_students')) || [];
+            } else {
+                // Mapear campos do Supabase para o formato do State
+                students = data.map(d => ({
+                    name: d.name,
+                    grade: d.grade,
+                    class: d.class,
+                    discipline: d.discipline,
+                    score: d.score,
+                    medals: d.medals,
+                    correctAnswers: d.correct_answers || 0,
+                    totalAnswers: d.total_answers || 0
+                }));
+            }
+        } catch (e) {
+            console.error("Erro Supabase Fetch:", e);
+            students = JSON.parse(localStorage.getItem('sabermg_students')) || [];
+        }
+    } else {
+        students = JSON.parse(localStorage.getItem('sabermg_students')) || [];
+    }
+
+    // 2. Filtrar Dados (Se houver filtro ativo)
+    if (state.adminFilter !== 'all') {
+        students = students.filter(s => s.discipline === state.adminFilter);
+    }
+
+    // 3. Renderizar Tabela
+    adminTableBody.innerHTML = '';
     let totalCorrect = 0;
     let totalAttempts = 0;
 
@@ -376,6 +497,90 @@ function loadAdminData() {
     admTotalStudents.innerText = students.length;
     const avgRate = totalAttempts > 0 ? Math.round((totalCorrect / totalAttempts) * 100) : 0;
     admAvgSuccess.innerText = `${avgRate}%`;
+}
+
+// --- NOVAS FUNÇÕES ADMIN ---
+
+function exportToPDF() {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+
+    // Título
+    doc.setFontSize(18);
+    doc.text("SaberMG - Relatório de Desempenho", 14, 20);
+    
+    doc.setFontSize(12);
+    doc.text(`Filtro Aplicado: ${state.adminFilter === 'all' ? 'Todas as Disciplinas' : state.adminFilter}`, 14, 30);
+    doc.text(`Data: ${new Date().toLocaleDateString('pt-BR')}`, 14, 38);
+
+    // Pegar dados da tabela Renderizada
+    const rows = [];
+    const trs = adminTableBody.querySelectorAll('tr');
+    
+    trs.forEach(tr => {
+        const tds = tr.querySelectorAll('td');
+        rows.push([
+            tds[0].innerText, // Aluno
+            tds[1].innerText, // Série/Turma
+            tds[2].innerText, // Matéria
+            tds[3].innerText, // Pontos
+            tds[4].innerText, // Acertos
+            tds[5].innerText  // Erros
+        ]);
+    });
+
+    if (rows.length === 0) {
+        alert("Não há dados para exportar!");
+        return;
+    }
+
+    doc.autoTable({
+        startY: 45,
+        head: [['Aluno', 'Série/Turma', 'Matéria', 'Pontos', 'Acertos', 'Erros']],
+        body: rows,
+        theme: 'striped',
+        headStyles: { fillColor: [99, 102, 241] } // Cor primária do app (Indigo)
+    });
+
+    doc.save(`Relatorio_SaberMG_${state.adminFilter}_${Date.now()}.pdf`);
+}
+
+async function clearResults() {
+    const confirmation = confirm("⚠️ ATENÇÃO: Tem certeza que deseja LIMPAR TODOS os resultados? Esta ação não pode ser desfeita!");
+    if (!confirmation) return;
+
+    // 1. Limpar LocalStorage
+    localStorage.removeItem('sabermg_students');
+
+    // 2. Limpar Supabase
+    if (supabaseClient) {
+        const passwordCheck = prompt("Digite a senha de admin para confirmar a limpeza:");
+        if (passwordCheck !== '8840') {
+            alert("Senha incorreta! Operação cancelada.");
+            return;
+        }
+
+        try {
+            // Deleta tudo da tabela results
+            const { error } = await supabaseClient
+                .from('results')
+                .delete()
+                .neq('name', '___'); // Truque para deletar tudo sem filtro exacto
+
+            if (error) {
+                console.error("Erro ao limpar Supabase:", error);
+                alert("Erro ao limpar no Supabase, mas os dados locais foram limpos.");
+            } else {
+                alert("Resultados limpos no Supabase e Local!");
+            }
+        } catch (e) {
+            console.error("Erro na requisição de limpeza:", e);
+        }
+    } else {
+        alert("Resultados locais limpos!");
+    }
+
+    loadAdminData(); // Atualiza painel
 }
 
 // --- UTILS ---

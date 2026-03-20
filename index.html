@@ -10,6 +10,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&family=Poppins:wght@600;800&display=swap" rel="stylesheet">
     <!-- Folha de Estilos -->
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Supabase -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <!-- jsPDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
+
     <!-- Script de Modulo -->
     <script type="module" src="app.js" defer></script>
 </head>
@@ -181,6 +188,16 @@
             </header>
 
             <main class="admin-content">
+                <div class="admin-controls card glass">
+                    <div class="filter-header">
+                        <span>Filtro: <strong id="admin-active-filter">Todas as Disciplinas</strong></span>
+                    </div>
+                    <div class="admin-btn-group">
+                        <button class="btn btn-success btn-small" id="btn-export-pdf">Exportar PDF 📄</button>
+                        <button class="btn btn-danger btn-small" id="btn-clear-results">Limpar 🗑️</button>
+                    </div>
+                </div>
+
                 <div class="stats-grid">
                     <div class="stat-card">
                         <span class="stat-emoji">👥</span>
@@ -220,6 +237,41 @@
                 </div>
             </main>
         </section>
+
+        <!-- Modal de Autenticação Admin -->
+        <div id="modal-admin-auth" class="modal-overlay hidden">
+            <div class="modal-card card glass">
+                <h3>Acesso Professor 👨‍🏫</h3>
+                <p class="modal-subtitle">Escolha o conteúdo e digite a senha.</p>
+                
+                <form id="admin-auth-form">
+                    <div class="input-group">
+                        <label for="admin-content">Conteúdo/Disciplina:</label>
+                        <select id="admin-content" required>
+                            <option value="all">Filtro Geral (Ver Tudo)</option>
+                            <option value="Matemática">Matemática</option>
+                            <option value="Português">Português</option>
+                            <option value="Ciências">Ciências</option>
+                            <option value="História">História</option>
+                            <option value="Geografia">Geografia</option>
+                            <option value="Arte">Arte</option>
+                            <option value="Educação Física">Educação Física</option>
+                            <option value="Ensino Religioso">Ensino Religioso</option>
+                        </select>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="admin-password">Senha:</label>
+                        <input type="password" id="admin-password" placeholder="Digite a senha" required>
+                    </div>
+
+                    <div class="modal-actions">
+                        <button type="button" class="btn btn-secondary" id="modal-admin-close">Cancelar</button>
+                        <button type="submit" class="btn btn-primary">Entrar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
 
     </div>
 
