@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaberMG - Jogo Educacional 🏆</title>
+    <!-- Fontes do Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&family=Poppins:wght@600;800&display=swap" rel="stylesheet">
+    <!-- Folha de Estilos -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Script de Modulo -->
+    <script type="module" src="app.js" defer></script>
+</head>
+<body>
+
+    <!-- Container Principal (Garante o fundo e centralização) -->
+    <div class="app-container">
+
+        <!-- --- TELA 1: LOGIN --- -->
+        <section id="screen-login" class="screen active">
+            <div class="card glass">
+                <div class="logo-area">
+                    <span class="logo-icon">⭐</span>
+                    <h1>Saber<span>MG</span></h1>
+                    <p>Aprenda jogando com o CBC!</p>
+                </div>
+                
+                <form id="login-form">
+                    <div class="input-group">
+                        <label for="student-name">Seu Nome:</label>
+                        <input type="text" id="student-name" placeholder="Ex: João Silva" required>
+                    </div>
+
+                    <div class="row">
+                        <div class="input-group">
+                            <label for="student-grade">Série:</label>
+                            <select id="student-grade" required>
+                                <option value="" disabled selected>Escolha...</option>
+                                <option value="6º">6º Ano</option>
+                                <option value="7º">7º Ano</option>
+                                <option value="8º">8º Ano</option>
+                                <option value="9º">9º Ano</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="student-class">Turma:</label>
+                            <input type="text" id="student-class" placeholder="Ex: A" required maxlength="5">
+                        </div>
+                    </div>
+
+                    <div class="discipline-grid-container">
+                        <label>Escolha uma Matéria:</label>
+                        <div class="discipline-grid" id="discipline-grid">
+                            <button type="button" class="discipline-btn" data-discipline="Matemática">
+                                <span class="discipline-emoji">🔢</span> Matemática
+                            </button>
+                            <button type="button" class="discipline-btn" data-discipline="Português">
+                                <span class="discipline-emoji">📖</span> Português
+                            </button>
+                            <button type="button" class="discipline-btn" data-discipline="Ciências">
+                                <span class="discipline-emoji">🔬</span> Ciências
+                            </button>
+                            <button type="button" class="discipline-btn" data-discipline="História">
+                                <span class="discipline-emoji">🏰</span> História
+                            </button>
+                            <button type="button" class="discipline-btn" data-discipline="Geografia">
+                                <span class="discipline-emoji">🌍</span> Geografia
+                            </button>
+                            <button type="button" class="discipline-btn" data-discipline="Arte">
+                                <span class="discipline-emoji">🎨</span> Arte
+                            </button>
+                            <button type="button" class="discipline-btn" data-discipline="Educação Física">
+                                <span class="discipline-emoji">⚽</span> Educação Física
+                            </button>
+                            <button type="button" class="discipline-btn" data-discipline="Ensino Religioso">
+                                <span class="discipline-emoji">🙏</span> Ensino Religioso
+                            </button>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large">Começar Aventura! 🚀</button>
+                </form>
+
+                <div class="admin-link">
+                    <button id="goto-admin" class="btn btn-text">Acesso Professor 👨‍🏫</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- --- TELA 2: DASHBOARD DO ALUNO --- -->
+        <section id="screen-dashboard" class="screen">
+            <header class="app-header">
+                <div class="user-info">
+                    <span class="user-avatar">👦</span>
+                    <div>
+                        <h2 id="dash-greeting">Olá, Aluno!</h2>
+                        <p id="dash-subtitle">6º Ano - Turma A</p>
+                    </div>
+                </div>
+                <button class="btn btn-small btn-secondary" id="dash-logout">Sair</button>
+            </header>
+
+            <main class="dashboard-content">
+                <div class="stats-row">
+                    <div class="stat-card">
+                        <span class="stat-emoji">🏆</span>
+                        <div class="stat-data">
+                            <span class="stat-value" id="dash-score">0</span>
+                            <span class="stat-label">Pontos</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-emoji">🥇</span>
+                        <div class="stat-data">
+                            <span class="stat-value" id="dash-medals">0</span>
+                            <span class="stat-label">Medalhas</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="play-card card glass">
+                    <h3>Sua Jornada: <span id="dash-discipline-name">Matemática</span></h3>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar-fill" style="width: 0%" id="dash-progress"></div>
+                    </div>
+                    <p class="progress-text" id="dash-progress-text">Fase 1 de 3</p>
+                    <button class="btn btn-primary btn-large" id="btn-start-game">Jogar Agora 🎮</button>
+                </div>
+            </main>
+        </section>
+
+        <!-- --- TELA 3: ARENA DE JOGO --- -->
+        <section id="screen-game" class="screen">
+            <header class="game-header">
+                <div class="game-hud">
+                    <div class="hud-item">
+                        <span class="hud-emoji">❤️</span>
+                        <span id="game-lives" class="hud-value">3</span>
+                    </div>
+                    <div class="hud-item">
+                        <span class="hud-emoji">🔥</span>
+                        <span id="game-combo" class="hud-value">1x</span>
+                    </div>
+                </div>
+                <div class="game-score">
+                    <span id="current-score">0</span> pts
+                </div>
+            </header>
+
+            <main class="game-content">
+                <div class="question-card card">
+                    <div class="question-header">
+                        <span class="badge" id="question-skill">Habilidade</span>
+                    </div>
+                    <h2 id="question-text">Texto da Pergunta aqui?</h2>
+                    
+                    <div class="options-container" id="options-grid">
+                        <!-- Botões de Opções gerados por JS -->
+                    </div>
+                </div>
+            </main>
+
+            <!-- Overlay de Feedback -->
+            <div id="feedback-overlay" class="feedback-overlay hidden">
+                <div class="feedback-card card">
+                    <div class="feedback-icon" id="fb-icon">🎉</div>
+                    <h2 id="fb-title">Muito Bem!</h2>
+                    <p id="fb-explanation">Explicação da resposta.</p>
+                    <button class="btn btn-primary" id="btn-next-question">Próxima ➡️</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- --- TELA 4: PAINEL DO PROFESSOR (ADMIN) --- -->
+        <section id="screen-admin" class="screen">
+            <header class="app-header">
+                <h2>Painel do Professor 👨‍🏫</h2>
+                <button class="btn btn-small btn-secondary" id="admin-back">Voltar</button>
+            </header>
+
+            <main class="admin-content">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <span class="stat-emoji">👥</span>
+                        <div class="stat-data">
+                            <span class="stat-value" id="adm-total-students">0</span>
+                            <span class="stat-label">Alunos</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-emoji">📊</span>
+                        <div class="stat-data">
+                            <span class="stat-value" id="adm-avg-success">0%</span>
+                            <span class="stat-label">Taxa de Acerto</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="table-container card">
+                    <h3>Relatório de Desempenho</h3>
+                    <div class="table-scroll">
+                        <table id="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>Aluno</th>
+                                    <th>Série/Turma</th>
+                                    <th>Matéria</th>
+                                    <th>Pontos</th>
+                                    <th>Acertos</th>
+                                    <th>Erros</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Linhas geradas por JS -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </main>
+        </section>
+
+    </div>
+
+</body>
+</html>
