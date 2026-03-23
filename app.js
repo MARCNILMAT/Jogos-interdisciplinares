@@ -164,7 +164,10 @@ function setupEventListeners() {
         }
 
         const filteredQuestions = QUESTIONS_DB.filter(q => q.grade === grade && q.discipline === selectedDiscipline);
-        const uniqueTopics = [...new Set(filteredQuestions.map(q => q.skill).filter(Boolean))].sort();
+        
+        // Remove a parte do código (ex: "(EF08LP03)") para agrupar os tópicos principais
+        const rawTopics = filteredQuestions.map(q => q.skill ? q.skill.replace(/\s*\([^)]*\)/g, '').trim() : '');
+        const uniqueTopics = [...new Set(rawTopics.filter(Boolean))].sort();
 
         studentTopic.innerHTML = '<option value="">Misturar todos os Tópicos</option>';
         uniqueTopics.forEach(topic => {
@@ -306,11 +309,13 @@ function loadDashboard() {
     dashMedals.innerText = s.medals;
     dashDisciplineName.innerText = s.topic ? `${s.discipline} (${s.topic})` : s.discipline;
     
+    const getBaseTopic = (skill) => skill ? skill.replace(/\s*\([^)]*\)/g, '').trim() : '';
+    
     // Progresso baseado nas questões disponíveis
     const totalQuestions = QUESTIONS_DB.filter(q => 
         q.grade === s.grade && 
         q.discipline === s.discipline &&
-        (!s.topic || q.skill === s.topic)
+        (!s.topic || getBaseTopic(q.skill) === s.topic)
     ).length;
     dashProgressText.innerText = `Você tem ${totalQuestions} desafios disponíveis!`;
     dashProgress.style.width = "0%";
@@ -321,11 +326,13 @@ function startNewGame() {
     const s = state.currentStudent;
     if (!s.answeredQuestions) s.answeredQuestions = [];
 
+    const getBaseTopic = (skill) => skill ? skill.replace(/\s*\([^)]*\)/g, '').trim() : '';
+
     // 1. Filtrar questões livres (não respondidas)
     let questions = QUESTIONS_DB.filter(q => 
         q.grade === s.grade && 
         q.discipline === s.discipline && 
-        (!s.topic || q.skill === s.topic) &&
+        (!s.topic || getBaseTopic(q.skill) === s.topic) &&
         !s.answeredQuestions.includes(q.id)
     );
 
@@ -334,7 +341,7 @@ function startNewGame() {
         const totalAvail = QUESTIONS_DB.filter(q => 
             q.grade === s.grade && 
             q.discipline === s.discipline &&
-            (!s.topic || q.skill === s.topic)
+            (!s.topic || getBaseTopic(q.skill) === s.topic)
         ).length;
         if (totalAvail > 0) {
             alert("🎉 Você respondeu todos os desafios deste tópico! Reiniciando o ciclo para você treinar mais!");
@@ -343,7 +350,7 @@ function startNewGame() {
             questions = QUESTIONS_DB.filter(q => 
                 q.grade === s.grade && 
                 q.discipline === s.discipline &&
-                (!s.topic || q.skill === s.topic)
+                (!s.topic || getBaseTopic(q.skill) === s.topic)
             );
         } else {
             alert("Desculpe, ainda não temos questões para essa matéria/série.");
