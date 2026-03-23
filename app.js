@@ -44,6 +44,9 @@ const screens = {
 // Componentes Login
 const loginForm = document.getElementById('login-form');
 const disciplineButtons = document.querySelectorAll('.discipline-btn');
+const studentGrade = document.getElementById('student-grade');
+const studentTopic = document.getElementById('student-topic');
+const topicContainer = document.getElementById('topic-container');
 let selectedDiscipline = null;
 
 // Componentes Dashboard
@@ -152,12 +155,41 @@ function init() {
 }
 
 function setupEventListeners() {
+    // Atualiza tópicos disponíveis
+    function updateTopics() {
+        const grade = studentGrade.value;
+        if (!grade || !selectedDiscipline) {
+            topicContainer.classList.add('hidden');
+            return;
+        }
+
+        const filteredQuestions = QUESTIONS_DB.filter(q => q.grade === grade && q.discipline === selectedDiscipline);
+        const uniqueTopics = [...new Set(filteredQuestions.map(q => q.skill).filter(Boolean))].sort();
+
+        studentTopic.innerHTML = '<option value="">Misturar todos os Tópicos</option>';
+        uniqueTopics.forEach(topic => {
+            const option = document.createElement('option');
+            option.value = topic;
+            option.innerText = topic;
+            studentTopic.appendChild(option);
+        });
+
+        if (uniqueTopics.length > 0) {
+            topicContainer.classList.remove('hidden');
+        } else {
+            topicContainer.classList.add('hidden');
+        }
+    }
+
+    studentGrade.addEventListener('change', updateTopics);
+
     // Seleção de Disciplina no Login
     disciplineButtons.forEach(btn => {
         btn.addEventListener('click', () => {
             disciplineButtons.forEach(b => b.classList.remove('selected'));
             btn.classList.add('selected');
             selectedDiscipline = btn.getAttribute('data-discipline');
+            updateTopics();
         });
     });
 
@@ -179,6 +211,7 @@ function setupEventListeners() {
             grade,
             class: classStr,
             discipline: selectedDiscipline,
+            topic: studentTopic.value || null,
             score: 0,
             medals: 0,
             correctAnswers: 0,
@@ -271,10 +304,14 @@ function loadDashboard() {
     dashSubtitle.innerText = `${s.grade} Ano - Turma ${s.class}`;
     dashScore.innerText = s.score;
     dashMedals.innerText = s.medals;
-    dashDisciplineName.innerText = s.discipline;
+    dashDisciplineName.innerText = s.topic ? `${s.discipline} (${s.topic})` : s.discipline;
     
     // Progresso baseado nas questões disponíveis
-    const totalQuestions = QUESTIONS_DB.filter(q => q.grade === s.grade && q.discipline === s.discipline).length;
+    const totalQuestions = QUESTIONS_DB.filter(q => 
+        q.grade === s.grade && 
+        q.discipline === s.discipline &&
+        (!s.topic || q.skill === s.topic)
+    ).length;
     dashProgressText.innerText = `Você tem ${totalQuestions} desafios disponíveis!`;
     dashProgress.style.width = "0%";
 }
@@ -288,17 +325,26 @@ function startNewGame() {
     let questions = QUESTIONS_DB.filter(q => 
         q.grade === s.grade && 
         q.discipline === s.discipline && 
+        (!s.topic || q.skill === s.topic) &&
         !s.answeredQuestions.includes(q.id)
     );
 
     // 2. Fallback: Se acabaram as perguntas novas, avisa e reinicia o ciclo
     if (questions.length === 0) {
-        const totalAvail = QUESTIONS_DB.filter(q => q.grade === s.grade && q.discipline === s.discipline).length;
+        const totalAvail = QUESTIONS_DB.filter(q => 
+            q.grade === s.grade && 
+            q.discipline === s.discipline &&
+            (!s.topic || q.skill === s.topic)
+        ).length;
         if (totalAvail > 0) {
-            alert("🎉 Você respondeu todos os desafios! Reiniciando o ciclo para você treinar mais!");
+            alert("🎉 Você respondeu todos os desafios deste tópico! Reiniciando o ciclo para você treinar mais!");
             s.answeredQuestions = []; // Limpa histórico para recomeçar
             saveStudent(s); // Salva a limpeza
-            questions = QUESTIONS_DB.filter(q => q.grade === s.grade && q.discipline === s.discipline);
+            questions = QUESTIONS_DB.filter(q => 
+                q.grade === s.grade && 
+                q.discipline === s.discipline &&
+                (!s.topic || q.skill === s.topic)
+            );
         } else {
             alert("Desculpe, ainda não temos questões para essa matéria/série.");
             return;
