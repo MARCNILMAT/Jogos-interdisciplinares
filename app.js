@@ -148,10 +148,36 @@ function playSound(type) {
     }
 }
 
+// --- ATUALIZAÇÃO DE CONTAGEM DE QUESTÕES ---
+function updateSubjectQuestionCounts() {
+    const grade = studentGrade.value;
+    
+    disciplineButtons.forEach(btn => {
+        const discipline = btn.getAttribute('data-discipline');
+        if (!discipline) return;
+
+        const count = QUESTIONS_DB.filter(q => 
+            q.discipline === discipline && 
+            (!grade || q.grade === grade)
+        ).length;
+
+        let badge = btn.querySelector('.question-count-badge');
+        if (!badge) {
+            badge = document.createElement('span');
+            badge.className = 'question-count-badge';
+            btn.appendChild(badge);
+        }
+        
+        badge.innerText = count;
+        badge.style.display = count > 0 ? 'inline-block' : 'none';
+    });
+}
+
 // --- INICIALIZAÇÃO ---
 function init() {
     setupEventListeners();
     checkExistingSession();
+    updateSubjectQuestionCounts(); // Atualiza contagem inicial
 }
 
 function setupEventListeners() {
@@ -201,7 +227,10 @@ function setupEventListeners() {
         }
     }
 
-    studentGrade.addEventListener('change', updateTopics);
+    studentGrade.addEventListener('change', () => {
+        updateTopics();
+        updateSubjectQuestionCounts();
+    });
     document.getElementById('student-name').addEventListener('input', updateTopics);
 
     // Seleção de Disciplina no Login
