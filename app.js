@@ -164,16 +164,33 @@ function setupEventListeners() {
         }
 
         const filteredQuestions = QUESTIONS_DB.filter(q => q.grade === grade && q.discipline === selectedDiscipline);
-        
-        // Remove a parte do código (ex: "(EF08LP03)") para agrupar os tópicos principais
         const rawTopics = filteredQuestions.map(q => q.skill ? q.skill.replace(/\s*\([^)]*\)/g, '').trim() : '');
         const uniqueTopics = [...new Set(rawTopics.filter(Boolean))].sort();
+
+        // Verificar aluno existente para bloquear tópicos
+        const name = document.getElementById('student-name').value;
+        let completedTopics = [];
+        if (name) {
+            const students = JSON.parse(localStorage.getItem('sabermg_students')) || [];
+            const found = students.find(s => s.name.toLowerCase() === name.toLowerCase() && s.grade === grade);
+            if (found && found.completedTopics) {
+                completedTopics = found.completedTopics;
+            }
+        }
 
         studentTopic.innerHTML = '<option value="">Misturar todos os Tópicos</option>';
         uniqueTopics.forEach(topic => {
             const option = document.createElement('option');
             option.value = topic;
-            option.innerText = topic;
+            
+            const isCompleted = completedTopics.includes(topic);
+            option.innerText = isCompleted ? `${topic} (Concluído ✔)` : topic;
+            
+            if (isCompleted) {
+                option.disabled = true;
+                option.style.backgroundColor = '#f3f4f6'; // Estilo para indicar bloqueio
+                option.style.color = '#9ca3af';
+            }
             studentTopic.appendChild(option);
         });
 
@@ -185,6 +202,7 @@ function setupEventListeners() {
     }
 
     studentGrade.addEventListener('change', updateTopics);
+    document.getElementById('student-name').addEventListener('input', updateTopics);
 
     // Seleção de Disciplina no Login
     disciplineButtons.forEach(btn => {
@@ -208,7 +226,16 @@ function setupEventListeners() {
             return;
         }
 
-        const student = {
+        // Recuperar dados de aluno existente para não zerar pontos
+        const students = JSON.parse(localStorage.getItem('sabermg_students')) || [];
+        const found = students.find(s => s.name.toLowerCase() === name.toLowerCase() && s.grade === grade);
+
+        const student = found ? {
+            ...found,
+            class: classStr,
+            discipline: selectedDiscipline,
+            topic: studentTopic.value || null
+        } : {
             id: Date.now().toString(),
             name,
             grade,
@@ -218,7 +245,8 @@ function setupEventListeners() {
             score: 0,
             medals: 0,
             correctAnswers: 0,
-            totalAnswers: 0
+            totalAnswers: 0,
+            completedTopics: []
         };
 
         state.currentStudent = student;
@@ -325,14 +353,16 @@ function loadDashboard() {
 function startNewGame() {
     const s = state.currentStudent;
     if (!s.answeredQuestions) s.answeredQuestions = [];
+    if (!s.completedTopics) s.completedTopics = [];
 
     const getBaseTopic = (skill) => skill ? skill.replace(/\s*\([^)]*\)/g, '').trim() : '';
 
-    // 1. Filtrar questões livres (não respondidas)
+    // 1. Filtrar questões livres (não respondidas) e de tópicos não concluídos
     let questions = QUESTIONS_DB.filter(q => 
         q.grade === s.grade && 
         q.discipline === s.discipline && 
         (!s.topic || getBaseTopic(q.skill) === s.topic) &&
+        !s.completedTopics.includes(getBaseTopic(q.skill)) && // <-- NOVO: Exclui já completados
         !s.answeredQuestions.includes(q.id)
     );
 
@@ -466,6 +496,15 @@ function handleNextQuestion() {
 
     if (state.game.currentIndex >= state.game.questions.length) {
         playSound('victory');
+        
+        const s = state.currentStudent;
+        if (s.topic) {
+            if (!s.completedTopics) s.completedTopics = [];
+            if (!s.completedTopics.includes(s.topic)) {
+                s.completedTopics.push(s.topic);
+            }
+        }
+
         alert("Parabéns! Você concluiu todos os desafios desta fase! 🏆");
         state.currentStudent.medals = (state.currentStudent.medals || 0) + 1; // Medalha extra
         saveStudent(state.currentStudent);
