@@ -9269,5 +9269,227 @@ export const QUESTIONS_DB = [
     answer: "Uma disputa ideológica (capitalismo x socialismo) e uma corrida armamentista, sem conflitos armados diretos entre os dois países.",
     explanation: "",
     skill: "Guerras mundiais, Guerra Fria e globalização"
+  },
+
+  // --- HISTÓRIA LOTE 4 (NOVAS QUESTÕES) ---
+  {
+    id: 821,
+    grade: "7º",
+    discipline: "História",
+    type: "multiple",
+    text: "O Império Bizantino, com capital em Constantinopla, preservou a cultura greco-romana e difundiu o cristianismo ortodoxo. Sua principal contribuição jurídica foi:",
+    options: ["O Código de Hamurabi.","O Corpus Juris Civilis (Corpo de Direito Civil), organizado por Justiniano.","A Declaração dos Direitos do Homem.","A Carta Magna."],
+    answer: "O Corpus Juris Civilis (Corpo de Direito Civil), organizado por Justiniano.",
+    explanation: "",
+    skill: "Império Bizantino e a civilização islâmica"
+  },
+  {
+    id: 822,
+    grade: "7º",
+    discipline: "História",
+    type: "multiple",
+    text: "O islamismo tem como um de seus pilares a peregrinação a Meca, cidade sagrada localizada na atual Arábia Saudita. Qual o nome dessa peregrinação?",
+    options: ["Jihad.","Ramadã.","Hajj.","Sharia."],
+    answer: "Hajj.",
+    explanation: "",
+    skill: "Império Bizantino e a civilização islâmica"
+  },
+  {
+    id: 823,
+    grade: "7º",
+    discipline: "História",
+    type: "multiple",
+    text: "Os árabes, sob a liderança de Maomé, unificaram a Península Arábica e iniciaram um processo de expansão territorial. Qual fator contribuiu para essa rápida expansão?",
+    options: ["A superioridade tecnológica em armas de fogo.","A unificação política e religiosa (o Estado islâmico) e o enfraquecimento dos impérios Bizantino e Persa.","A aliança com os cruzados europeus.","A descoberta de ouro na Arábia."],
+    answer: "A unificação política e religiosa (o Estado islâmico) e o enfraquecimento dos impérios Bizantino e Persa.",
+    explanation: "",
+    skill: "Império Bizantino e a civilização islâmica"
+  },
+  {
+    id: 824,
+    grade: "7º",
+    discipline: "História",
+    type: "multiple",
+    text: "A cidade de Constantinopla (atual Istambul) foi conquistada pelos turcos-otomanos em 1453. Esse evento é considerado por muitos historiadores como:",
+    options: ["O início da Idade Média.","Um marco do fim da Idade Média e do Império Bizantino.","A data de início da Revolução Industrial.","A fundação do Império Romano do Ocidente."],
+    answer: "Um marco do fim da Idade Média e do Império Bizantino.",
+    explanation: "",
+    skill: "Império Bizantino e a civilização islâmica"
+  },
+  {
+    id: 825,
+    grade: "7º",
+    discipline: "História",
+    type: "multiple",
+    text: "No sistema feudal, a terra era a principal fonte de riqueza e poder. O feudo era dividido em duas partes:",
+    options: ["A cidade e o campo.","O manso senhorial (terra do senhor) e o manso servil (terra dos servos).","A área de mineração e a área agrícola.","O território de caça e o território de cultivo."],
+    answer: "O manso senhorial (terra do senhor) e o manso servil (terra dos servos).",
+    explanation: "",
+    skill: "A Europa feudal e as relações de suserania e vassalagem"
+  },
+  {
+    id: 826,
+    grade: "7º",
+    discipline: "História",
+    type: "multiple",
+    text: "A relação de suserania e vassalagem era um pacto entre nobres que envolvia:",
+    options: ["A troca de terras (feudo) por fidelidade e auxílio militar.","A venda de cargos políticos.","A adoção de parentes como herdeiros.","A divisão igualitária de terras entre todos os camponeses."],
+    answer: "A troca de terras (feudo) por fidelidade e auxílio militar.",
+    explanation: "",
+    skill: "A Europa feudal e as relações de suserania e vassalagem"
+  },
+  {
+    id: 827,
+    grade: "7º",
+    discipline: "História",
+    type: "multiple",
+    text: "A Igreja Católica teve papel central na sociedade feudal, exercendo influência política, econômica e cultural. A principal unidade religiosa e administrativa era:",
+    options: ["A catedral.","A paróquia, liderada por um pároco.","A universidade.","O mosteiro exclusivamente."],
+    answer: "A paróquia, liderada por um pároco.",
+    explanation: "",
+    skill: "A Europa feudal e as relações de suserania e vassalagem"
+  },
+  {
+    id: 828,
+    grade: "7º",
+    discipline: "História",
+    type: "multiple",
+    text: "As Cruzadas foram expedições militares organizadas pela Igreja Católica com o objetivo declarado de:",
+    options: ["Conquistar terras na América.","Retomar a Terra Santa (Jerusalém) do domínio muçulmano.","Expandir o Império Bizantino.","Combater os vikings no norte da Europa."],
+    answer: "Retomar a Terra Santa (Jerusalém) do domínio muçulmano.",
+    explanation: "",
+    skill: "A Europa feudal e as relações de suserania e vassalagem"
+  },
+  {
+    id: 829,
+    grade: "7º",
+    discipline: "História",
+    type: "multiple",
+    text: "As rotas comerciais que ligavam a Europa ao Oriente passavam pelo Mar Mediterrâneo. Quais cidades italianas se destacaram como centros comerciais nesse período?",
+    options: ["Londres e Paris.","Veneza e Gênova.","Lisboa e Sevilha.","Atenas e Roma."],
+    answer: "Veneza e Gênova.",
+    explanation: "",
+    skill: "Renascimento comercial e urbano"
+  },
+  {
+    id: 830,
+    grade: "7º",
+    discipline: "História",
+    type: "multiple",
+    text: "As corporações de ofício (ou guildas) eram associações que regulavam:",
+    options: ["A vida religiosa nas cidades.","As atividades artesanais, estabelecendo normas de produção, preços e formação de aprendizes.","A cobrança de impostos pelos reis.","A organização militar das cidades."],
+    answer: "As atividades artesanais, estabelecendo normas de produção, preços e formação de aprendizes.",
+    explanation: "",
+    skill: "Renascimento comercial e urbano"
+  },
+  {
+    id: 831,
+    grade: "7º",
+    discipline: "História",
+    type: "multiple",
+    text: "O desenvolvimento do comércio e das cidades contribuiu para o enfraquecimento do feudalismo, pois:",
+    options: ["Fortalecia a economia natural baseada nas trocas diretas.","Favoreceu o surgimento de uma economia monetária e de um novo grupo social (a burguesia) que buscava maior liberdade.","Aumentou o poder dos senhores feudais sobre os servos.","Impediu a formação de governos centralizados."],
+    answer: "Favoreceu o surgimento de uma economia monetária e de um novo grupo social (a burguesia) que buscava maior liberdade.",
+    explanation: "",
+    skill: "Renascimento comercial e urbano"
+  },
+  {
+    id: 832,
+    grade: "7º",
+    discipline: "História",
+    type: "multiple",
+    text: "A formação dos Estados Nacionais Modernos na Europa envolveu:",
+    options: ["A descentralização do poder político e a autonomia dos senhores feudais.","A centralização política, a criação de exércitos nacionais e a unificação tributária sob a autoridade do rei.","A eliminação completa da monarquia e a instauração da república.","A independência de todas as cidades-estado."],
+    answer: "A centralização política, a criação de exércitos nacionais e a unificação tributária sob a autoridade do rei.",
+    explanation: "",
+    skill: "Estado Moderno e absolutismo"
+  },
+  {
+    id: 833,
+    grade: "7º",
+    discipline: "História",
+    type: "multiple",
+    text: "O mercantilismo foi o conjunto de práticas econômicas adotadas pelos Estados Modernos. Uma de suas características era:",
+    options: ["O livre comércio sem intervenção do Estado.","O acúmulo de metais preciosos e o estabelecimento de colônias para garantir matérias-primas e mercados consumidores.","A igualdade econômica entre todas as classes sociais.","A proibição total do comércio exterior."],
+    answer: "O acúmulo de metais preciosos e o estabelecimento de colônias para garantir matérias-primas e mercados consumidores.",
+    explanation: "",
+    skill: "Estado Moderno e absolutismo"
+  },
+  {
+    id: 834,
+    grade: "7º",
+    discipline: "História",
+    type: "multiple",
+    text: "O absolutismo inglês enfrentou resistência do Parlamento, resultando na Revolução Inglesa do século XVII. Esse conflito levou:",
+    options: ["Ao fortalecimento do absolutismo na Inglaterra.","À execução do rei Carlos I e à consolidação de uma monarquia parlamentar, limitando os poderes do rei.","À independência das Treze Colônias.","À aliança da Inglaterra com a França."],
+    answer: "À execução do rei Carlos I e à consolidação de uma monarquia parlamentar, limitando os poderes do rei.",
+    explanation: "",
+    skill: "Estado Moderno e absolutismo"
+  },
+  {
+    id: 835,
+    grade: "7º",
+    discipline: "História",
+    type: "multiple",
+    text: "Cristóvão Colombo, navegador genovês financiado pela Espanha, chegou à América em 1492. Ele acreditava ter chegado:",
+    options: ["Às Índias (Ásia), por isso chamou os povos nativos de 'índios'.","À África, contornando o Cabo da Boa Esperança.","Ao Brasil, onde encontrou pau-brasil.","À China, estabelecendo relações comerciais."],
+    answer: "Às Índias (Ásia), por isso chamou os povos nativos de 'índios'.",
+    explanation: "",
+    skill: "Expansão marítima e conquista da América"
+  },
+  {
+    id: 836,
+    grade: "7º",
+    discipline: "História",
+    type: "multiple",
+    text: "A conquista da América pelos espanhóis foi facilitada por diversos fatores, EXCETO:",
+    options: ["A superioridade tecnológica em armas de fogo e uso de cavalos.","As alianças com povos indígenas que eram inimigos dos astecas e incas.","A unidade e coesão total dos impérios asteca e inca sem conflitos internos.","A disseminação de doenças trazidas pelos europeus, que dizimaram grande parte da população nativa."],
+    answer: "A unidade e coesão total dos impérios asteca e inca sem conflitos internos.",
+    explanation: "",
+    skill: "Expansão marítima e conquista da América"
+  },
+  {
+    id: 837,
+    grade: "7º",
+    discipline: "História",
+    type: "multiple",
+    text: "O Vice-Reino da Nova Espanha e o Vice-Reino do Peru foram as principais divisões administrativas criadas pelos espanhóis na América. Essas regiões correspondem atualmente, respectivamente, a:",
+    options: ["Argentina e Chile.","Brasil e Guianas.","México e América Andina (Peru, Bolívia, Equador).","Colômbia e Venezuela."],
+    answer: "México e América Andina (Peru, Bolívia, Equador).",
+    explanation: "",
+    skill: "Expansão marítima e conquista da América"
+  },
+  {
+    id: 838,
+    grade: "7º",
+    discipline: "História",
+    type: "multiple",
+    text: "A arte islâmica é conhecida por evitar representações figurativas de Maomé e de Deus, desenvolvendo padrões geométricos e caligrafia. Isso está relacionado:",
+    options: ["À falta de habilidade artística dos árabes.","À proibição da idolatria no islamismo, evitando a adoração de imagens.","À influência exclusiva da arte egípcia.","Ao uso apenas de cores preto e branco."],
+    answer: "À proibição da idolatria no islamismo, evitando a adoração de imagens.",
+    explanation: "",
+    skill: "Império Bizantino e a civilização islâmica"
+  },
+  {
+    id: 839,
+    grade: "7º",
+    discipline: "História",
+    type: "multiple",
+    text: "A servidão no feudalismo obrigava os servos a:",
+    options: ["Pagar impostos e prestar serviços ao senhor feudal (corveia, talha, capitação), mas não eram propriedade do senhor, podendo ter família e não serem vendidos individualmente.","Serem propriedade do senhor como objetos, sem direitos familiares.","Receberem salários em moeda pelo trabalho na terra.","Terem plena liberdade de ir e vir."],
+    answer: "Pagar impostos e prestar serviços ao senhor feudal (corveia, talha, capitação), mas não eram propriedade do senhor, podendo ter família e não serem vendidos individualmente.",
+    explanation: "",
+    skill: "A Europa feudal e as relações de suserania e vassalagem"
+  },
+  {
+    id: 840,
+    grade: "7º",
+    discipline: "História",
+    type: "multiple",
+    text: "A peste negra, que assolou a Europa no século XIV, teve como consequência:",
+    options: ["O aumento populacional e o crescimento das cidades.","A redução drástica da população, crise econômica e questionamentos sobre a ordem social e religiosa.","O fortalecimento do sistema feudal.","A unificação política da Europa."],
+    answer: "A redução drástica da população, crise econômica e questionamentos sobre a ordem social e religiosa.",
+    explanation: "",
+    skill: "Renascimento comercial e urbano"
   }
 ];
