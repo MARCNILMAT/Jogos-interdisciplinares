@@ -2,8 +2,8 @@ import { QUESTIONS_DB } from './questions.js';
 
 // --- CONFIGURAÇÃO SUPABASE ---
 // PREENCHA ESTAS VARIÁVEIS COM SUA CONTA SUPABASE
-const SUPABASE_URL = 'https://thjrggyochdirwnhrwzr.supabase.co'; 
-const SUPABASE_KEY = ''; // Vocé deve colar a ANON KEY aqui
+const SUPABASE_URL = 'https://pflundnuolxzbcnymbfl.supabase.co'; 
+const SUPABASE_KEY = 'sb_publishable_XgnCUrYDbp351eeMpH76tw_RXtS_bo8'; // Você deve colar a ANON KEY aqui
 
 let supabaseClient = null;
 
