@@ -664,47 +664,54 @@ async function loadAdminData() {
 // --- NOVAS FUNÇÕES ADMIN ---
 
 function exportToPDF() {
-    const { jsPDF } = window.jspdf;
-    const doc = new jsPDF();
+    try {
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF();
 
-    // Título
-    doc.setFontSize(18);
-    doc.text("SaberMG - Relatório de Desempenho", 14, 20);
-    
-    doc.setFontSize(12);
-    doc.text(`Filtro Aplicado: ${state.adminFilter === 'all' ? 'Todas as Disciplinas' : state.adminFilter}`, 14, 30);
-    doc.text(`Data: ${new Date().toLocaleDateString('pt-BR')}`, 14, 38);
+        // Título
+        doc.setFontSize(18);
+        doc.text("SaberMG - Relatório de Desempenho", 14, 20);
+        
+        doc.setFontSize(12);
+        doc.text(`Filtro Aplicado: ${state.adminFilter === 'all' ? 'Todas as Disciplinas' : state.adminFilter}`, 14, 30);
+        doc.text(`Data: ${new Date().toLocaleDateString('pt-BR')}`, 14, 38);
 
-    // Pegar dados da tabela Renderizada
-    const rows = [];
-    const trs = adminTableBody.querySelectorAll('tr');
-    
-    trs.forEach(tr => {
-        const tds = tr.querySelectorAll('td');
-        rows.push([
-            tds[0].innerText, // Aluno
-            tds[1].innerText, // Série/Turma
-            tds[2].innerText, // Matéria
-            tds[3].innerText, // Pontos
-            tds[4].innerText, // Acertos
-            tds[5].innerText  // Erros
-        ]);
-    });
+        // Pegar dados da tabela Renderizada
+        const rows = [];
+        const trs = adminTableBody.querySelectorAll('tr');
+        
+        trs.forEach(tr => {
+            const tds = tr.querySelectorAll('td');
+            if (tds.length >= 6) {
+                rows.push([
+                    tds[0].innerText, // Aluno
+                    tds[1].innerText, // Série/Turma
+                    tds[2].innerText, // Matéria
+                    tds[3].innerText, // Pontos
+                    tds[4].innerText, // Acertos
+                    tds[5].innerText  // Erros
+                ]);
+            }
+        });
 
-    if (rows.length === 0) {
-        alert("Não há dados para exportar!");
-        return;
+        if (rows.length === 0) {
+            alert("Não há dados para exportar!");
+            return;
+        }
+
+        doc.autoTable({
+            startY: 45,
+            head: [['Aluno', 'Série/Turma', 'Matéria', 'Pontos', 'Acertos', 'Erros']],
+            body: rows,
+            theme: 'striped',
+            headStyles: { fillColor: [99, 102, 241] } // Cor primária do app (Indigo)
+        });
+
+        doc.save(`Relatorio_SaberMG_${state.adminFilter}_${Date.now()}.pdf`);
+    } catch (error) {
+        console.error("Erro na exportação para PDF:", error);
+        alert("Ocorreu um erro ao gerar o PDF. Verifique se as bibliotecas foram carregadas corretamente.");
     }
-
-    doc.autoTable({
-        startY: 45,
-        head: [['Aluno', 'Série/Turma', 'Matéria', 'Pontos', 'Acertos', 'Erros']],
-        body: rows,
-        theme: 'striped',
-        headStyles: { fillColor: [99, 102, 241] } // Cor primária do app (Indigo)
-    });
-
-    doc.save(`Relatorio_SaberMG_${state.adminFilter}_${Date.now()}.pdf`);
 }
 
 async function clearResults() {
