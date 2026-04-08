@@ -34727,5 +34727,116 @@ export const QUESTIONS_DB = [
     answer: "Tratar os outros como gostaríamos de ser tratados",
     explanation: "Princípio de ética e empatia universal.",
     skill: "Ética"
+  },
+
+  {
+    id: 3128,
+    grade: "6º",
+    discipline: "Inglês",
+    type: "multiple",
+    text: "How do you say 'maçã' in English?",
+    options: ["Grape","Apple","Orange","Banana"],
+    answer: "Apple",
+    explanation: "Apple é a tradução de maçã.",
+    skill: "Vocabulary"
+  },
+  {
+    id: 3129,
+    grade: "7º",
+    discipline: "Inglês",
+    type: "multiple",
+    text: "The opposite of 'Big' is:",
+    options: ["Large","Small","Tall","Hevay"],
+    answer: "Small",
+    explanation: "Big (grande) x Small (pequeno).",
+    skill: "Adjectives"
+  },
+  {
+    id: 3130,
+    grade: "8º",
+    discipline: "Inglês",
+    type: "multiple",
+    text: "I ___ to the beach last summer.",
+    options: ["go","goes","went","going"],
+    answer: "went",
+    explanation: "Went é o passado simples do verbo to go.",
+    skill: "Past Tense"
+  },
+  {
+    id: 3131,
+    grade: "9º",
+    discipline: "Inglês",
+    type: "multiple",
+    text: "Choose the correct pronoun: '___ is my sister.'",
+    options: ["He","It","She","They"],
+    answer: "She",
+    explanation: "She é usado para o gênero feminino.",
+    skill: "Pronouns"
+  },
+  {
+    id: 3132,
+    grade: "6º",
+    discipline: "Inglês",
+    type: "multiple",
+    text: "Which color do you get if you mix Blue and Yellow?",
+    options: ["Purple","Green","Orange","Red"],
+    answer: "Green",
+    explanation: "Blue + Yellow = Green.",
+    skill: "Colors"
+  },
+  {
+    id: 3133,
+    grade: "7º",
+    discipline: "Inglês",
+    type: "multiple",
+    text: "What is the capital of the United Kingdom?",
+    options: ["New York","London","Paris","Berlin"],
+    answer: "London",
+    explanation: "Londres é a capital do Reino Unido.",
+    skill: "Culture"
+  },
+  {
+    id: 3134,
+    grade: "6º",
+    discipline: "Português",
+    type: "multiple",
+    text: "Qual destas palavras é um Substantivo Coletivo de 'Peixes'?",
+    options: ["Manada","Cardume","Alcateia","Enxame"],
+    answer: "Cardume",
+    explanation: "Cardume é o conjunto de peixes.",
+    skill: "Substantivos"
+  },
+  {
+    id: 3135,
+    grade: "7º",
+    discipline: "Português",
+    type: "multiple",
+    text: "Na frase 'Eu e ele fomos ao cinema', o sujeito é:",
+    options: ["Simples","Composto","Oculto","Inexistente"],
+    answer: "Composto",
+    explanation: "Possui dois núcleos: Eu e ele.",
+    skill: "Sintaxe"
+  },
+  {
+    id: 3136,
+    grade: "8º",
+    discipline: "Português",
+    type: "multiple",
+    text: "Qual o antônimo de 'Virtude'?",
+    options: ["Bondade","Vício","Qualidade","Habilidade"],
+    answer: "Vício",
+    explanation: "Vício é o oposto moral de virtude.",
+    skill: "Semântica"
+  },
+  {
+    id: 3137,
+    grade: "9º",
+    discipline: "Português",
+    type: "multiple",
+    text: "Quem escreveu 'Grande Sertão: Veredas'?",
+    options: ["Machado de Assis","Guimarães Rosa","José de Alencar","Monteiro Lobato"],
+    answer: "Guimarães Rosa",
+    explanation: "Obra prima do modernismo brasileiro.",
+    skill: "Literatura"
   }
 ];
