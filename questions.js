@@ -33774,5 +33774,149 @@ export const QUESTIONS_DB = [
     answer: "Canal do Panamá",
     explanation: "Obra fundamental para o comércio marítimo global.",
     skill: "Geopolítica"
+  },
+
+  {
+    id: 3042,
+    grade: "6º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Quanto é 50 x 8?",
+    options: ["350","400","450","500"],
+    answer: "400",
+    explanation: "50 x 8 = 400.",
+    skill: "Cálculo"
+  },
+  {
+    id: 3043,
+    grade: "7º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Qual o valor de x na equação 2x = 42?",
+    options: ["20","21","22","24"],
+    answer: "21",
+    explanation: "x = 42 / 2 = 21.",
+    skill: "Equações"
+  },
+  {
+    id: 3044,
+    grade: "8º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "A raiz quadrada de 144 é:",
+    options: ["11","12","13","14"],
+    answer: "12",
+    explanation: "12 x 12 = 144.",
+    skill: "Radiciação"
+  },
+  {
+    id: 3045,
+    grade: "9º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Qual o resultado de 10 elevado a 3 (10³)?",
+    options: ["100","300","1000","30"],
+    answer: "1000",
+    explanation: "10 x 10 x 10 = 1000.",
+    skill: "Potenciação"
+  },
+  {
+    id: 3046,
+    grade: "8º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "A área de um quadrado de lado 10cm é:",
+    options: ["20cm²","40cm²","100cm²","50cm²"],
+    answer: "100cm²",
+    explanation: "Área = Lado x Lado = 10 x 10 = 100.",
+    skill: "Geometria"
+  },
+  {
+    id: 3047,
+    grade: "6º",
+    discipline: "Português",
+    type: "multiple",
+    text: "Qual destas palavras é um PRONOME?",
+    options: ["Ele","Livro","Mesa","Lápis"],
+    answer: "Ele",
+    explanation: "Ele é um pronome pessoal do caso reto.",
+    skill: "Classes de Palavras"
+  },
+  {
+    id: 3048,
+    grade: "7º",
+    discipline: "Português",
+    type: "multiple",
+    text: "A palavra 'Bexiga' se escreve com:",
+    options: ["X","CH","S","G"],
+    answer: "X",
+    explanation: "Ortografia correta com X.",
+    skill: "Ortografia"
+  },
+  {
+    id: 3049,
+    grade: "8º",
+    discipline: "Português",
+    type: "multiple",
+    text: "No plural, 'Chapéu' fica:",
+    options: ["Chapéis","Chapéus","Chapeles","Chapeus"],
+    answer: "Chapéus",
+    explanation: "Oxítonas terminadas em -eu fazem plural em -eus.",
+    skill: "Morfologia"
+  },
+  {
+    id: 3050,
+    grade: "9º",
+    discipline: "Português",
+    type: "multiple",
+    text: "O autor de 'Vidas Secas' é:",
+    options: ["Machado de Assis","Graciliano Ramos","José de Alencar","Clarice Lispector"],
+    answer: "Graciliano Ramos",
+    explanation: "Obra de destaque do regionalismo nordestino.",
+    skill: "Literatura"
+  },
+  {
+    id: 3051,
+    grade: "6º",
+    discipline: "Ciências",
+    type: "multiple",
+    text: "Qual planeta é conhecido como 'Planeta Vermelho'?",
+    options: ["Vênus","Terra","Marte","Júpiter"],
+    answer: "Marte",
+    explanation: "Devido à cor de sua superfície rica em óxido de ferro.",
+    skill: "Sistema Solar"
+  },
+  {
+    id: 3052,
+    grade: "7º",
+    discipline: "Ciências",
+    type: "multiple",
+    text: "Qual gás os humanos absorvem na respiração para as células?",
+    options: ["Gás Carbônico","Nitrogênio","Oxigênio","Hidrogênio"],
+    answer: "Oxigênio",
+    explanation: "O O2 é vital para a produção de energia nas células.",
+    skill: "Respiração"
+  },
+  {
+    id: 3053,
+    grade: "8º",
+    discipline: "Ciências",
+    type: "multiple",
+    text: "O centro de controle da célula vegetal, que contém o DNA, é o:",
+    options: ["Mitocôndria","Parede Celular","Núcleo","Cloroplasto"],
+    answer: "Núcleo",
+    explanation: "O DNA armazena a informação genética.",
+    skill: "Biologia Celular"
+  },
+  {
+    id: 3054,
+    grade: "9º",
+    discipline: "Ciências",
+    type: "multiple",
+    text: "H2O é a fórmula química de qual substância?",
+    options: ["Sal","Açúcar","Água","Ferro"],
+    answer: "Água",
+    explanation: "Junção de dois Hidrogênios e um Oxigênio.",
+    skill: "Química"
   }
 ];
