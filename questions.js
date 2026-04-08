@@ -32789,5 +32789,182 @@ export const QUESTIONS_DB = [
     answer: "Hipérbole",
     explanation: "Hipérbole é o exagero intencional.",
     skill: "Figuras de Linguagem"
+  },
+
+  {
+    id: 2953,
+    grade: "6º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Qual o resultado de 125 x 4?",
+    options: ["400","450","500","600"],
+    answer: "500",
+    explanation: "125 x 2 = 250; 250 x 2 = 500.",
+    skill: "Operações"
+  },
+  {
+    id: 2954,
+    grade: "7º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Quanto é 1/2 + 1/4?",
+    options: ["1/6","2/6","3/4","1/2"],
+    answer: "3/4",
+    explanation: "1/2 = 2/4. 2/4 + 1/4 = 3/4.",
+    skill: "Frações"
+  },
+  {
+    id: 2955,
+    grade: "8º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "A raiz quadrada de 144 é:",
+    options: ["10","11","12","14"],
+    answer: "12",
+    explanation: "12 x 12 = 144.",
+    skill: "Radiciação"
+  },
+  {
+    id: 2956,
+    grade: "9º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Qual o valor de x na equação x² = 25 (considerando x > 0)?",
+    options: ["2","5","8","10"],
+    answer: "5",
+    explanation: "A raiz quadrada positiva de 25 é 5.",
+    skill: "Equações de 2º Grau"
+  },
+  {
+    id: 2957,
+    grade: "6º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Um ângulo reto mede quantos graus?",
+    options: ["45º","90º","180º","360º"],
+    answer: "90º",
+    explanation: "Ângulos retos medem exatamente 90 graus.",
+    skill: "Geometria"
+  },
+  {
+    id: 2958,
+    grade: "7º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Se um produto custa 100 reais e tem 15% de desconto, qual o novo preço?",
+    options: ["85","90","95","115"],
+    answer: "85",
+    explanation: "100 - 15 = 85 reais.",
+    skill: "Porcentagem"
+  },
+  {
+    id: 2959,
+    grade: "8º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "O valor numérico da expressão 2a + 3b quando a=2 e b=3 é:",
+    options: ["10","11","12","13"],
+    answer: "13",
+    explanation: "(2x2) + (3x3) = 4 + 9 = 13.",
+    skill: "Álgebra"
+  },
+  {
+    id: 2960,
+    grade: "9º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Qual a soma dos ângulos internos de um triângulo?",
+    options: ["90º","180º","270º","360º"],
+    answer: "180º",
+    explanation: "Sempre 180º na geometria plana.",
+    skill: "Geometria"
+  },
+  {
+    id: 2961,
+    grade: "6º",
+    discipline: "Português",
+    type: "multiple",
+    text: "Qual o coletivo de 'Livros'?",
+    options: ["Alcateia","Biblioteca","Constelação","Enxame"],
+    answer: "Biblioteca",
+    explanation: "Biblioteca é o conjunto de livros.",
+    skill: "Substantivos"
+  },
+  {
+    id: 2962,
+    grade: "7º",
+    discipline: "Português",
+    type: "multiple",
+    text: "Na frase 'Eles correm muito', qual o verbo?",
+    options: ["Eles","Correm","Muito","Não tem verbo"],
+    answer: "Correm",
+    explanation: "Correr indica a ação do sujeito.",
+    skill: "Verbos"
+  },
+  {
+    id: 2963,
+    grade: "8º",
+    discipline: "Português",
+    type: "multiple",
+    text: "Qual a forma correta do plural de 'Pão'?",
+    options: ["Pãos","Pães","Pãis","Pãoles"],
+    answer: "Pães",
+    explanation: "Plural africado de pão.",
+    skill: "Morfologia"
+  },
+  {
+    id: 2964,
+    grade: "9º",
+    discipline: "Português",
+    type: "multiple",
+    text: "Quem escreveu 'Dom Casmurro'?",
+    options: ["Machado de Assis","José de Alencar","Monteiro Lobato","Clarice Lispector"],
+    answer: "Machado de Assis",
+    explanation: "Considerado um dos maiores clássicos brasileiros.",
+    skill: "Literatura"
+  },
+  {
+    id: 2965,
+    grade: "6º",
+    discipline: "Português",
+    type: "multiple",
+    text: "Qual destas palavras é um ADJETIVO?",
+    options: ["Cadeira","Azul","Mesa","Lápis"],
+    answer: "Azul",
+    explanation: "Azul é uma característica ou qualidade.",
+    skill: "Adjetivos"
+  },
+  {
+    id: 2966,
+    grade: "7º",
+    discipline: "Português",
+    type: "multiple",
+    text: "Na frase 'Vou à escola', o sinal indicativo de crase em 'à' ocorre pois:",
+    options: ["Vou (verbo de movimento) exige 'a' + 'a' artigo","É uma exceção","Sempre tem crase antes de escola","Nenhuma das anteriores"],
+    answer: "Vou (verbo de movimento) exige 'a' + 'a' artigo",
+    explanation: "Junção da preposição com o artigo feminino.",
+    skill: "Crase"
+  },
+  {
+    id: 2967,
+    grade: "8º",
+    discipline: "Português",
+    type: "multiple",
+    text: "A palavra 'Café' é acentuada por ser:",
+    options: ["Oxítona terminada em E","Paroxítona","Proparoxítona","Monossílaba"],
+    answer: "Oxítona terminada em E",
+    explanation: "Regra básica de acentuação.",
+    skill: "Ortografia"
+  },
+  {
+    id: 2968,
+    grade: "9º",
+    discipline: "Português",
+    type: "multiple",
+    text: "A conjunção 'Entretanto' indica ideia de:",
+    options: ["Adição","Conclusão","Oposição (Adversidade)","Explicação"],
+    answer: "Oposição (Adversidade)",
+    explanation: "Indica contraste entre as orações.",
+    skill: "Sintaxe"
   }
 ];
