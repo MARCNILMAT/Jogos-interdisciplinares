@@ -33663,5 +33663,116 @@ export const QUESTIONS_DB = [
     answer: "Performance",
     explanation: "O artista interage diretamente com o público/espaço.",
     skill: "Arte Contemporânea"
+  },
+
+  {
+    id: 3032,
+    grade: "6º",
+    discipline: "História",
+    type: "multiple",
+    text: "Qual civilização antiga construiu as famosas Pirâmides de Gizé?",
+    options: ["Roma","Grécia","Egito","Babilônia"],
+    answer: "Egito",
+    explanation: "As pirâmides serviam de túmulos para os faraós.",
+    skill: "Egito Antigo"
+  },
+  {
+    id: 3033,
+    grade: "7º",
+    discipline: "História",
+    type: "multiple",
+    text: "O sistema econômico e social dominante na Europa durante a Idade Média foi o:",
+    options: ["Capitalismo","Feudalismo","Democracia","Socialismo"],
+    answer: "Feudalismo",
+    explanation: "Baseado na vassalagem e na economia agrária.",
+    skill: "Idade Média"
+  },
+  {
+    id: 3034,
+    grade: "8º",
+    discipline: "História",
+    type: "multiple",
+    text: "A Revolução que derrubou a monarquia em 1789 e criou o lema 'Liberdade, Igualdade e Fraternidade' foi a:",
+    options: ["Revolução Industrial","Revolução Francesa","Revolução Americana","Revolução Russa"],
+    answer: "Revolução Francesa",
+    explanation: "Marco fundamental do fim do Absolutismo.",
+    skill: "Revolução Francesa"
+  },
+  {
+    id: 3035,
+    grade: "9º",
+    discipline: "História",
+    type: "multiple",
+    text: "O período da 'Guerra Fria' foi marcado pela disputa ideológica entre:",
+    options: ["Alemanha e Japão","Brasil e Argentina","EUA e União Soviética","França e Inglaterra"],
+    answer: "EUA e União Soviética",
+    explanation: "Capitalismo versus Socialismo.",
+    skill: "Guerra Fria"
+  },
+  {
+    id: 3036,
+    grade: "7º",
+    discipline: "História",
+    type: "multiple",
+    text: "A principal mão de obra utilizada no Brasil Colonial para o plantio de cana-de-açúcar foi:",
+    options: ["Assalariada europeia","Imigrante japonesa","Pessoas escravizadas trazidas da África","Senhores de Engenho"],
+    answer: "Pessoas escravizadas trazidas da África",
+    explanation: "Base de sustentação degradante da economia colonial.",
+    skill: "Brasil Colônia"
+  },
+  {
+    id: 3037,
+    grade: "6º",
+    discipline: "Geografia",
+    type: "multiple",
+    text: "O movimento de translação da Terra leva aproximadamente:",
+    options: ["24 horas","30 dias","365 dias e 6 horas","10 anos"],
+    answer: "365 dias e 6 horas",
+    explanation: "É a volta completa em torno do Sol.",
+    skill: "Movimentos da Terra"
+  },
+  {
+    id: 3038,
+    grade: "7º",
+    discipline: "Geografia",
+    type: "multiple",
+    text: "O Brasil está localizado em qual continente?",
+    options: ["América do Norte","África","América do Sul","Oceania"],
+    answer: "América do Sul",
+    explanation: "O Brasil ocupa grande parte da massa sul-americana.",
+    skill: "Localização"
+  },
+  {
+    id: 3039,
+    grade: "8º",
+    discipline: "Geografia",
+    type: "multiple",
+    text: "O processo de integração econômica e cultural entre os países no mundo moderno é a:",
+    options: ["Urbanização","Globalização","Erosão","Desertificação"],
+    answer: "Globalização",
+    explanation: "Promove a rapidez na troca de mercadorias e informações.",
+    skill: "Globalização"
+  },
+  {
+    id: 3040,
+    grade: "9º",
+    discipline: "Geografia",
+    type: "multiple",
+    text: "O país com a maior extensão territorial do mundo é a:",
+    options: ["China","Rússia","Canadá","EUA"],
+    answer: "Rússia",
+    explanation: "A Rússia se estende pela Europa e Ásia.",
+    skill: "Extensões Territoriais"
+  },
+  {
+    id: 3041,
+    grade: "8º",
+    discipline: "Geografia",
+    type: "multiple",
+    text: "O canal artificial que liga o Oceano Atlântico ao Pacífico na América Central é o:",
+    options: ["Canal de Suez","Estreito de Gibraltar","Canal do Panamá","Canal da Mancha"],
+    answer: "Canal do Panamá",
+    explanation: "Obra fundamental para o comércio marítimo global.",
+    skill: "Geopolítica"
   }
 ];
