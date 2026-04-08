@@ -31228,5 +31228,127 @@ export const QUESTIONS_DB = [
     answer: "16",
     explanation: "2 x 2 x 2 x 2 = 16.",
     skill: "Potenciação"
+  },
+
+  {
+    id: 2812,
+    grade: "6º",
+    discipline: "Ciências",
+    type: "multiple",
+    text: "O que é a 'Litosfera'?",
+    options: ["A camada de água da Terra","A camada sólida externa da Terra (solo e rochas)","A camada de gases","O núcleo de ferro"],
+    answer: "A camada sólida externa da Terra (solo e rochas)",
+    explanation: "Lito vem do grego 'pedra'.",
+    skill: "Estrutura da Terra"
+  },
+  {
+    id: 2813,
+    grade: "7º",
+    discipline: "Ciências",
+    type: "multiple",
+    text: "Qual destes animais é um hermafrodita (possui os dois sexos em um mesmo indivíduo)?",
+    options: ["Cão","Gato","Minhoca","Pássaro"],
+    answer: "Minhoca",
+    explanation: "Minhocas são anelídeos que possuem ambos os sistemas reprodutores.",
+    skill: "Zoologia"
+  },
+  {
+    id: 2814,
+    grade: "8º",
+    discipline: "Ciências",
+    type: "multiple",
+    text: "A digestão mecânica que ocorre na boca é realizada por qual estrutura?",
+    options: ["Língua","Dentes","Esôfago","Estômago"],
+    answer: "Dentes",
+    explanation: "Os dentes trituram o alimento iniciando a digestão física.",
+    skill: "Sistema Digestório"
+  },
+  {
+    id: 2815,
+    grade: "9º",
+    discipline: "Ciências",
+    type: "multiple",
+    text: "A energia que um corpo possui devido ao seu movimento é chamada de:",
+    options: ["Energia Potencial","Energia Cinética","Energia Química","Energia Elétrica"],
+    answer: "Energia Cinética",
+    explanation: "Cinética vem do grego 'kinētikos' que significa movimento.",
+    skill: "Energia"
+  },
+  {
+    id: 2816,
+    grade: "6º",
+    discipline: "Geografia",
+    type: "multiple",
+    text: "Qual destes planetas é conhecido como o 'Planeta Vermelho'?",
+    options: ["Vênus","Marte","Júpiter","Saturno"],
+    answer: "Marte",
+    explanation: "Devido à presença de óxido de ferro em sua superfície.",
+    skill: "Sistema Solar"
+  },
+  {
+    id: 2817,
+    grade: "7º",
+    discipline: "Geografia",
+    type: "multiple",
+    text: "O estado da Bahia está localizado em qual região brasileira?",
+    options: ["Norte","Sudeste","Centro-Oeste","Nordeste"],
+    answer: "Nordeste",
+    explanation: "A Bahia é o estado mais populoso do Nordeste.",
+    skill: "Regionalização"
+  },
+  {
+    id: 2818,
+    grade: "8º",
+    discipline: "Geografia",
+    type: "multiple",
+    text: "O canal artificial que liga o Oceano Atlântico ao Pacífico na América Central é o:",
+    options: ["Canal de Suez","Canal do Panamá","Estreito de Gibraltar","Canal da Mancha"],
+    answer: "Canal do Panamá",
+    explanation: "Obra fundamental para o comércio marítimo global.",
+    skill: "Geopolítica"
+  },
+  {
+    id: 2819,
+    grade: "9º",
+    discipline: "Geografia",
+    type: "multiple",
+    text: "A União Europeia é um exemplo de:",
+    options: ["País","Bloco Econômico","Estado Federado","Empresa Multinacional"],
+    answer: "Bloco Econômico",
+    explanation: "Promove a integração econômica e política entre países europeus.",
+    skill: "Globalização"
+  },
+  {
+    id: 2820,
+    grade: "6º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Quanto é 3/4 de 100?",
+    options: ["25","50","75","80"],
+    answer: "75",
+    explanation: "100 dividido por 4 é 25; 25 multiplicado por 3 é 75.",
+    skill: "Frações"
+  },
+  {
+    id: 2821,
+    grade: "7º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "O resultado da expressão (-5) + (-12) é:",
+    options: ["-7","7","17","-17"],
+    answer: "-17",
+    explanation: "Soma de dois números negativos resulta em um negativo.",
+    skill: "Números Inteiros"
+  },
+  {
+    id: 2822,
+    grade: "8º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "O triplo de um número 'x' adicionado a 10 é representado por:",
+    options: ["3x + 10","x³ + 10","3 + x + 10","10x + 3"],
+    answer: "3x + 10",
+    explanation: "Triplo de x é 3x.",
+    skill: "Álgebra"
   }
 ];
