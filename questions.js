@@ -34217,5 +34217,138 @@ export const QUESTIONS_DB = [
     answer: "Hipérbole",
     explanation: "Hipérbole é o exagero intencional.",
     skill: "Figuras de Linguagem"
+  },
+
+  {
+    id: 3082,
+    grade: "6º",
+    discipline: "Educação Física",
+    type: "multiple",
+    text: "Quantos jogadores possui uma equipe de Futsal em quadra em uma partida oficial?",
+    options: ["4","5","11","7"],
+    answer: "5",
+    explanation: "O futsal é disputado por dois times de 5 jogadores cada.",
+    skill: "Futsal"
+  },
+  {
+    id: 3083,
+    grade: "7º",
+    discipline: "Educação Física",
+    type: "multiple",
+    text: "O 'Saque' é o fundamento que inicia a disputa de pontos em qual destes esportes?",
+    options: ["Futebol","Basquete","Vôlei","Handebol"],
+    answer: "Vôlei",
+    explanation: "O vôlei começa com um saque atrás da linha de fundo.",
+    skill: "Voleibol"
+  },
+  {
+    id: 3084,
+    grade: "8º",
+    discipline: "Educação Física",
+    type: "multiple",
+    text: "A prática regular de alongamentos antes e depois do exercício ajuda a melhorar a:",
+    options: ["Velocidade","Flexibilidade","Força Bruta","Miopia"],
+    answer: "Flexibilidade",
+    explanation: "O alongamento prepara o músculo e melhora a amplitude de movimento.",
+    skill: "Saúde"
+  },
+  {
+    id: 3085,
+    grade: "9º",
+    discipline: "Educação Física",
+    type: "multiple",
+    text: "O Basquetebol é um esporte de invasão cujo objetivo principal é:",
+    options: ["Marcar gols","Chutar a bola mais longe","Arremessar a bola na cesta","Derrubar o adversário"],
+    answer: "Arremessar a bola na cesta",
+    explanation: "O objetivo é pontuar através das cestas.",
+    skill: "Basquete"
+  },
+  {
+    id: 3086,
+    grade: "6º",
+    discipline: "Arte",
+    type: "multiple",
+    text: "Qual destas é considerada uma cor fria?",
+    options: ["Vermelho","Laranja","Azul","Amarelo"],
+    answer: "Azul",
+    explanation: "Cores frias transmitem calma e frescor (azul, verde, roxo).",
+    skill: "Cores"
+  },
+  {
+    id: 3087,
+    grade: "7º",
+    discipline: "Arte",
+    type: "multiple",
+    text: "A técnica de pintura que utiliza pigmentos misturados a água sobre argamassa fresca é o:",
+    options: ["Afresco","Mosaico","Grafite","Colagem"],
+    answer: "Afresco",
+    explanation: "Muito comum em igrejas e palácios renascentistas.",
+    skill: "Técnicas"
+  },
+  {
+    id: 3088,
+    grade: "8º",
+    discipline: "Arte",
+    type: "multiple",
+    text: "O estilo artístico que buscava retratar o inconsciente e os sonhos é o:",
+    options: ["Realismo","Surrealismo","Cubismo","Impressionismo"],
+    answer: "Surrealismo",
+    explanation: "Exemplo: Salvador Dalí.",
+    skill: "Vanguardas"
+  },
+  {
+    id: 3089,
+    grade: "9º",
+    discipline: "Arte",
+    type: "multiple",
+    text: "O cinema é classificado como qual destas artes?",
+    options: ["1ª Arte","3ª Arte","7ª Arte","9ª Arte"],
+    answer: "7ª Arte",
+    explanation: "Termo criado no início do século XX.",
+    skill: "Cinema"
+  },
+  {
+    id: 3090,
+    grade: "6º",
+    discipline: "Ensino Religioso",
+    type: "multiple",
+    text: "Qual destes é um símbolo da paz em diversas culturas?",
+    options: ["Uma caveira","Uma pomba branca","Um trovão","Uma espada"],
+    answer: "Uma pomba branca",
+    explanation: "Símbolo universal de harmonia e paz.",
+    skill: "Valores"
+  },
+  {
+    id: 3091,
+    grade: "7º",
+    discipline: "Ensino Religioso",
+    type: "multiple",
+    text: "A 'Regra de Ouro', presente em muitas tradições, ensina que devemos:",
+    options: ["Tratar os outros como gostaríamos de ser tratados","Sermos melhores que todos","Ignorar as necessidades alheias","Focar apenas em nós mesmos"],
+    answer: "Tratar os outros como gostaríamos de ser tratados",
+    explanation: "Princípio de ética e empatia universal.",
+    skill: "Ética"
+  },
+  {
+    id: 3092,
+    grade: "8º",
+    discipline: "Ensino Religioso",
+    type: "multiple",
+    text: "A liberdade de crença no Brasil é um direito garantido pela:",
+    options: ["Prefeitura","Internet","Constituição Federal","Igreja Local"],
+    answer: "Constituição Federal",
+    explanation: "Nossa lei maior garante que todos podem ter sua religião.",
+    skill: "Direitos"
+  },
+  {
+    id: 3093,
+    grade: "9º",
+    discipline: "Ensino Religioso",
+    type: "multiple",
+    text: "O diálogo inter-religioso é importante para promover a:",
+    options: ["Guerra entre religiões","Cultura da Paz e Tolerância","Divisão da sociedade","Extinção das crenças"],
+    answer: "Cultura da Paz e Tolerância",
+    explanation: "O diálogo ajuda a superar preconceitos.",
+    skill: "Tolerância"
   }
 ];
