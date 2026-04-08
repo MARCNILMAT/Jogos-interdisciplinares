@@ -34040,5 +34040,182 @@ export const QUESTIONS_DB = [
     answer: "50",
     explanation: "25% é a quarta parte (200 / 4 = 50).",
     skill: "Porcentagem"
+  },
+
+  {
+    id: 3066,
+    grade: "6º",
+    discipline: "História",
+    type: "multiple",
+    text: "Qual civilização antiga construiu as famosas Pirâmides de Gizé?",
+    options: ["Roma","Grécia","Egito","Fenícia"],
+    answer: "Egito",
+    explanation: "As pirâmides serviam como túmulos para os faraós.",
+    skill: "Egito Antigo"
+  },
+  {
+    id: 3067,
+    grade: "7º",
+    discipline: "História",
+    type: "multiple",
+    text: "O sistema econômico e social dominante na Europa durante a Idade Médio foi o:",
+    options: ["Capitalismo","Feudalismo","Democracia","Socialismo"],
+    answer: "Feudalismo",
+    explanation: "Baseado na vassalagem e na economia agrária.",
+    skill: "Idade Média"
+  },
+  {
+    id: 3068,
+    grade: "8º",
+    discipline: "História",
+    type: "multiple",
+    text: "A Revolução que derrubou a monarquia em 1789 e criou o lema 'Liberdade, Igualdade e Fraternidade' foi a:",
+    options: ["Industrial","Francesa","Americana","Russa"],
+    answer: "Francesa",
+    explanation: "Marco fundamental do fim do absolutismo.",
+    skill: "Revolução Francesa"
+  },
+  {
+    id: 3069,
+    grade: "9º",
+    discipline: "História",
+    type: "multiple",
+    text: "O período da 'Guerra Fria' foi marcado pela disputa ideológica entre:",
+    options: ["Alemanha e Japão","Brasil e Argentina","EUA e União Soviética","França e Inglaterra"],
+    answer: "EUA e União Soviética",
+    explanation: "Capitalismo versus Socialismo.",
+    skill: "Guerra Fria"
+  },
+  {
+    id: 3070,
+    grade: "6º",
+    discipline: "Geografia",
+    type: "multiple",
+    text: "Como se chama a linha imaginária que divide a Terra em hemisférios Norte e Sul?",
+    options: ["Meridiano de Greenwich","Linha do Equador","Trópico de Câncer","Círculo Polar"],
+    answer: "Linha do Equador",
+    explanation: "Divide a Terra horizontalmente ao meio.",
+    skill: "Coordenadas"
+  },
+  {
+    id: 3071,
+    grade: "7º",
+    discipline: "Geografia",
+    type: "multiple",
+    text: "O Brasil está localizado em qual continente?",
+    options: ["América do Norte","África","América do Sul","Oceania"],
+    answer: "América do Sul",
+    explanation: "O Brasil ocupa grande parte da massa sul-americana.",
+    skill: "Localização"
+  },
+  {
+    id: 3072,
+    grade: "8º",
+    discipline: "Geografia",
+    type: "multiple",
+    text: "O processo de integração econômica e cultural entre os países no mundo é a:",
+    options: ["Urbanização","Globalização","Colonização","Industralização"],
+    answer: "Globalização",
+    explanation: "O mundo tornou-se mais conectado pós-anos 90.",
+    skill: "Globalização"
+  },
+  {
+    id: 3073,
+    grade: "9º",
+    discipline: "Geografia",
+    type: "multiple",
+    text: "Qual fenômeno climático gera o aumento da temperatura média na Terra?",
+    options: ["El Niño","Aquecimento Global","Inversão Térmica","Chuva Ácida"],
+    answer: "Aquecimento Global",
+    explanation: "Relacionado à emissão de gases estufa.",
+    skill: "Meio Ambiente"
+  },
+  {
+    id: 3074,
+    grade: "6º",
+    discipline: "Ciências",
+    type: "multiple",
+    text: "Qual é o maior planeta do Sistema Solar?",
+    options: ["Terra","Marte","Júpiter","Saturno"],
+    answer: "Júpiter",
+    explanation: "Júpiter é um gigante gasoso.",
+    skill: "Planetas"
+  },
+  {
+    id: 3075,
+    grade: "7º",
+    discipline: "Ciências",
+    type: "multiple",
+    text: "Qual destes animais faz parte do grupo dos Anfíbios?",
+    options: ["Cobra","Sapo","Peixe","Pássaro"],
+    answer: "Sapo",
+    explanation: "Os anfíbios têm pele úmida e ciclo de vida duplo.",
+    skill: "Zoologia"
+  },
+  {
+    id: 3076,
+    grade: "8º",
+    discipline: "Ciências",
+    type: "multiple",
+    text: "Qual o principal órgão do sistema circulatório que bombeia o sangue?",
+    options: ["Pulmão","Cérebro","Coração","Fígado"],
+    answer: "Coração",
+    explanation: "O coração funciona como uma bomba muscular.",
+    skill: "Corpo Humano"
+  },
+  {
+    id: 3077,
+    grade: "9º",
+    discipline: "Ciências",
+    type: "multiple",
+    text: "A primeira lei de Newton também é conhecida como Lei da:",
+    options: ["Gravidade","Inércia","Ação e Reação","Força"],
+    answer: "Inércia",
+    explanation: "Diz que um corpo mantém seu estado até que uma força atue sobre ele.",
+    skill: "Física"
+  },
+  {
+    id: 3078,
+    grade: "6º",
+    discipline: "Português",
+    type: "multiple",
+    text: "Qual destas palavras é um Substantivo Próprio?",
+    options: ["Menino","Cidade","Brasil","Papel"],
+    answer: "Brasil",
+    explanation: "Nomes de países são substantivos próprios.",
+    skill: "Substantivos"
+  },
+  {
+    id: 3079,
+    grade: "7º",
+    discipline: "Português",
+    type: "multiple",
+    text: "Qual o antônimo de 'Orgulho'?",
+    options: ["Modéstia","Vaidade","Arrogância","Prepotência"],
+    answer: "Modéstia",
+    explanation: "Modéstia é o oposto de orgulho.",
+    skill: "Antônimos"
+  },
+  {
+    id: 3080,
+    grade: "8º",
+    discipline: "Português",
+    type: "multiple",
+    text: "Na frase 'Eu viarei amanhã', o verbo está no:",
+    options: ["Presente","Pretérito","Futuro","Imperfeito"],
+    answer: "Futuro",
+    explanation: "Indica uma ação que ainda ocorrerá.",
+    skill: "Verbos"
+  },
+  {
+    id: 3081,
+    grade: "9º",
+    discipline: "Português",
+    type: "multiple",
+    text: "A figura de linguagem que consiste em uma comparação exagerada (ex: 'Morri de rir') é a:",
+    options: ["Metáfora","Hipérbole","Ironia","Ironia"],
+    answer: "Hipérbole",
+    explanation: "Hipérbole é o exagero intencional.",
+    skill: "Figuras de Linguagem"
   }
 ];
