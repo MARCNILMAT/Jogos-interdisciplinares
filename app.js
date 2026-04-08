@@ -60,6 +60,7 @@ const dashProgressText = document.getElementById('dash-progress-text');
 const btnStartGame = document.getElementById('btn-start-game');
 const btnLogout = document.getElementById('dash-logout');
 const btnChangeTopic = document.getElementById('btn-change-topic');
+const topicsSelectionArea = document.getElementById('topics-selection-area');
 
 // Componentes Jogo
 const gameLives = document.getElementById('game-lives');
@@ -306,20 +307,8 @@ function setupEventListeners() {
     // Botão de Trocar Tópico (Dashboard)
     if (btnChangeTopic) {
         btnChangeTopic.addEventListener('click', () => {
-            const s = state.currentStudent;
-            // Preencher campos de login para facilitar
-            document.getElementById('student-name').value = s.name;
-            document.getElementById('student-grade').value = s.grade;
-            document.getElementById('student-class').value = s.class;
-            
-            // Simular seleção de disciplina anterior
-            disciplineButtons.forEach(btn => {
-                if (btn.getAttribute('data-discipline') === s.discipline) {
-                    btn.click();
-                }
-            });
-
-            switchScreen('login');
+            btnChangeTopic.classList.add('hidden');
+            topicsSelectionArea.classList.remove('hidden');
         });
     }
 
@@ -402,7 +391,11 @@ function loadDashboard() {
         s.answeredQuestions && s.answeredQuestions.includes(q.id)
     ).length;
 
-    // 3. Atualizar UI
+    // 3. Limpar área de tópicos
+    topicsSelectionArea.innerHTML = '<p style="font-size: 0.9rem; color: #6366f1; font-weight: bold; margin-bottom: 5px;">Selecione o próximo desafio:</p>';
+    topicsSelectionArea.classList.add('hidden');
+
+    // 4. Atualizar UI
     if (totalQuestions > 0) {
         const percent = Math.round((answeredInThisTopic / totalQuestions) * 100);
         dashProgressText.innerText = `Progresso: ${answeredInThisTopic} de ${totalQuestions} desafios concluídos!`;
@@ -412,6 +405,43 @@ function loadDashboard() {
             btnStartGame.innerText = "Tópico Concluído! ✅";
             btnStartGame.style.opacity = "0.7";
             btnChangeTopic.classList.remove('hidden');
+            
+            // Gerar botões para outros tópicos restantes
+            const otherQuestions = QUESTIONS_DB.filter(q => q.grade === s.grade && q.discipline === s.discipline);
+            const allTopics = [...new Set(otherQuestions.map(q => getBaseTopic(q.skill)))].filter(Boolean).sort();
+            
+            let topicsFound = 0;
+            allTopics.forEach(t => {
+                if (t === s.topic) return;
+
+                const qInTopic = otherQuestions.filter(q => getBaseTopic(q.skill) === t);
+                const ansInTopic = qInTopic.filter(q => s.answeredQuestions && s.answeredQuestions.includes(q.id)).length;
+                
+                if (ansInTopic < qInTopic.length) {
+                    const btn = document.createElement('button');
+                    btn.className = "btn btn-secondary btn-small";
+                    btn.style.width = "100%";
+                    btn.style.textAlign = "left";
+                    btn.innerHTML = `<span>${t}</span> <span style="font-size: 0.7rem; float: right;">${qInTopic.length - ansInTopic} restam</span>`;
+                    btn.onclick = () => {
+                        s.topic = t;
+                        saveStudent(s);
+                        loadDashboard();
+                    };
+                    topicsSelectionArea.appendChild(btn);
+                    topicsFound++;
+                }
+            });
+
+            if (topicsFound === 0) {
+                const msg = document.createElement('p');
+                msg.style.fontSize = "0.8rem";
+                msg.style.color = "#6b7280";
+                msg.innerText = "Você completou todas as atividades desta matéria! 🎓";
+                topicsSelectionArea.appendChild(msg);
+                topicsSelectionArea.classList.remove('hidden');
+                btnChangeTopic.classList.add('hidden');
+            }
         } else {
             btnStartGame.innerText = "Jogar Agora";
             btnStartGame.style.opacity = "1";
