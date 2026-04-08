@@ -33143,5 +33143,226 @@ export const QUESTIONS_DB = [
     answer: "Aquecimento Global",
     explanation: "Relacionado à emissão de gases estufa.",
     skill: "Meio Ambiente"
+  },
+
+  {
+    id: 2985,
+    grade: "6º",
+    discipline: "Ciências",
+    type: "multiple",
+    text: "Qual destes é um exemplo de animal vertebrado?",
+    options: ["Minhoca","Peixe","Borboleta","Aranha"],
+    answer: "Peixe",
+    explanation: "Vertebrados possuem coluna vertebral.",
+    skill: "Zoologia"
+  },
+  {
+    id: 2986,
+    grade: "7º",
+    discipline: "Ciências",
+    type: "multiple",
+    text: "As briófitas (musgos) são caracterizadas por serem:",
+    options: ["Plantas gigantes","Vasculares","Avasculares (sem vasos condutores)","Plantas com flores"],
+    answer: "Avasculares (sem vasos condutores)",
+    explanation: "Por isso são pequenas e vivem em locais úmidos.",
+    skill: "Botânica"
+  },
+  {
+    id: 2987,
+    grade: "8º",
+    discipline: "Ciências",
+    type: "multiple",
+    text: "O sistema do corpo humano que bombeia o sangue é o:",
+    options: ["Respiratório","Digestório","Circulatório","Nervoso"],
+    answer: "Circulatório",
+    explanation: "O coração é o centro deste sistema.",
+    skill: "Corpo Humano"
+  },
+  {
+    id: 2988,
+    grade: "9º",
+    discipline: "Ciências",
+    type: "multiple",
+    text: "A primeira lei de Newton é também conhecida como lei da:",
+    options: ["Ação e Reação","Inércia","Gravidade","Força"],
+    answer: "Inércia",
+    explanation: "Diz que objetos em repouso tendem a ficar em repouso.",
+    skill: "Física"
+  },
+  {
+    id: 2989,
+    grade: "6º",
+    discipline: "Educação Física",
+    type: "multiple",
+    text: "Qual esporte é jogado com uma cesta?",
+    options: ["Futebol","Vôlei","Basquete","Handebol"],
+    answer: "Basquete",
+    explanation: "O objetivo é acertar a bola na cesta adversária.",
+    skill: "Esportes"
+  },
+  {
+    id: 2990,
+    grade: "7º",
+    discipline: "Educação Física",
+    type: "multiple",
+    text: "A 'Manchete' é um fundamento de qual esporte?",
+    options: ["Basquete","Vôlei","Futsal","Tênis"],
+    answer: "Vôlei",
+    explanation: "Usada para recepção e defesa no voleibol.",
+    skill: "Vôlei"
+  },
+  {
+    id: 2991,
+    grade: "8º",
+    discipline: "Educação Física",
+    type: "multiple",
+    text: "O 'Handebol' é jogado majoritariamente com:",
+    options: ["Os pés","As mãos","Tacos","Raquetes"],
+    answer: "As mãos",
+    explanation: "É um esporte de arremesso manual.",
+    skill: "Handebol"
+  },
+  {
+    id: 2992,
+    grade: "9º",
+    discipline: "Educação Física",
+    type: "multiple",
+    text: "A prática de exercícios físicos ajuda a prevenir a:",
+    options: ["Miopia","Gripe","Obesidade","Cárie"],
+    answer: "Obesidade",
+    explanation: "Melhora o metabolismo e queima calorias.",
+    skill: "Saúde"
+  },
+  {
+    id: 2993,
+    grade: "6º",
+    discipline: "Arte",
+    type: "multiple",
+    text: "Qual destas é uma cor secundária?",
+    options: ["Vermelho","Verde","Azul","Amarelo"],
+    answer: "Verde",
+    explanation: "Verde surge da mistura de azul e amarelo.",
+    skill: "Cores"
+  },
+  {
+    id: 2994,
+    grade: "7º",
+    discipline: "Arte",
+    type: "multiple",
+    text: "O estilo artístico com formas geométricas e fragmentadas é o:",
+    options: ["Impressionismo","Cubismo","Surrealismo","Realismo"],
+    answer: "Cubismo",
+    explanation: "Exemplo famoso: Pablo Picasso.",
+    skill: "Vanguardas"
+  },
+  {
+    id: 2995,
+    grade: "8º",
+    discipline: "Arte",
+    type: "multiple",
+    text: "Quem pintou a 'Monalisa'?",
+    options: ["Van Gogh","Picasso","Leonardo da Vinci","Dalí"],
+    answer: "Leonardo da Vinci",
+    explanation: "Mestre do Renascimento.",
+    skill: "História da Arte"
+  },
+  {
+    id: 2996,
+    grade: "9º",
+    discipline: "Arte",
+    type: "multiple",
+    text: "A arte urbana feita em muros públicos é o:",
+    options: ["Mosaico","Escultura","Grafite","Performance"],
+    answer: "Grafite",
+    explanation: "O grafite é uma expressão visual urbana.",
+    skill: "Arte Urbana"
+  },
+  {
+    id: 2997,
+    grade: "6º",
+    discipline: "Inglês",
+    type: "multiple",
+    text: "Como se diz 'Cachorro' em Inglês?",
+    options: ["Cat","Dog","Bird","Fish"],
+    answer: "Dog",
+    explanation: "Dog = Cachorro.",
+    skill: "Vocabulary"
+  },
+  {
+    id: 2998,
+    grade: "7º",
+    discipline: "Inglês",
+    type: "multiple",
+    text: "Qual o pronome para 'Ela'?",
+    options: ["He","It","She","They"],
+    answer: "She",
+    explanation: "She = Ela.",
+    skill: "Pronouns"
+  },
+  {
+    id: 2999,
+    grade: "8º",
+    discipline: "Inglês",
+    type: "multiple",
+    text: "Yesterday, I ___ to school.",
+    options: ["go","goes","went","going"],
+    answer: "went",
+    explanation: "Past of to go.",
+    skill: "Past Tense"
+  },
+  {
+    id: 3000,
+    grade: "9º",
+    discipline: "Inglês",
+    type: "multiple",
+    text: "O oposto de 'Happy' é:",
+    options: ["Sad","Big","Fast","Cold"],
+    answer: "Sad",
+    explanation: "Sad = Triste.",
+    skill: "Adjectives"
+  },
+  {
+    id: 3001,
+    grade: "6º",
+    discipline: "Ensino Religioso",
+    type: "multiple",
+    text: "Qual destes é um símbolo da paz?",
+    options: ["Caveira","Pomba Branca","Raio","Espada"],
+    answer: "Pomba Branca",
+    explanation: "Símbolo universal de paz.",
+    skill: "Símbolos"
+  },
+  {
+    id: 3002,
+    grade: "7º",
+    discipline: "Ensino Religioso",
+    type: "multiple",
+    text: "O respeito às diferenças é fundamental para a:",
+    options: ["Intolerância","Convivência Social","Desigualdade","Discriminação"],
+    answer: "Convivência Social",
+    explanation: "A tolerância é base da paz.",
+    skill: "Valores"
+  },
+  {
+    id: 3003,
+    grade: "8º",
+    discipline: "Ensino Religioso",
+    type: "multiple",
+    text: "A liberdade de religião no Brasil é garantida pela:",
+    options: ["Televisão","Constituição","Empresa","Internet"],
+    answer: "Constituição",
+    explanation: "Nossa lei maior garante liberdade de culto.",
+    skill: "Direitos"
+  },
+  {
+    id: 3004,
+    grade: "9º",
+    discipline: "Ensino Religioso",
+    type: "multiple",
+    text: "O conjunto de regras morais de uma religião chama-se:",
+    options: ["Esporte","Dogma/Ética","Moda","Negócio"],
+    answer: "Dogma/Ética",
+    explanation: "Orientações de conduta.",
+    skill: "Ética"
   }
 ];
