@@ -59,6 +59,7 @@ const dashProgress = document.getElementById('dash-progress');
 const dashProgressText = document.getElementById('dash-progress-text');
 const btnStartGame = document.getElementById('btn-start-game');
 const btnLogout = document.getElementById('dash-logout');
+const btnChangeTopic = document.getElementById('btn-change-topic');
 
 // Componentes Jogo
 const gameLives = document.getElementById('game-lives');
@@ -302,6 +303,26 @@ function setupEventListeners() {
         });
     }
 
+    // Botão de Trocar Tópico (Dashboard)
+    if (btnChangeTopic) {
+        btnChangeTopic.addEventListener('click', () => {
+            const s = state.currentStudent;
+            // Preencher campos de login para facilitar
+            document.getElementById('student-name').value = s.name;
+            document.getElementById('student-grade').value = s.grade;
+            document.getElementById('student-class').value = s.class;
+            
+            // Simular seleção de disciplina anterior
+            disciplineButtons.forEach(btn => {
+                if (btn.getAttribute('data-discipline') === s.discipline) {
+                    btn.click();
+                }
+            });
+
+            switchScreen('login');
+        });
+    }
+
     // Jogo
     btnNextQuestion.addEventListener('click', handleNextQuestion);
 
@@ -390,9 +411,11 @@ function loadDashboard() {
         if (answeredInThisTopic >= totalQuestions) {
             btnStartGame.innerText = "Tópico Concluído! ✅";
             btnStartGame.style.opacity = "0.7";
+            btnChangeTopic.classList.remove('hidden');
         } else {
             btnStartGame.innerText = "Jogar Agora";
             btnStartGame.style.opacity = "1";
+            btnChangeTopic.classList.add('hidden');
         }
     } else {
         dashProgressText.innerText = `Ainda não temos desafios para este tópico.`;
