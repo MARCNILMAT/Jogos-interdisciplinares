@@ -29377,5 +29377,138 @@ export const QUESTIONS_DB = [
     answer: "China",
     explanation: "A China é uma das maiores potências globais.",
     skill: "Geografia da Ásia"
+  },
+
+  {
+    id: 2645,
+    grade: "6º",
+    discipline: "Inglês",
+    type: "multiple",
+    text: "How do you say 'cachorro' in English?",
+    options: ["Cat","Dog","Bird","Fish"],
+    answer: "Dog",
+    explanation: "Animal de estimação comum.",
+    skill: "Vocabulary: Animals"
+  },
+  {
+    id: 2646,
+    grade: "7º",
+    discipline: "Inglês",
+    type: "multiple",
+    text: "The pronoun for a girl is:",
+    options: ["He","She","It","They"],
+    answer: "She",
+    explanation: "She = Ela.",
+    skill: "Pronouns"
+  },
+  {
+    id: 2647,
+    grade: "8º",
+    discipline: "Inglês",
+    type: "multiple",
+    text: "What is the past tense of the verb 'to go'?",
+    options: ["Goes","Going","Went","Gone"],
+    answer: "Went",
+    explanation: "Went é o passado irregular de go.",
+    skill: "Simple Past"
+  },
+  {
+    id: 2648,
+    grade: "9º",
+    discipline: "Inglês",
+    type: "multiple",
+    text: "Choose the correct comparative: 'The elephant is ___ than the cat.'",
+    options: ["Big","Bigger","Biggest","More big"],
+    answer: "Bigger",
+    explanation: "Adjetivos curtos recebem -er no comparativo.",
+    skill: "Comparatives"
+  },
+  {
+    id: 2649,
+    grade: "6º",
+    discipline: "Ensino Religioso",
+    type: "multiple",
+    text: "Qual destes é um símbolo universal da paz?",
+    options: ["Uma caveira","Uma pomba branca","Um raio","Uma espada"],
+    answer: "Uma pomba branca",
+    explanation: "A pomba com um ramo de oliveira simboliza a paz.",
+    skill: "Símbolos"
+  },
+  {
+    id: 2650,
+    grade: "7º",
+    discipline: "Ensino Religioso",
+    type: "multiple",
+    text: "O respeito às diferentes crenças e religiões chama-se:",
+    options: ["Intolerância","Tolerância Religiosa","Preconceito","Segregação"],
+    answer: "Tolerância Religiosa",
+    explanation: "Base para a convivência pacífica em sociedade.",
+    skill: "Respeito"
+  },
+  {
+    id: 2651,
+    grade: "8º",
+    discipline: "Ensino Religioso",
+    type: "multiple",
+    text: "O conjunto de valores que orientam o que é certo ou errado é a:",
+    options: ["Moda","Ética","Política","Economia"],
+    answer: "Ética",
+    explanation: "A ética estuda a conduta humana e seus valores.",
+    skill: "Valores"
+  },
+  {
+    id: 2652,
+    grade: "9º",
+    discipline: "Ensino Religioso",
+    type: "multiple",
+    text: "A liberdade de crença é garantida no Brasil pela:",
+    options: ["Empresa","Constituição Federal","Televisão","Internet"],
+    answer: "Constituição Federal",
+    explanation: "A lei máxima do país garante a liberdade religiosa.",
+    skill: "Direitos Humanos"
+  },
+  {
+    id: 2653,
+    grade: "6º",
+    discipline: "Educação Física",
+    type: "multiple",
+    text: "No Futsal, o jogador que pode usar as mãos dentro da área é o:",
+    options: ["Fixo","Ala","Pivô","Goleiro"],
+    answer: "Goleiro",
+    explanation: "O goleiro defende o gol e pode usar as mãos na área.",
+    skill: "Futsal"
+  },
+  {
+    id: 2654,
+    grade: "7º",
+    discipline: "Educação Física",
+    type: "multiple",
+    text: "Quantos jogadores compõem uma equipe de Voleibol em quadra?",
+    options: ["5","6","11","7"],
+    answer: "6",
+    explanation: "Cada time joga com 6 atletas titulares.",
+    skill: "Voleibol"
+  },
+  {
+    id: 2655,
+    grade: "8º",
+    discipline: "Educação Física",
+    type: "multiple",
+    text: "No Basquetebol, uma cesta de lance livre vale quantos pontos?",
+    options: ["1 ponto","2 pontos","3 pontos","5 pontos"],
+    answer: "1 ponto",
+    explanation: "Lance livre é cobrado após faltas e vale 1 ponto.",
+    skill: "Basquete"
+  },
+  {
+    id: 2656,
+    grade: "9º",
+    discipline: "Educação Física",
+    type: "multiple",
+    text: "A prática regular de exercícios ajuda a prevenir qual destas doenças?",
+    options: ["Gripe","Hipertensão","Miopia","Fraturas"],
+    answer: "Hipertensão",
+    explanation: "Melhora a circulação e fortalece o coração.",
+    skill: "Qualidade de Vida"
   }
 ];
