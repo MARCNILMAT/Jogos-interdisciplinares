@@ -32579,5 +32579,215 @@ export const QUESTIONS_DB = [
     answer: "CFC (Clorofluorcarboneto)",
     explanation: "O CFC destrói as moléculas de ozônio na estratosfera.",
     skill: "Impactos Ambientais"
+  },
+
+  {
+    id: 2934,
+    grade: "6º",
+    discipline: "Inglês",
+    type: "multiple",
+    text: "What color is the sky on a sunny day?",
+    options: ["Green","Blue","Red","Yellow"],
+    answer: "Blue",
+    explanation: "Blue = Azul.",
+    skill: "Colors"
+  },
+  {
+    id: 2935,
+    grade: "6º",
+    discipline: "Inglês",
+    type: "multiple",
+    text: "My mother's brother is my ___.",
+    options: ["Aunt","Uncle","Cousin","Grandfather"],
+    answer: "Uncle",
+    explanation: "Uncle = Tio.",
+    skill: "Family"
+  },
+  {
+    id: 2936,
+    grade: "7º",
+    discipline: "Inglês",
+    type: "multiple",
+    text: "How do you say 'maçã' in English?",
+    options: ["Grape","Apple","Orange","Banana"],
+    answer: "Apple",
+    explanation: "Apple = Maçã.",
+    skill: "Food"
+  },
+  {
+    id: 2937,
+    grade: "8º",
+    discipline: "Inglês",
+    type: "multiple",
+    text: "The opposite of 'Small' is:",
+    options: ["Little","Short","Big","Thin"],
+    answer: "Big",
+    explanation: "Big = Grande.",
+    skill: "Adjectives"
+  },
+  {
+    id: 2938,
+    grade: "9º",
+    discipline: "Inglês",
+    type: "multiple",
+    text: "I ___ a movie last night.",
+    options: ["watch","watches","watched","watching"],
+    answer: "watched",
+    explanation: "Simple Past: watched.",
+    skill: "Past Tense"
+  },
+  {
+    id: 2939,
+    grade: "6º",
+    discipline: "Ensino Religioso",
+    type: "multiple",
+    text: "Qual destes é um símbolo da paz?",
+    options: ["Uma caveira","Uma pomba branca","Um raio","Uma espada"],
+    answer: "Uma pomba branca",
+    explanation: "Símbolo universal de paz e harmonia.",
+    skill: "Valores"
+  },
+  {
+    id: 2940,
+    grade: "7º",
+    discipline: "Ensino Religioso",
+    type: "multiple",
+    text: "O respeito às diferenças é fundamental para a:",
+    options: ["Guerra","Intolerância","Convivência Social","Desigualdade"],
+    answer: "Convivência Social",
+    explanation: "A tolerância permite que todos vivam bem juntos.",
+    skill: "Respeito"
+  },
+  {
+    id: 2941,
+    grade: "8º",
+    discipline: "Ensino Religioso",
+    type: "multiple",
+    text: "Qual destes é considerado um local sagrado para os Judeus?",
+    options: ["Muro das Lamentações","Catedral da Sé","Mesquita de Al-Aqsa","Templo de Salomão"],
+    answer: "Muro das Lamentações",
+    explanation: "Local de oração e peregrinação em Jerusalém.",
+    skill: "Locais Sagrados"
+  },
+  {
+    id: 2942,
+    grade: "6º",
+    discipline: "Arte",
+    type: "multiple",
+    text: "Qual destas é uma cor primária?",
+    options: ["Verde","Laranja","Vermelho","Roxo"],
+    answer: "Vermelho",
+    explanation: "As cores primárias são Vermelho, Amarelo e Azul.",
+    skill: "Cores"
+  },
+  {
+    id: 2943,
+    grade: "7º",
+    discipline: "Arte",
+    type: "multiple",
+    text: "O estilo de pintura que utiliza pontos de cor lado a lado é o:",
+    options: ["Cubismo","Pontilhismo","Surrealismo","Pop Art"],
+    answer: "Pontilhismo",
+    explanation: "Técnica de Seurat e Signac.",
+    skill: "Técnicas"
+  },
+  {
+    id: 2944,
+    grade: "8º",
+    discipline: "Arte",
+    type: "multiple",
+    text: "A arte de dobrar papel para criar objetos chama-se:",
+    options: ["Mosaico","Origami","Escultura","Grafite"],
+    answer: "Origami",
+    explanation: "Origami é uma tradição japonesa.",
+    skill: "Expressão Visual"
+  },
+  {
+    id: 2945,
+    grade: "9º",
+    discipline: "Arte",
+    type: "multiple",
+    text: "O cinema é conhecido como qual arte?",
+    options: ["Sexta Arte","Sétima Arte","Oitava Arte","Nona Arte"],
+    answer: "Sétima Arte",
+    explanation: "Denominação clássica para o cinema.",
+    skill: "Audiovisual"
+  },
+  {
+    id: 2946,
+    grade: "6º",
+    discipline: "Educação Física",
+    type: "multiple",
+    text: "No Futsal, quantos jogadores cada equipe tem em quadra?",
+    options: ["5","6","11","7"],
+    answer: "5",
+    explanation: "O futsal é jogado com 5 titulares por time.",
+    skill: "Esportes"
+  },
+  {
+    id: 2947,
+    grade: "7º",
+    discipline: "Educação Física",
+    type: "multiple",
+    text: "O sistema de pontuação 'Set' é usado em qual esporte?",
+    options: ["Futebol","Basquete","Vôlei","Handebol"],
+    answer: "Vôlei",
+    explanation: "As partidas de vôlei são divididas em sets (geralmente até 25 pontos).",
+    skill: "Vôlei"
+  },
+  {
+    id: 2948,
+    grade: "8º",
+    discipline: "Educação Física",
+    type: "multiple",
+    text: "A prática regular de exercícios ajuda a prevenir a:",
+    options: ["Gripe","Obesidade","Miopia","Fraturas"],
+    answer: "Obesidade",
+    explanation: "Ajuda no controle do peso e saúde metabólica.",
+    skill: "Saúde"
+  },
+  {
+    id: 2949,
+    grade: "6º",
+    discipline: "Português",
+    type: "multiple",
+    text: "Qual destas palavras é um Substantivo Próprio?",
+    options: ["Cidade","Brasil","Pessoa","Animal"],
+    answer: "Brasil",
+    explanation: "Nomes de países são substantivos próprios.",
+    skill: "Classes de Palavras"
+  },
+  {
+    id: 2950,
+    grade: "7º",
+    discipline: "Português",
+    type: "multiple",
+    text: "O antônimo de 'Orgulho' é:",
+    options: ["Vaidade","Modéstia","Arrogância","Prepotência"],
+    answer: "Modéstia",
+    explanation: "Modéstia é a qualidade de quem não se enaltece.",
+    skill: "Vocabulário"
+  },
+  {
+    id: 2951,
+    grade: "8º",
+    discipline: "Português",
+    type: "multiple",
+    text: "Na frase 'Eu viarei amanhã', o verbo está no:",
+    options: ["Presente","Pretérito","Futuro","Imperfeito"],
+    answer: "Futuro",
+    explanation: "Indica uma ação que ainda vai acontecer.",
+    skill: "Verbos"
+  },
+  {
+    id: 2952,
+    grade: "9º",
+    discipline: "Português",
+    type: "multiple",
+    text: "Qual figura de linguagem é uma comparação exagerada (ex: 'Morri de rir')?",
+    options: ["Metáfora","Hipérbole","Ironia","Eufemismo"],
+    answer: "Hipérbole",
+    explanation: "Hipérbole é o exagero intencional.",
+    skill: "Figuras de Linguagem"
   }
 ];
