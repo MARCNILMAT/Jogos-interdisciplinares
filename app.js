@@ -368,14 +368,36 @@ function loadDashboard() {
     
     const getBaseTopic = (skill) => skill ? skill.replace(/\s*\([^)]*\)/g, '').trim() : '';
     
-    // Progresso baseado nas questões disponíveis
-    const totalQuestions = QUESTIONS_DB.filter(q => 
+    // 1. Total de questões disponíveis para este tópico/disciplina
+    const filteredDB = QUESTIONS_DB.filter(q => 
         q.grade === s.grade && 
         q.discipline === s.discipline &&
         (!s.topic || getBaseTopic(q.skill) === s.topic)
+    );
+    const totalQuestions = filteredDB.length;
+
+    // 2. Quantas dessas o aluno já respondeu (ID está no answeredQuestions)
+    const answeredInThisTopic = filteredDB.filter(q => 
+        s.answeredQuestions && s.answeredQuestions.includes(q.id)
     ).length;
-    dashProgressText.innerText = `Você tem ${totalQuestions} desafios disponíveis!`;
-    dashProgress.style.width = "0%";
+
+    // 3. Atualizar UI
+    if (totalQuestions > 0) {
+        const percent = Math.round((answeredInThisTopic / totalQuestions) * 100);
+        dashProgressText.innerText = `Progresso: ${answeredInThisTopic} de ${totalQuestions} desafios concluídos!`;
+        dashProgress.style.width = `${percent}%`;
+        
+        if (answeredInThisTopic >= totalQuestions) {
+            btnStartGame.innerText = "Tópico Concluído! ✅";
+            btnStartGame.style.opacity = "0.7";
+        } else {
+            btnStartGame.innerText = "Jogar Agora";
+            btnStartGame.style.opacity = "1";
+        }
+    } else {
+        dashProgressText.innerText = `Ainda não temos desafios para este tópico.`;
+        dashProgress.style.width = "0%";
+    }
 }
 
 // --- LÓGICA DO JOGO ---
@@ -386,38 +408,21 @@ function startNewGame() {
 
     const getBaseTopic = (skill) => skill ? skill.replace(/\s*\([^)]*\)/g, '').trim() : '';
 
-    // 1. Filtrar questões livres (não respondidas) e de tópicos não concluídos
+    // 1. Filtrar questões livres (não respondidas)
     let questions = QUESTIONS_DB.filter(q => 
         q.grade === s.grade && 
         q.discipline === s.discipline && 
         (!s.topic || getBaseTopic(q.skill) === s.topic) &&
-        !s.completedTopics.includes(getBaseTopic(q.skill)) && // <-- NOVO: Exclui já completados
         !s.answeredQuestions.includes(q.id)
     );
 
-    // 2. Fallback: Se acabaram as perguntas novas, avisa e reinicia o ciclo
+    // 2. Se não houver mais questões, avisa para escolher outro tópico
     if (questions.length === 0) {
-        const totalAvail = QUESTIONS_DB.filter(q => 
-            q.grade === s.grade && 
-            q.discipline === s.discipline &&
-            (!s.topic || getBaseTopic(q.skill) === s.topic)
-        ).length;
-        if (totalAvail > 0) {
-            alert("🎉 Você respondeu todos os desafios deste tópico! Reiniciando o ciclo para você treinar mais!");
-            s.answeredQuestions = []; // Limpa histórico para recomeçar
-            saveStudent(s); // Salva a limpeza
-            questions = QUESTIONS_DB.filter(q => 
-                q.grade === s.grade && 
-                q.discipline === s.discipline &&
-                (!s.topic || getBaseTopic(q.skill) === s.topic)
-            );
-        } else {
-            alert("Desculpe, ainda não temos questões para essa matéria/série.");
-            return;
-        }
+        alert("🎉 Você já resolveu todos os desafios deste tópico! Por favor, escolha outro tópico ou disciplina para continuar sua aventura.");
+        return;
     }
 
-    // 3. Limitar a 15 questões (NOVO)
+    // 3. Limitar a 15 questões por sessão (ou o que sobrar)
     questions = shuffleArray([...questions]).slice(0, 15);
 
     state.game = {
