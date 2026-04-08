@@ -34616,5 +34616,116 @@ export const QUESTIONS_DB = [
     answer: "EUA e União Soviética",
     explanation: "Capitalismo versus Socialismo.",
     skill: "Guerra Fria"
+  },
+
+  {
+    id: 3118,
+    grade: "6º",
+    discipline: "Arte",
+    type: "multiple",
+    text: "Qual destas é considerada uma cor fria?",
+    options: ["Vermelho","Laranja","Azul","Amarelo"],
+    answer: "Azul",
+    explanation: "Cores frias transmitem calma e frescor (azul, verde, roxo).",
+    skill: "Cores"
+  },
+  {
+    id: 3119,
+    grade: "7º",
+    discipline: "Arte",
+    type: "multiple",
+    text: "A técnica de pintura que utiliza pigmentos misturados a água sobre argamassa fresca é o:",
+    options: ["Afresco","Mosaico","Grafite","Colagem"],
+    answer: "Afresco",
+    explanation: "Muito comum em igrejas e palácios renascentistas.",
+    skill: "Técnicas"
+  },
+  {
+    id: 3120,
+    grade: "8º",
+    discipline: "Arte",
+    type: "multiple",
+    text: "O estilo artístico que buscava retratar o inconsciente e os sonhos é o:",
+    options: ["Realismo","Surrealismo","Cubismo","Impressionismo"],
+    answer: "Surrealismo",
+    explanation: "Exemplo: Salvador Dalí.",
+    skill: "Vanguardas"
+  },
+  {
+    id: 3121,
+    grade: "9º",
+    discipline: "Arte",
+    type: "multiple",
+    text: "O cinema é classificado como qual destas artes?",
+    options: ["1ª Arte","3ª Arte","7ª Arte","9ª Arte"],
+    answer: "7ª Arte",
+    explanation: "Termo criado no início do século XX.",
+    skill: "Cinema"
+  },
+  {
+    id: 3122,
+    grade: "6º",
+    discipline: "Educação Física",
+    type: "multiple",
+    text: "Quantos jogadores possui uma equipe de Futsal em quadra em uma partida oficial?",
+    options: ["4","5","11","7"],
+    answer: "5",
+    explanation: "O futsal é disputado por dois times de 5 jogadores cada.",
+    skill: "Futsal"
+  },
+  {
+    id: 3123,
+    grade: "7º",
+    discipline: "Educação Física",
+    type: "multiple",
+    text: "O 'Saque' é o fundamento que inicia a disputa de pontos em qual destes esportes?",
+    options: ["Futebol","Basquete","Vôlei","Handebol"],
+    answer: "Vôlei",
+    explanation: "O vôlei começa com um saque atrás da linha de fundo.",
+    skill: "Voleibol"
+  },
+  {
+    id: 3124,
+    grade: "8º",
+    discipline: "Educação Física",
+    type: "multiple",
+    text: "A prática regular de alongamentos antes e depois do exercício ajuda a melhorar a:",
+    options: ["Velocidade","Flexibilidade","Força Bruta","Miopia"],
+    answer: "Flexibilidade",
+    explanation: "O alongamento prepara o músculo e melhora a amplitude de movimento.",
+    skill: "Saúde"
+  },
+  {
+    id: 3125,
+    grade: "9º",
+    discipline: "Educação Física",
+    type: "multiple",
+    text: "O Basquetebol é um esporte de invasão cujo objetivo principal é:",
+    options: ["Marcar gols","Chutar a bola mais longe","Arremessar a bola na cesta","Derrubar o adversário"],
+    answer: "Arremessar a bola na cesta",
+    explanation: "O objetivo é pontuar através das cestas.",
+    skill: "Basquete"
+  },
+  {
+    id: 3126,
+    grade: "6º",
+    discipline: "Ensino Religioso",
+    type: "multiple",
+    text: "Qual destes é um símbolo da paz em diversas culturas?",
+    options: ["Uma caveira","Uma pomba branca","Um trovão","Uma espada"],
+    answer: "Uma pomba branca",
+    explanation: "Símbolo universal de harmonia e paz.",
+    skill: "Valores"
+  },
+  {
+    id: 3127,
+    grade: "7º",
+    discipline: "Ensino Religioso",
+    type: "multiple",
+    text: "A 'Regra de Ouro', presente em muitas tradições, ensina que devemos:",
+    options: ["Tratar os outros como gostaríamos de ser tratados","Sermos melhores que todos","Ignorar as necessidades alheias","Focar apenas em nós mesmos"],
+    answer: "Tratar os outros como gostaríamos de ser tratados",
+    explanation: "Princípio de ética e empatia universal.",
+    skill: "Ética"
   }
 ];
