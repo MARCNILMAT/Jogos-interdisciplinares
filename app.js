@@ -668,22 +668,26 @@ function exportToPDF() {
         const { jsPDF } = window.jspdf;
         const doc = new jsPDF();
 
-        // Título
+        // Título Principal
         doc.setFontSize(18);
+        doc.setTextColor(0, 0, 0);
         doc.text("SaberMG - Relatório de Desempenho", 14, 20);
         
-        doc.setFontSize(12);
-        doc.text(`Filtro Aplicado: ${state.adminFilter === 'all' ? 'Todas as Disciplinas' : state.adminFilter}`, 14, 30);
-        doc.text(`Data: ${new Date().toLocaleDateString('pt-BR')}`, 14, 38);
+        doc.setFontSize(11);
+        doc.setTextColor(100, 100, 100);
+        doc.text(`Filtro Aplicado: ${state.adminFilter === 'all' ? 'Todas as Disciplinas' : state.adminFilter}`, 14, 28);
+        doc.text(`Data do Relatório: ${new Date().toLocaleDateString('pt-BR')} ${new Date().toLocaleTimeString('pt-BR')}`, 14, 34);
 
-        // Pegar dados da tabela Renderizada
-        const rows = [];
+        // 1. Agrupar dados por Série/Turma
+        const groups = {};
         const trs = adminTableBody.querySelectorAll('tr');
         
         trs.forEach(tr => {
             const tds = tr.querySelectorAll('td');
             if (tds.length >= 6) {
-                rows.push([
+                const groupKey = tds[1].innerText; // Ex: "6º Ano - A"
+                if (!groups[groupKey]) groups[groupKey] = [];
+                groups[groupKey].push([
                     tds[0].innerText, // Aluno
                     tds[1].innerText, // Série/Turma
                     tds[2].innerText, // Matéria
@@ -694,17 +698,40 @@ function exportToPDF() {
             }
         });
 
-        if (rows.length === 0) {
+        const sortedGroupKeys = Object.keys(groups).sort();
+
+        if (sortedGroupKeys.length === 0) {
             alert("Não há dados para exportar!");
             return;
         }
 
-        doc.autoTable({
-            startY: 45,
-            head: [['Aluno', 'Série/Turma', 'Matéria', 'Pontos', 'Acertos', 'Erros']],
-            body: rows,
-            theme: 'striped',
-            headStyles: { fillColor: [99, 102, 241] } // Cor primária do app (Indigo)
+        // 2. Renderizar cada grupo no PDF
+        let currentY = 45;
+
+        sortedGroupKeys.forEach((groupKey, index) => {
+            // Verificar se precisa de nova página antes do título do grupo
+            if (currentY > 240) {
+                doc.addPage();
+                currentY = 20;
+            }
+
+            // Título do Grupo (Série/Turma)
+            doc.setFontSize(14);
+            doc.setTextColor(99, 102, 241); // Indigo
+            doc.text(`Turma: ${groupKey}`, 14, currentY);
+            
+            doc.autoTable({
+                startY: currentY + 4,
+                head: [['Aluno', 'Série/Turma', 'Matéria', 'Pontos', 'Acertos', 'Erros']],
+                body: groups[groupKey],
+                theme: 'striped',
+                headStyles: { fillColor: [99, 102, 241] },
+                styles: { fontSize: 10 },
+                margin: { left: 14, right: 14 }
+            });
+
+            // Atualiza o Y para o próximo grupo baseado no fim da tabela anterior
+            currentY = doc.lastAutoTable.finalY + 15;
         });
 
         doc.save(`Relatorio_SaberMG_${state.adminFilter}_${Date.now()}.pdf`);
