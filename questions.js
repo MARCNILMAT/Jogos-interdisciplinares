@@ -37455,5 +37455,226 @@ export const QUESTIONS_DB = [
     answer: "Baleia",
     explanation: "Baleias respiram por pulmões e amamentam os filhotes.",
     skill: "Zoologia"
+  },
+
+  {
+    id: 3375,
+    grade: "6º",
+    discipline: "Português",
+    type: "multiple",
+    text: "Qual destas palavras é um PRONOME?",
+    options: ["Ele","Livro","Mesa","Lápis"],
+    answer: "Ele",
+    explanation: "Ele é um pronome pessoal do caso reto.",
+    skill: "Classes de Palavras"
+  },
+  {
+    id: 3376,
+    grade: "7º",
+    discipline: "Português",
+    type: "multiple",
+    text: "O plural da palavra 'Papel' é:",
+    options: ["Papéis","Papels","Papeles","Papeis"],
+    answer: "Papéis",
+    explanation: "Palavras terminadas em -el fazem o plural em -éis.",
+    skill: "Morfologia"
+  },
+  {
+    id: 3377,
+    grade: "8º",
+    discipline: "Português",
+    type: "multiple",
+    text: "A palavra 'Médico' é classificada como:",
+    options: ["Oxítona","Paroxítona","Proparoxítona","Monossílaba"],
+    answer: "Proparoxítona",
+    explanation: "A sílaba tônica é a antepenúltima.",
+    skill: "Acentuação"
+  },
+  {
+    id: 3378,
+    grade: "9º",
+    discipline: "Português",
+    type: "multiple",
+    text: "A figura de linguagem que utiliza o exagero intencional (ex: 'Morri de rir') é a:",
+    options: ["Metáfora","Hipérbole","Ironia","Eufemismo"],
+    answer: "Hipérbole",
+    explanation: "A hipérbole enfatiza uma ideia através do excesso.",
+    skill: "Figuras de Linguagem"
+  },
+  {
+    id: 3379,
+    grade: "6º",
+    discipline: "Português",
+    type: "multiple",
+    text: "Qual o substantivo coletivo de 'Peixes'?",
+    options: ["Cardume","Alcateia","Enxame","Bando"],
+    answer: "Cardume",
+    explanation: "Cardume é o conjunto de peixes.",
+    skill: "Substantivos"
+  },
+  {
+    id: 3380,
+    grade: "7º",
+    discipline: "Português",
+    type: "multiple",
+    text: "A palavra 'Bexiga' se escreve corretamente com:",
+    options: ["X","CH","S","G"],
+    answer: "X",
+    explanation: "Regras de ortografia da língua portuguesa.",
+    skill: "Ortografia"
+  },
+  {
+    id: 3381,
+    grade: "8º",
+    discipline: "Português",
+    type: "multiple",
+    text: "No verso 'O sol sorriu para mim', temos qual figura de linguagem?",
+    options: ["Metáfora","Personificação (Prosopopeia)","Hipérbole","Aliteração"],
+    answer: "Personificação (Prosopopeia)",
+    explanation: "Atribui ações humanas a seres inanimados.",
+    skill: "Figuras de Linguagem"
+  },
+  {
+    id: 3382,
+    grade: "9º",
+    discipline: "Português",
+    type: "multiple",
+    text: "A conjunção 'Mas' indica uma ideia de:",
+    options: ["Adição","Oposição (Contraste)","Causa","Explicação"],
+    answer: "Oposição (Contraste)",
+    explanation: "É uma conjunção adversativa.",
+    skill: "Conjunções"
+  },
+  {
+    id: 3383,
+    grade: "6º",
+    discipline: "História",
+    type: "multiple",
+    text: "A invenção da escrita marca o início de qual período histórico?",
+    options: ["Pré-História","Idade Antiga","Idade Média","Idade Moderna"],
+    answer: "Idade Antiga",
+    explanation: "O registro escrito diferencia a história da pré-história.",
+    skill: "Conceitos"
+  },
+  {
+    id: 3384,
+    grade: "7º",
+    discipline: "História",
+    type: "multiple",
+    text: "O sistema econômico e social dominante na Europa medieval foi o:",
+    options: ["Capitalismo","Feudalismo","Socialismo","Mercantilismo"],
+    answer: "Feudalismo",
+    explanation: "Baseado na posse da terra e vassalagem.",
+    skill: "Idade Média"
+  },
+  {
+    id: 3385,
+    grade: "8º",
+    discipline: "História",
+    type: "multiple",
+    text: "Qual país foi o pioneiro na Revolução Industrial?",
+    options: ["França","EUA","Inglaterra","Alemanha"],
+    answer: "Inglaterra",
+    explanation: "A Inglaterra possuía carvão, ferro e capital acumulado.",
+    skill: "Revolução Industrial"
+  },
+  {
+    id: 3386,
+    grade: "9º",
+    discipline: "História",
+    type: "multiple",
+    text: "A 'Guerra Fria' foi um conflito ideológico entre quais duas potências?",
+    options: ["Brasil e Portugal","Alemanha e Japão","EUA e União Soviética (URSS)","França e Inglaterra"],
+    answer: "EUA e União Soviética (URSS)",
+    explanation: "Disputa entre Capitalismo e Socialismo.",
+    skill: "Guerra Fria"
+  },
+  {
+    id: 3387,
+    grade: "6º",
+    discipline: "História",
+    type: "multiple",
+    text: "Qual civilização antiga construiu as famosas Pirâmides de Gizé?",
+    options: ["Grega","Romana","Egípcia","Fenícia"],
+    answer: "Egípcia",
+    explanation: "Serviam como túmulos para os faraós.",
+    skill: "Antiguidade"
+  },
+  {
+    id: 3388,
+    grade: "7º",
+    discipline: "História",
+    type: "multiple",
+    text: "O movimento que buscava separar o Brasil de Portugal em 1789, em Minas Gerais, foi a:",
+    options: ["Guerra dos Farrapos","Inconfidência Mineira","Revolta da Chibata","Sabinada"],
+    answer: "Inconfidência Mineira",
+    explanation: "Liderada por figuras como Tiradentes.",
+    skill: "Brasil Colônia"
+  },
+  {
+    id: 3389,
+    grade: "6º",
+    discipline: "Geografia",
+    type: "multiple",
+    text: "Como se chama a linha imaginária que divide a Terra em Leste e Oeste?",
+    options: ["Linha do Equador","Meridiano de Greenwich","Trópico de Câncer","Círculo Polar"],
+    answer: "Meridiano de Greenwich",
+    explanation: "É o meridiano de referência (0º).",
+    skill: "Cartografia"
+  },
+  {
+    id: 3390,
+    grade: "7º",
+    discipline: "Geografia",
+    type: "multiple",
+    text: "Qual o maior país da América do Sul em extensão territorial?",
+    options: ["Argentina","Chile","Brasil","Colômbia"],
+    answer: "Brasil",
+    explanation: "O Brasil ocupa quase metade da massa sul-americana.",
+    skill: "Brasil"
+  },
+  {
+    id: 3391,
+    grade: "8º",
+    discipline: "Geografia",
+    type: "multiple",
+    text: "O processo de integração econômica e cultural entre os países do mundo é a:",
+    options: ["Globalização","Urbanização","Desertificação","Erosão"],
+    answer: "Globalização",
+    explanation: "Facilita trocas comerciais e informação global.",
+    skill: "Mundo Atual"
+  },
+  {
+    id: 3392,
+    grade: "9º",
+    discipline: "Geografia",
+    type: "multiple",
+    text: "Qual fenômeno climático gera o aumento da temperatura média na Terra?",
+    options: ["El Niño","Aquecimento Global","Inversão Térmica","Chuva Ácida"],
+    answer: "Aquecimento Global",
+    explanation: "Relacionado à emissão de gases estufa.",
+    skill: "Meio Ambiente"
+  },
+  {
+    id: 3393,
+    grade: "6º",
+    discipline: "Geografia",
+    type: "multiple",
+    text: "O movimento de a Terra girar em torno de si mesma chama-se:",
+    options: ["Translação","Rotação","Oscilação","Nutação"],
+    answer: "Rotação",
+    explanation: "Leva 24 horas e gera dias e noites.",
+    skill: "Terra"
+  },
+  {
+    id: 3394,
+    grade: "7º",
+    discipline: "Geografia",
+    type: "multiple",
+    text: "Qual bioma brasileiro é conhecido por sua vegetação de árvores retorcidas em MG?",
+    options: ["Amazônia","Cerrado","Caatinga","Pampas"],
+    answer: "Cerrado",
+    explanation: "O Cerrado é o segundo maior bioma do Brasil.",
+    skill: "Biomas"
   }
 ];
