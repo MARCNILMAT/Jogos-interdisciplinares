@@ -37897,5 +37897,226 @@ export const QUESTIONS_DB = [
     answer: "Tratar os outros como gostaríamos de ser tratados",
     explanation: "Princípio universal de ética e empatia.",
     skill: "Ética"
+  },
+
+  {
+    id: 3415,
+    grade: "6º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Qual o resultado de 12 x 5?",
+    options: ["50","55","60","65"],
+    answer: "60",
+    explanation: "12 x 5 = 60.",
+    skill: "Cálculo"
+  },
+  {
+    id: 3416,
+    grade: "7º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Quanto é 25% de 200?",
+    options: ["25","50","100","150"],
+    answer: "50",
+    explanation: "25% é a quarta parte (200 / 4 = 50).",
+    skill: "Porcentagem"
+  },
+  {
+    id: 3417,
+    grade: "8º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "A raiz quadrada de 169 é:",
+    options: ["11","12","13","14"],
+    answer: "13",
+    explanation: "13 x 13 = 169.",
+    skill: "Radiciação"
+  },
+  {
+    id: 3418,
+    grade: "9º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "O valor de x na equação 2x + 10 = 30 é:",
+    options: ["5","10","15","20"],
+    answer: "10",
+    explanation: "2x = 20 -> x = 10.",
+    skill: "Equações"
+  },
+  {
+    id: 3419,
+    grade: "6º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "O perímetro de um quadrado de lado 6cm é:",
+    options: ["12cm","24cm","36cm","48cm"],
+    answer: "24cm",
+    explanation: "Perímetro = 4 x Lado = 4 x 6 = 24.",
+    skill: "Geometria"
+  },
+  {
+    id: 3420,
+    grade: "7º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Qual o MMC entre 3 e 4?",
+    options: ["7","12","24","1"],
+    answer: "12",
+    explanation: "Menor múltiplo comum.",
+    skill: "MMC"
+  },
+  {
+    id: 3421,
+    grade: "8º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Um ângulo raso mede quantos graus?",
+    options: ["90º","180º","270º","360º"],
+    answer: "180º",
+    explanation: "Corresponde a meia volta.",
+    skill: "Ângulos"
+  },
+  {
+    id: 3422,
+    grade: "9º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Qual a soma dos ângulos internos de um triângulo?",
+    options: ["90º","180º","270º","360º"],
+    answer: "180º",
+    explanation: "Sempre 180º na geometria plana.",
+    skill: "Triângulos"
+  },
+  {
+    id: 3423,
+    grade: "6º",
+    discipline: "Português",
+    type: "multiple",
+    text: "Qual destas palavras é um Substantivo Próprio?",
+    options: ["Menino","Brasil","Cidade","Papel"],
+    answer: "Brasil",
+    explanation: "Nomes de países são substantivos próprios.",
+    skill: "Substantivos"
+  },
+  {
+    id: 3424,
+    grade: "7º",
+    discipline: "Português",
+    type: "multiple",
+    text: "O antônimo de 'Feliz' é:",
+    options: ["Alegre","Contente","Triste","Satisfeito"],
+    answer: "Triste",
+    explanation: "Antônimos são palavras com sentidos opostos.",
+    skill: "Semântica"
+  },
+  {
+    id: 3425,
+    grade: "8º",
+    discipline: "Português",
+    type: "multiple",
+    text: "A palavra 'Médico' é classificada como:",
+    options: ["Oxítona","Paroxítona","Proparoxítona","Monossílaba"],
+    answer: "Proparoxítona",
+    explanation: "A antepenúltima sílaba é tônica.",
+    skill: "Acentuação"
+  },
+  {
+    id: 3426,
+    grade: "9º",
+    discipline: "Português",
+    type: "multiple",
+    text: "A figura de linguagem que usa o exagero é a:",
+    options: ["Metáfora","Hipérbole","Ironia","Paradoxo"],
+    answer: "Hipérbole",
+    explanation: "Como em 'vou morrer de rir'.",
+    skill: "Figuras"
+  },
+  {
+    id: 3427,
+    grade: "6º",
+    discipline: "Português",
+    type: "multiple",
+    text: "O coletivo de 'Peixes' é:",
+    options: ["Matilha","Bando","Cardume","Alcateia"],
+    answer: "Cardume",
+    explanation: "Coletivos designam conjuntos.",
+    skill: "Substantivos"
+  },
+  {
+    id: 3428,
+    grade: "7º",
+    discipline: "Português",
+    type: "multiple",
+    text: "Qual o pronome pessoal do caso reto na frase 'Eles viajaram'?",
+    options: ["Eles","Viajaram","Não tem","Ao"],
+    answer: "Eles",
+    explanation: "Eles é pronome reto.",
+    skill: "Pronomes"
+  },
+  {
+    id: 3429,
+    grade: "6º",
+    discipline: "Ciências",
+    type: "multiple",
+    text: "O movimento da Terra em torno do próprio eixo chama-se:",
+    options: ["Translação","Rotação","Oscilação","Precessão"],
+    answer: "Rotação",
+    explanation: "Leva 24h e gera o dia/noite.",
+    skill: "Astronomia"
+  },
+  {
+    id: 3430,
+    grade: "7º",
+    discipline: "Ciências",
+    type: "multiple",
+    text: "As plantas produzem alimento através da:",
+    options: ["Respiração","Digestão","Fotossíntese","Transpiração"],
+    answer: "Fotossíntese",
+    explanation: "Usam luz, CO2 e água.",
+    skill: "Botânica"
+  },
+  {
+    id: 3431,
+    grade: "8º",
+    discipline: "Ciências",
+    type: "multiple",
+    text: "Qual o principal órgão do sistema circulatório?",
+    options: ["Pulmão","Cérebro","Coração","Fígado"],
+    answer: "Coração",
+    explanation: "Bombeia sangue para o corpo.",
+    skill: "Corpo Humano"
+  },
+  {
+    id: 3432,
+    grade: "9º",
+    discipline: "Ciências",
+    type: "multiple",
+    text: "H2O é a fórmula de qual substância?",
+    options: ["Sal","Água","Açúcar","Gás"],
+    answer: "Água",
+    explanation: "2 Hidrogênios e 1 Oxigênio.",
+    skill: "Química"
+  },
+  {
+    id: 3433,
+    grade: "6º",
+    discipline: "Ciências",
+    type: "multiple",
+    text: "Qual planeta é conhecido como 'Planeta Vermelho'?",
+    options: ["Júpiter","Marte","Vênus","Saturno"],
+    answer: "Marte",
+    explanation: "Devido ao solo rico em óxido de ferro.",
+    skill: "Planetas"
+  },
+  {
+    id: 3434,
+    grade: "7º",
+    discipline: "Ciências",
+    type: "multiple",
+    text: "Os seres vivos que produzem o próprio alimento são:",
+    options: ["Consumers","Decompositores","Produtores","Parasitas"],
+    answer: "Produtores",
+    explanation: "Autótrofos.",
+    skill: "Ecologia"
   }
 ];
