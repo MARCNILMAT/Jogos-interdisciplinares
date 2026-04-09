@@ -34949,5 +34949,226 @@ export const QUESTIONS_DB = [
     answer: "Pampas",
     explanation: "Caracterizado por campos naturais e clima temperado.",
     skill: "Biomas"
+  },
+
+  {
+    id: 3148,
+    grade: "6º",
+    discipline: "Arte",
+    type: "multiple",
+    text: "As cores primárias são aquelas que não podem ser obtidas pela mistura de outras. Quais são elas?",
+    options: ["Verde, Roxo e Laranja","Vermelho, Azul e Amarelo","Preto, Branco e Cinza","Rosa, Marrom e Bege"],
+    answer: "Vermelho, Azul e Amarelo",
+    explanation: "Desta tríade surgem todas as outras cores secundárias.",
+    skill: "Teoria das Cores"
+  },
+  {
+    id: 3149,
+    grade: "7º",
+    discipline: "Arte",
+    type: "multiple",
+    text: "O estilo artístico caracterizado pelo uso de pontos de cor que se misturam na visão do observador é o:",
+    options: ["Impressionismo","Pontilhismo","Surrealismo","Cubismo"],
+    answer: "Pontilhismo",
+    explanation: "Georges Seurat foi um dos principais expoentes desta técnica.",
+    skill: "Técnicas de Pintura"
+  },
+  {
+    id: 3150,
+    grade: "8º",
+    discipline: "Arte",
+    type: "multiple",
+    text: "Qual destes artistas é um famoso representante do Surrealismo, conhecido por pintar relógios derretidos?",
+    options: ["Salvador Dalí","Pablo Picasso","Vincent van Gogh","Claude Monet"],
+    answer: "Salvador Dalí",
+    explanation: "Dalí explorava o mundo dos sonhos e do inconsciente.",
+    skill: "Vanguardas Europeias"
+  },
+  {
+    id: 3151,
+    grade: "9º",
+    discipline: "Arte",
+    type: "multiple",
+    text: "A arte de projetar e edificar prédios e espaços urbanos é a:",
+    options: ["Escultura","Arquitetura","Gravura","Performance"],
+    answer: "Arquitetura",
+    explanation: "A arquitetura une estética e funcionalidade técnica.",
+    skill: "Linguagens Artísticas"
+  },
+  {
+    id: 3152,
+    grade: "6º",
+    discipline: "Arte",
+    type: "multiple",
+    text: "O desenho feito de forma rápida para captar uma ideia ou movimento é chamado de:",
+    options: ["Esboço (ou Croqui)","Pintura a óleo","Afresco","Mosaico"],
+    answer: "Esboço (ou Croqui)",
+    explanation: "O esboço é a base preparatória para obras mais complexas.",
+    skill: "Desenho"
+  },
+  {
+    id: 3153,
+    grade: "7º",
+    discipline: "Arte",
+    type: "multiple",
+    text: "A técnica de colagem consiste em:",
+    options: ["Pintar com pincéis finos","Esculpir em mármore","Agrupar materiais diversos em um suporte","Fotografar paisagens"],
+    answer: "Agrupar materiais diversos em um suporte",
+    explanation: "A colagem utiliza papéis, tecidos e outros objetos.",
+    skill: "Meios e Materiais"
+  },
+  {
+    id: 3154,
+    grade: "8º",
+    discipline: "Arte",
+    type: "multiple",
+    text: "O grafite é uma forma de arte que nasceu nos centros urbanos. Ele se diferencia do picho pois:",
+    options: ["É feito apenas com pincel","Possui intenção estética e artística reconhecida","É proibido em qualquer lugar","Usa apenas a cor branca"],
+    answer: "Possui intenção estética e artística reconhecida",
+    explanation: "O grafite é uma expressão visual complexa e valorizada.",
+    skill: "Arte Urbana"
+  },
+  {
+    id: 3155,
+    grade: "9º",
+    discipline: "Arte",
+    type: "multiple",
+    text: "Qual destes elementos é fundamental na linguagem teatral?",
+    options: ["Câmera","Pincel","Ator e Público","Instrumento de corda"],
+    answer: "Ator e Público",
+    explanation: "O teatro acontece na interação entre quem atua e quem assiste.",
+    skill: "Teatro"
+  },
+  {
+    id: 3156,
+    grade: "6º",
+    discipline: "Inglês",
+    type: "multiple",
+    text: "Qual a tradução correta para 'Azul' em Inglês?",
+    options: ["Red","Green","Blue","Black"],
+    answer: "Blue",
+    explanation: "Blue = Azul.",
+    skill: "Colors"
+  },
+  {
+    id: 3157,
+    grade: "7º",
+    discipline: "Inglês",
+    type: "multiple",
+    text: "Como se diz 'Pai' em Inglês?",
+    options: ["Mother","Brother","Father","Sister"],
+    answer: "Father",
+    explanation: "Father = Pai.",
+    skill: "Family"
+  },
+  {
+    id: 3158,
+    grade: "8º",
+    discipline: "Inglês",
+    type: "multiple",
+    text: "The opposite of 'Fast' is:",
+    options: ["Quick","Slow","Strong","Weak"],
+    answer: "Slow",
+    explanation: "Fast (rápido) x Slow (lento).",
+    skill: "Adjectives"
+  },
+  {
+    id: 3159,
+    grade: "9º",
+    discipline: "Inglês",
+    type: "multiple",
+    text: "I ___ to school every day.",
+    options: ["go","goes","went","going"],
+    answer: "go",
+    explanation: "Simple Present: plural/I uses the base form.",
+    skill: "Simple Present"
+  },
+  {
+    id: 3160,
+    grade: "6º",
+    discipline: "Inglês",
+    type: "multiple",
+    text: "Qual destes números é o 'Twelve'?",
+    options: ["2","12","20","22"],
+    answer: "12",
+    explanation: "Twelve = 12.",
+    skill: "Numbers"
+  },
+  {
+    id: 3161,
+    grade: "7º",
+    discipline: "Inglês",
+    type: "multiple",
+    text: "Choose the correct: '___ is your name?' 'My name is Carlos.'",
+    options: ["How","Who","What","Where"],
+    answer: "What",
+    explanation: "What is your name? (Qual o seu nome?).",
+    skill: "Questions"
+  },
+  {
+    id: 3162,
+    grade: "8º",
+    discipline: "Inglês",
+    type: "multiple",
+    text: "The animal known as the 'King of the Jungle' is the:",
+    options: ["Elephant","Tiger","Lion","Monkey"],
+    answer: "Lion",
+    explanation: "Lion = Leão.",
+    skill: "Animals"
+  },
+  {
+    id: 3163,
+    grade: "9º",
+    discipline: "Inglês",
+    type: "multiple",
+    text: "Yesterday, I ___ a delicious pizza.",
+    options: ["eat","eats","ate","eating"],
+    answer: "ate",
+    explanation: "Past of eat is ate (irregular).",
+    skill: "Simple Past"
+  },
+  {
+    id: 3164,
+    grade: "6º",
+    discipline: "Inglês",
+    type: "multiple",
+    text: "How do you say 'cachorro' in English?",
+    options: ["Cat","Dog","Bird","Horse"],
+    answer: "Dog",
+    explanation: "Dog = Cachorro.",
+    skill: "Animals"
+  },
+  {
+    id: 3165,
+    grade: "7º",
+    discipline: "Inglês",
+    type: "multiple",
+    text: "Which pronoun is used for a group where I am included?",
+    options: ["He","They","We","You"],
+    answer: "We",
+    explanation: "We = Nós.",
+    skill: "Pronouns"
+  },
+  {
+    id: 3166,
+    grade: "8º",
+    discipline: "Inglês",
+    type: "multiple",
+    text: "A 'Library' is a place where you can:",
+    options: ["Buy food","Borrow books","Watch a movie","Play soccer"],
+    answer: "Borrow books",
+    explanation: "Library = Biblioteca.",
+    skill: "Places"
+  },
+  {
+    id: 3167,
+    grade: "9º",
+    discipline: "Inglês",
+    type: "multiple",
+    text: "Choose the negative: 'I study English.'",
+    options: ["I not study English","I don't study English","I am not study English","I no study English"],
+    answer: "I don't study English",
+    explanation: "Auxiliary 'do' + 'not'.",
+    skill: "Negatives"
   }
 ];
