@@ -38560,5 +38560,204 @@ export const QUESTIONS_DB = [
     answer: "Tratar os outros como gostaríamos de ser tratados",
     explanation: "Princípio universal de ética.",
     skill: "Ética"
+  },
+
+  {
+    id: 3475,
+    grade: "6º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Qual o resultado de 15 x 6?",
+    options: ["80","90","100","110"],
+    answer: "90",
+    explanation: "15 x 6 = 90.",
+    skill: "Cálculo"
+  },
+  {
+    id: 3476,
+    grade: "7º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Quanto é 50% de 350?",
+    options: ["150","175","180","200"],
+    answer: "175",
+    explanation: "50% é a metade (350 / 2 = 175).",
+    skill: "Porcentagem"
+  },
+  {
+    id: 3477,
+    grade: "8º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "A raiz quadrada de 144 é:",
+    options: ["11","12","13","14"],
+    answer: "12",
+    explanation: "12 x 12 = 144.",
+    skill: "Radiciação"
+  },
+  {
+    id: 3478,
+    grade: "9º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "O valor de x na equação 10x = 1000 é:",
+    options: ["10","100","1000","50"],
+    answer: "100",
+    explanation: "x = 1000 / 10 = 100.",
+    skill: "Equações"
+  },
+  {
+    id: 3479,
+    grade: "6º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "O perímetro de um triângulo equilátero com lado 7cm é:",
+    options: ["14cm","21cm","28cm","35cm"],
+    answer: "21cm",
+    explanation: "Lado x 3 = 7 x 3 = 21.",
+    skill: "Perímetro"
+  },
+  {
+    id: 3480,
+    grade: "7º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "O número -8 é maior ou menor que -3?",
+    options: ["Maior","Menor","Igual","Nenhuma"],
+    answer: "Menor",
+    explanation: "Na reta numérica, -8 está mais à esquerda que -3.",
+    skill: "Inteiros"
+  },
+  {
+    id: 3481,
+    grade: "6º",
+    discipline: "Português",
+    type: "multiple",
+    text: "Qual destas palavras é um ADJETIVO?",
+    options: ["Correr","Bonita","Cadeira","Sempre"],
+    answer: "Bonita",
+    explanation: "Indica uma característica.",
+    skill: "Classes de Palavras"
+  },
+  {
+    id: 3482,
+    grade: "7º",
+    discipline: "Português",
+    type: "multiple",
+    text: "O antônimo de 'Orgulho' é:",
+    options: ["Modéstia","Vaidade","Arrogância","Prepotência"],
+    answer: "Modéstia",
+    explanation: "Modéstia é o oposto de orgulho.",
+    skill: "Semântica"
+  },
+  {
+    id: 3483,
+    grade: "8º",
+    discipline: "Português",
+    type: "multiple",
+    text: "Na frase 'Eu e ele fomos ao cinema', o sujeito é:",
+    options: ["Simples","Composto","Oculto","Inexistente"],
+    answer: "Composto",
+    explanation: "Possui dois núcleos: Eu e ele.",
+    skill: "Sintaxe"
+  },
+  {
+    id: 3484,
+    grade: "9º",
+    discipline: "Português",
+    type: "multiple",
+    text: "Quem escreveu 'O Guarani'?",
+    options: ["Machado de Assis","José de Alencar","Clarice Lispector","Monteiro Lobato"],
+    answer: "José de Alencar",
+    explanation: "Obra fundamental do Romantismo brasileiro.",
+    skill: "Literatura"
+  },
+  {
+    id: 3485,
+    grade: "6º",
+    discipline: "Português",
+    type: "multiple",
+    text: "Qual o coletivo de 'Estrelas'?",
+    options: ["Cardume","Constelação","Alcateia","Matilha"],
+    answer: "Constelação",
+    explanation: "Conjunto de estrelas no céu.",
+    skill: "Substantivos"
+  },
+  {
+    id: 3486,
+    grade: "8º",
+    discipline: "Português",
+    type: "multiple",
+    text: "A palavra 'Médico' é classificada como:",
+    options: ["Oxítona","Paroxítona","Proparoxítona","Monossílaba"],
+    answer: "Proparoxítona",
+    explanation: "A antepenúltima sílaba é tônica.",
+    skill: "Acentuação"
+  },
+  {
+    id: 3487,
+    grade: "6º",
+    discipline: "Ciências",
+    type: "multiple",
+    text: "Qual é o maior planeta do Sistema Solar?",
+    options: ["Terra","Marte","Júpiter","Saturno"],
+    answer: "Júpiter",
+    explanation: "Júpiter é um gigante gasoso muito maior que a Terra.",
+    skill: "Astronomia"
+  },
+  {
+    id: 3488,
+    grade: "7º",
+    discipline: "Ciências",
+    type: "multiple",
+    text: "Qual destes animais faz parte do grupo dos Anfíbios?",
+    options: ["Cobra","Sapo","Peixe","Pássaro"],
+    answer: "Sapo",
+    explanation: "Anfíbios têm pele úmida e ciclo de vida duplo.",
+    skill: "Zoologia"
+  },
+  {
+    id: 3489,
+    grade: "8º",
+    discipline: "Ciências",
+    type: "multiple",
+    text: "O principal órgão do sistema circulatório que bombeia sangue é o:",
+    options: ["Pulmão","Cérebro","Coração","Fígado"],
+    answer: "Coração",
+    explanation: "O coração age como uma bomba muscular.",
+    skill: "Fisiologia"
+  },
+  {
+    id: 3490,
+    grade: "9º",
+    discipline: "Ciências",
+    type: "multiple",
+    text: "A primeira lei de Newton é também conhecida como lei da:",
+    options: ["Inércia","Ação e Reação","Gravidade","Força"],
+    answer: "Inércia",
+    explanation: "Indica a tendência de um corpo manter seu estado inicial.",
+    skill: "Física"
+  },
+  {
+    id: 3491,
+    grade: "6º",
+    discipline: "Ciências",
+    type: "multiple",
+    text: "A mistura de água e sal totalmente dissolvido é:",
+    options: ["Substância Pura","Mistura Homogênea","Mistura Heterogênea","Elemento"],
+    answer: "Mistura Homogênea",
+    explanation: "Não se distinguem as fases.",
+    skill: "Química"
+  },
+  {
+    id: 3492,
+    grade: "7º",
+    discipline: "Ciências",
+    type: "multiple",
+    text: "O processo em que a planta produz oxigênio e glicose usando luz é a:",
+    options: ["Respiração","Digestão","Fotossíntese","Transpiração"],
+    answer: "Fotossíntese",
+    explanation: "Conversão de energia solar em química.",
+    skill: "Botânica"
   }
 ];
