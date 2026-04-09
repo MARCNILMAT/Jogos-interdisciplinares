@@ -37676,5 +37676,226 @@ export const QUESTIONS_DB = [
     answer: "Cerrado",
     explanation: "O Cerrado é o segundo maior bioma do Brasil.",
     skill: "Biomas"
+  },
+
+  {
+    id: 3395,
+    grade: "6º",
+    discipline: "Inglês",
+    type: "multiple",
+    text: "Qual a tradução correta para 'Maçã' em Inglês?",
+    options: ["Grape","Apple","Orange","Banana"],
+    answer: "Apple",
+    explanation: "Apple = Maçã.",
+    skill: "Vocabulary"
+  },
+  {
+    id: 3396,
+    grade: "7º",
+    discipline: "Inglês",
+    type: "multiple",
+    text: "The opposite of 'Big' is:",
+    options: ["Large","Small","Fast","Strong"],
+    answer: "Small",
+    explanation: "Big (grande) x Small (pequeno - antônimo).",
+    skill: "Adjectives"
+  },
+  {
+    id: 3397,
+    grade: "8º",
+    discipline: "Inglês",
+    type: "multiple",
+    text: "I ___ to the library yesterday.",
+    options: ["go","goes","went","going"],
+    answer: "went",
+    explanation: "Went é o passado simples do verbo irregular 'to go'.",
+    skill: "Simple Past"
+  },
+  {
+    id: 3398,
+    grade: "9º",
+    discipline: "Inglês",
+    type: "multiple",
+    text: "Choose the correct: '___ are you?' 'I am 14 years old.'",
+    options: ["How many","How old","How much","What age"],
+    answer: "How old",
+    explanation: "Usado para perguntar a idade em inglês.",
+    skill: "Questions"
+  },
+  {
+    id: 3399,
+    grade: "6º",
+    discipline: "Inglês",
+    type: "multiple",
+    text: "Which number is 'Twelve'?",
+    options: ["2","12","20","22"],
+    answer: "12",
+    explanation: "Twelve = 12.",
+    skill: "Numbers"
+  },
+  {
+    id: 3400,
+    grade: "6º",
+    discipline: "Arte",
+    type: "multiple",
+    text: "Quais são as cores primárias?",
+    options: ["Verde, Roxo e Laranja","Vermelho, Azul e Amarelo","Preto, Branco e Cinza","Rosa, Marrom e Azul"],
+    answer: "Vermelho, Azul e Amarelo",
+    explanation: "Cores que não podem ser obtidas pela mistura de outras.",
+    skill: "Cores"
+  },
+  {
+    id: 3401,
+    grade: "7º",
+    discipline: "Arte",
+    type: "multiple",
+    text: "O estilo artístico caracterizado pelo uso de figuras geométricas e fragmentação da imagem é o:",
+    options: ["Cubismo","Impressionismo","Realismo","Barroco"],
+    answer: "Cubismo",
+    explanation: "Pablo Picasso foi um dos fundadores deste movimento.",
+    skill: "Vanguardas"
+  },
+  {
+    id: 3402,
+    grade: "8º",
+    discipline: "Arte",
+    type: "multiple",
+    text: "A técnica de dobrar papel para criar objetos chama-se:",
+    options: ["Origami","Mosaico","Escultura","Grafite"],
+    answer: "Origami",
+    explanation: "Tradição milenar da cultura japonesa.",
+    skill: "Técnicas"
+  },
+  {
+    id: 3403,
+    grade: "9º",
+    discipline: "Arte",
+    type: "multiple",
+    text: "O cinema é frequentemente chamado de:",
+    options: ["3ª Arte","7ª Arte","9ª Arte","1ª Arte"],
+    answer: "7ª Arte",
+    explanation: "Classificação surgida no início do século XX.",
+    skill: "Audiovisual"
+  },
+  {
+    id: 3404,
+    grade: "6º",
+    discipline: "Arte",
+    type: "multiple",
+    text: "O desenho feito de forma rápida para capturar uma ideia é o:",
+    options: ["Esboço","Pintura a óleo","Gravura","Afresco"],
+    answer: "Esboço",
+    explanation: "Também chamado de croqui.",
+    skill: "Linguagens"
+  },
+  {
+    id: 3405,
+    grade: "6º",
+    discipline: "Educação Física",
+    type: "multiple",
+    text: "No Futsal, quantos jogadores cada equipe tem em quadra?",
+    options: ["4","5","6","11"],
+    answer: "5",
+    explanation: "O futsal é disputado por 5 jogadores titulares em cada time.",
+    skill: "Esportes"
+  },
+  {
+    id: 3406,
+    grade: "7º",
+    discipline: "Educação Física",
+    type: "multiple",
+    text: "O 'Saque' inicia a disputa em qual destes esportes?",
+    options: ["Futebol","Basquete","Vôlei","Handebol"],
+    answer: "Vôlei",
+    explanation: "O saque é o fundamento que coloca a bola em jogo.",
+    skill: "Voleibol"
+  },
+  {
+    id: 3407,
+    grade: "8º",
+    discipline: "Educação Física",
+    type: "multiple",
+    text: "O teste de IMC serve para medir a relação entre:",
+    options: ["Tempo e distância","Peso e altura","Força e velocidade","Idade e fôlego"],
+    answer: "Peso e altura",
+    explanation: "Índice de Massa Corporal avalia o estado nutricional.",
+    skill: "Saúde"
+  },
+  {
+    id: 3408,
+    grade: "9º",
+    discipline: "Educação Física",
+    type: "multiple",
+    text: "Em qual cidade ocorreram as primeiras Olimpíadas da Era Moderna?",
+    options: ["Londres","Paris","Atenas","Roma"],
+    answer: "Atenas",
+    explanation: "Em 1896, na capital da Grécia.",
+    skill: "Olimpismo"
+  },
+  {
+    id: 3409,
+    grade: "8º",
+    discipline: "Educação Física",
+    type: "multiple",
+    text: "Praticar alongamentos ajuda a melhorar qual capacidade física?",
+    options: ["Velocidade","Flexibilidade","Resistência","Miopia"],
+    answer: "Flexibilidade",
+    explanation: "Aumenta a amplitude de movimento das articulações.",
+    skill: "Condicionamento"
+  },
+  {
+    id: 3410,
+    grade: "6º",
+    discipline: "Ensino Religioso",
+    type: "multiple",
+    text: "Qual destes é um livro sagrado para o Islamismo?",
+    options: ["Poli","Alcorão","Bíblia","Vedas"],
+    answer: "Alcorão",
+    explanation: "Livro central da fé islâmica.",
+    skill: "Religiões"
+  },
+  {
+    id: 3411,
+    grade: "7º",
+    discipline: "Ensino Religioso",
+    type: "multiple",
+    text: "O respeito mútuo entre pessoas de diferentes crenças chama-se:",
+    options: ["Tolerância","Intolerância","Discriminação","Individualismo"],
+    answer: "Tolerância",
+    explanation: "Pilar da convivência em sociedade.",
+    skill: "Diversidade"
+  },
+  {
+    id: 3412,
+    grade: "8º",
+    discipline: "Ensino Religioso",
+    type: "multiple",
+    text: "A liberdade religiosa no Brasil é garantida pela:",
+    options: ["Televisão","Constituição Federal","Internet","Igreja Local"],
+    answer: "Constituição Federal",
+    explanation: "A lei máxima do país assegura esse direito.",
+    skill: "Direitos"
+  },
+  {
+    id: 3413,
+    grade: "9º",
+    discipline: "Ensino Religioso",
+    type: "multiple",
+    text: "O diálogo entre diferentes religiões chama-se:",
+    options: ["Ecumenismo","Dialética","Monólogo","Conformismo"],
+    answer: "Ecumenismo",
+    explanation: "Termo usado para buscar a união e paz entre credos.",
+    skill: "Tolerância"
+  },
+  {
+    id: 3414,
+    grade: "7º",
+    discipline: "Ensino Religioso",
+    type: "multiple",
+    text: "A 'Regra de Ouro' presente em muitas culturas diz que devemos:",
+    options: ["Sermos melhores que todos","Tratar os outros como gostaríamos de ser tratados","Ignorar as necessidades alheias","Focar apenas em nós mesmos"],
+    answer: "Tratar os outros como gostaríamos de ser tratados",
+    explanation: "Princípio universal de ética e empatia.",
+    skill: "Ética"
   }
 ];
