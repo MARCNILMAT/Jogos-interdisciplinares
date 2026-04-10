@@ -47,9 +47,17 @@ const screens = {
 const loginForm = document.getElementById('login-form');
 const disciplineButtons = document.querySelectorAll('.discipline-btn');
 const studentGrade = document.getElementById('student-grade');
+const studentClass = document.getElementById('student-class');
 const studentTopic = document.getElementById('student-topic');
 const topicContainer = document.getElementById('topic-container');
 let selectedDiscipline = null;
+
+const GRADE_CLASS_MAP = {
+    '6º': ['601', '602'],
+    '7º': ['701', '702'],
+    '8º': ['801', '802'],
+    '9º': ['901', '902']
+};
 
 // Componentes Dashboard
 const dashGreeting = document.getElementById('dash-greeting');
@@ -242,6 +250,22 @@ function setupEventListeners() {
     }
 
     studentGrade.addEventListener('change', () => {
+        // Atualizar dropdown de Turma no Login
+        const grade = studentGrade.value;
+        const classes = GRADE_CLASS_MAP[grade] || [];
+        studentClass.innerHTML = '';
+        if (classes.length > 0) {
+            studentClass.title = "Selecione a turma";
+            classes.forEach(c => {
+                const opt = document.createElement('option');
+                opt.value = c;
+                opt.textContent = `Turma ${c}`;
+                studentClass.appendChild(opt);
+            });
+        } else {
+            studentClass.innerHTML = '<option value="" disabled selected>Escolha a série antes</option>';
+        }
+
         updateTopics();
         updateSubjectQuestionCounts();
     });
@@ -369,6 +393,28 @@ function setupEventListeners() {
         state.adminClassFilter = adminFilterClass.value;
         loadAdminData();
     });
+    
+    // Atualizar dropdown de turma no admin imediatamente ao trocar a série
+    if (adminFilterGrade) {
+        adminFilterGrade.addEventListener('change', () => {
+            const grade = adminFilterGrade.value;
+            let classes = [];
+            if (grade !== 'all') {
+                classes = GRADE_CLASS_MAP[grade] || [];
+            } else {
+                classes = Object.values(GRADE_CLASS_MAP).flat();
+            }
+            adminFilterClass.innerHTML = '<option value="all">Todas</option>';
+            classes.forEach(c => {
+                const opt = document.createElement('option');
+                opt.value = c;
+                opt.textContent = `Turma ${c}`;
+                adminFilterClass.appendChild(opt);
+            });
+            // Opcional: já disparar o filtro automaticamente ou esperar clicar em Filtrar
+        });
+    }
+
     if (btnToggleChart) btnToggleChart.addEventListener('click', () => {
         chartSection.classList.toggle('hidden');
         if (!chartSection.classList.contains('hidden')) renderPerformanceChart();
@@ -720,12 +766,13 @@ async function loadAdminData() {
     if (state.adminGradeFilter !== 'all') {
         students = students.filter(s => s.grade === state.adminGradeFilter);
     }
-    // 2d. Popular dropdown de turmas com as turmas disponíveis nos dados brutos da SÉRIE
-    let studentsForClassDropdown = allStudentsRaw;
+    // 2d. Popular dropdown de turmas com as turmas associadas rigidamente
+    let allClasses = [];
     if (state.adminGradeFilter !== 'all') {
-        studentsForClassDropdown = allStudentsRaw.filter(s => s.grade === state.adminGradeFilter);
+        allClasses = GRADE_CLASS_MAP[state.adminGradeFilter] || [];
+    } else {
+        allClasses = Object.values(GRADE_CLASS_MAP).flat();
     }
-    const allClasses = [...new Set(studentsForClassDropdown.map(s => s.class).filter(Boolean))].sort();
     
     // Se a turma atualmente filtrada não existir nesta série, reseta
     if (state.adminClassFilter !== 'all' && !allClasses.includes(state.adminClassFilter.toUpperCase()) && !allClasses.includes(state.adminClassFilter)) {
