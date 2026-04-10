@@ -720,20 +720,30 @@ async function loadAdminData() {
     if (state.adminGradeFilter !== 'all') {
         students = students.filter(s => s.grade === state.adminGradeFilter);
     }
-    // 2c. Filtrar por Turma
+    // 2d. Popular dropdown de turmas com as turmas disponíveis nos dados brutos da SÉRIE
+    let studentsForClassDropdown = allStudentsRaw;
+    if (state.adminGradeFilter !== 'all') {
+        studentsForClassDropdown = allStudentsRaw.filter(s => s.grade === state.adminGradeFilter);
+    }
+    const allClasses = [...new Set(studentsForClassDropdown.map(s => s.class).filter(Boolean))].sort();
+    
+    // Se a turma atualmente filtrada não existir nesta série, reseta
+    if (state.adminClassFilter !== 'all' && !allClasses.includes(state.adminClassFilter.toUpperCase()) && !allClasses.includes(state.adminClassFilter)) {
+        state.adminClassFilter = 'all';
+    }
+    
+    // Agora aplicamos o filtro real de turma aos alunos que vão pra tabela:
     if (state.adminClassFilter !== 'all') {
         students = students.filter(s => s.class && s.class.toUpperCase() === state.adminClassFilter.toUpperCase());
     }
 
-    // 2d. Popular dropdown de turmas com as turmas disponíveis nos dados brutos
-    const allClasses = [...new Set(allStudentsRaw.map(s => s.class).filter(Boolean))].sort();
-    const currentClassVal = adminFilterClass.value;
+    const currentClassVal = state.adminClassFilter;
     adminFilterClass.innerHTML = '<option value="all">Todas</option>';
     allClasses.forEach(c => {
         const opt = document.createElement('option');
         opt.value = c;
         opt.textContent = `Turma ${c}`;
-        if (c === currentClassVal) opt.selected = true;
+        if (c.toUpperCase() === currentClassVal.toUpperCase()) opt.selected = true;
         adminFilterClass.appendChild(opt);
     });
 
