@@ -931,31 +931,47 @@ function renderPerformanceChart() {
         return;
     }
 
-    // Calcular média de acertos por disciplina
-    const disciplineStats = {};
-    cachedAdminStudents.forEach(s => {
-        if (!disciplineStats[s.discipline]) {
-            disciplineStats[s.discipline] = { totalQuestions: 0, correctAnswers: 0 };
-        }
-        disciplineStats[s.discipline].totalQuestions += (s.totalAnswers || 0);
-        disciplineStats[s.discipline].correctAnswers += (s.correctAnswers || 0);
+    // Dados individuais dos alunos
+    const sortedStudents = [...cachedAdminStudents].sort((a,b) => {
+        const rateA = a.totalAnswers > 0 ? (a.correctAnswers / a.totalAnswers) : 0;
+        const rateB = b.totalAnswers > 0 ? (b.correctAnswers / b.totalAnswers) : 0;
+        return rateB - rateA; // Decrescente (maior taxa primeiro)
     });
 
-    const labels = Object.keys(disciplineStats);
-    const successRates = labels.map(disc => {
-        const stats = disciplineStats[disc];
-        return stats.totalQuestions > 0 ? Math.round((stats.correctAnswers / stats.totalQuestions) * 100) : 0;
+    const labels = sortedStudents.map(s => {
+        // Encurtar nome e mostrar qual disciplina (ex: Joao S. (Mat))
+        const parts = s.name.split(' ');
+        const firstName = parts[0];
+        const lastInitial = parts.length > 1 ? ` ${parts[parts.length-1][0]}.` : '';
+        const discShort = s.discipline ? s.discipline.substring(0,3) : '';
+        return `${firstName}${lastInitial} (${discShort})`;
+    });
+
+    const successRates = sortedStudents.map(s => {
+        return s.totalAnswers > 0 ? Math.round((s.correctAnswers / s.totalAnswers) * 100) : 0;
+    });
+
+    // Cores baseadas no aproveitamento
+    const bgColors = successRates.map(r => {
+        if (r >= 70) return 'rgba(16, 185, 129, 0.6)'; // Verde (>70%)
+        if (r >= 40) return 'rgba(245, 158, 11, 0.6)'; // Amarelo (40%-69%)
+        return 'rgba(239, 68, 68, 0.6)';               // Vermelho (<40%)
+    });
+    const borderColors = successRates.map(r => {
+        if (r >= 70) return 'rgba(16, 185, 129, 1)';
+        if (r >= 40) return 'rgba(245, 158, 11, 1)';
+        return 'rgba(239, 68, 68, 1)';
     });
 
     performanceChart = new Chart(ctx, {
-        type: 'bar',
+        type: 'bar', // Pode usar 'bar' e configurar indexAxis: 'y' para ser horizontal depois se houver mt alunos
         data: {
             labels: labels,
             datasets: [{
-                label: 'Taxa de Acerto Média (%)',
+                label: 'Taxa de Acerto (%)',
                 data: successRates,
-                backgroundColor: 'rgba(99, 102, 241, 0.6)',
-                borderColor: 'rgba(99, 102, 241, 1)',
+                backgroundColor: bgColors,
+                borderColor: borderColors,
                 borderWidth: 1,
                 borderRadius: 4
             }]
