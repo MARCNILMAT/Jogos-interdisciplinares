@@ -23,6 +23,8 @@ const state = {
     view: 'login', // 'login', 'dashboard', 'game', 'admin'
     currentStudent: null, // { name, grade, class, discipline, score, medals }
     adminFilter: 'all', // 'all' ou 'Disciplina'
+    adminGradeFilter: 'all',
+    adminClassFilter: 'all',
     game: {
         questions: [],
         currentIndex: 0,
@@ -91,6 +93,16 @@ const adminActiveFilterText = document.getElementById('admin-active-filter');
 // Novos Botões Admin
 const btnExportPdf = document.getElementById('btn-export-pdf');
 const btnClearResults = document.getElementById('btn-clear-results');
+const btnApplyFilters = document.getElementById('btn-apply-filters');
+const btnToggleChart = document.getElementById('btn-toggle-chart');
+const btnToggleTopics = document.getElementById('btn-toggle-topics');
+const adminFilterGrade = document.getElementById('admin-filter-grade');
+const adminFilterClass = document.getElementById('admin-filter-class');
+const chartSection = document.getElementById('chart-section');
+const topicsSection = document.getElementById('topics-section');
+const topicsReportContent = document.getElementById('topics-report-content');
+let performanceChart = null; // Instância do Chart.js
+let cachedAdminStudents = []; // Cache dos dados carregados
 
 
 // --- ÁUDIO (Web Audio API) ---
@@ -352,6 +364,19 @@ function setupEventListeners() {
     // Novos Botões Admin
     if (btnExportPdf) btnExportPdf.addEventListener('click', exportToPDF);
     if (btnClearResults) btnClearResults.addEventListener('click', clearResults);
+    if (btnApplyFilters) btnApplyFilters.addEventListener('click', () => {
+        state.adminGradeFilter = adminFilterGrade.value;
+        state.adminClassFilter = adminFilterClass.value;
+        loadAdminData();
+    });
+    if (btnToggleChart) btnToggleChart.addEventListener('click', () => {
+        chartSection.classList.toggle('hidden');
+        if (!chartSection.classList.contains('hidden')) renderPerformanceChart();
+    });
+    if (btnToggleTopics) btnToggleTopics.addEventListener('click', () => {
+        topicsSection.classList.toggle('hidden');
+        if (!topicsSection.classList.contains('hidden')) renderTopicsReport();
+    });
 }
 
 // --- NAVEGAÇÃO ---
@@ -650,6 +675,7 @@ async function saveStudent(student) {
 // --- LÓGICA DO ADMIN ---
 async function loadAdminData() {
     let students = [];
+    let allStudentsRaw = [];
 
     // 1. Carregar Dados
     if (supabaseClient) {
@@ -684,10 +710,35 @@ async function loadAdminData() {
         students = JSON.parse(localStorage.getItem('sabermg_students')) || [];
     }
 
-    // 2. Filtrar Dados (Se houver filtro ativo)
+    allStudentsRaw = [...students];
+
+    // 2. Filtrar Dados (Disciplina)
     if (state.adminFilter !== 'all') {
         students = students.filter(s => s.discipline === state.adminFilter);
     }
+    // 2b. Filtrar por Série
+    if (state.adminGradeFilter !== 'all') {
+        students = students.filter(s => s.grade === state.adminGradeFilter);
+    }
+    // 2c. Filtrar por Turma
+    if (state.adminClassFilter !== 'all') {
+        students = students.filter(s => s.class && s.class.toUpperCase() === state.adminClassFilter.toUpperCase());
+    }
+
+    // 2d. Popular dropdown de turmas com as turmas disponíveis nos dados brutos
+    const allClasses = [...new Set(allStudentsRaw.map(s => s.class).filter(Boolean))].sort();
+    const currentClassVal = adminFilterClass.value;
+    adminFilterClass.innerHTML = '<option value="all">Todas</option>';
+    allClasses.forEach(c => {
+        const opt = document.createElement('option');
+        opt.value = c;
+        opt.textContent = `Turma ${c}`;
+        if (c === currentClassVal) opt.selected = true;
+        adminFilterClass.appendChild(opt);
+    });
+
+    // Guardar dados filtrados no cache para gráfico/tópicos
+    cachedAdminStudents = students;
 
     // 3. Renderizar Tabela
     adminTableBody.innerHTML = '';
@@ -717,6 +768,10 @@ async function loadAdminData() {
     admTotalStudents.innerText = students.length;
     const avgRate = totalAttempts > 0 ? Math.round((totalCorrect / totalAttempts) * 100) : 0;
     admAvgSuccess.innerText = `${avgRate}%`;
+
+    // Atualizar gráfico e tópicos se visíveis
+    if (!chartSection.classList.contains('hidden')) renderPerformanceChart();
+    if (!topicsSection.classList.contains('hidden')) renderTopicsReport();
 }
 
 // --- NOVAS FUNÇÕES ADMIN ---
@@ -844,6 +899,134 @@ function shuffleArray(array) {
         [array[i], array[j]] = [array[j], array[i]];
     }
     return array;
+}
+
+// --- NOVAS FUNÇÕES: GRÁFICOS E TÓPICOS ---
+
+function renderPerformanceChart() {
+    const ctx = document.getElementById('performance-chart');
+    if (!ctx) return;
+
+    if (performanceChart) {
+        performanceChart.destroy();
+    }
+
+    if (!cachedAdminStudents || cachedAdminStudents.length === 0) {
+        // Se não houver dados
+        performanceChart = new Chart(ctx, {
+            type: 'bar',
+            data: { labels: ['Sem dados'], datasets: [{ label: 'Tentativas', data: [0] }] },
+            options: { responsive: true, maintainAspectRatio: false }
+        });
+        return;
+    }
+
+    // Calcular média de acertos por disciplina
+    const disciplineStats = {};
+    cachedAdminStudents.forEach(s => {
+        if (!disciplineStats[s.discipline]) {
+            disciplineStats[s.discipline] = { totalQuestions: 0, correctAnswers: 0 };
+        }
+        disciplineStats[s.discipline].totalQuestions += (s.totalAnswers || 0);
+        disciplineStats[s.discipline].correctAnswers += (s.correctAnswers || 0);
+    });
+
+    const labels = Object.keys(disciplineStats);
+    const successRates = labels.map(disc => {
+        const stats = disciplineStats[disc];
+        return stats.totalQuestions > 0 ? Math.round((stats.correctAnswers / stats.totalQuestions) * 100) : 0;
+    });
+
+    performanceChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: 'Taxa de Acerto Média (%)',
+                data: successRates,
+                backgroundColor: 'rgba(99, 102, 241, 0.6)',
+                borderColor: 'rgba(99, 102, 241, 1)',
+                borderWidth: 1,
+                borderRadius: 4
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    max: 100,
+                    ticks: { callback: function(value) { return value + "%" } }
+                }
+            },
+            plugins: {
+                legend: { display: false }
+            }
+        }
+    });
+}
+
+function renderTopicsReport() {
+    if (!topicsReportContent) return;
+
+    if (!cachedAdminStudents || cachedAdminStudents.length === 0) {
+        topicsReportContent.innerHTML = '<p>Nenhum dado disponível com os filtros atuais.</p>';
+        return;
+    }
+
+    const topicsStats = {};
+
+    // Agregar respostas corretas e totais por tópico a partir de todas as interações?
+    // Observação: o student object (s) atualmente armazena apenas correctAnswers totais
+    // e answeredQuestions (IDs). Para saber taxa de acerto por TÓPICO, precisaríamos ter
+    // guardado histórico mais granular. 
+    // Como simplificação (visto a estrutura de dados atual), vamos listar quantos alunos concluíram quais tópicos.
+
+    cachedAdminStudents.forEach(s => {
+        // Obter os tópicos das questões que o aluno respondeu
+        if (s.answeredQuestions && s.answeredQuestions.length > 0) {
+            const answeredInTopic = {}; // Contador de questões respondidas por tópico para este aluno
+            s.answeredQuestions.forEach(qId => {
+                const q = QUESTIONS_DB.find(x => x.id === qId);
+                if (q && q.skill) {
+                    const skill = q.skill.replace(/\s*\([^)]*\)/g, '').trim();
+                    const key = `${s.discipline} - ${skill}`;
+                    if (!answeredInTopic[key]) answeredInTopic[key] = 0;
+                    answeredInTopic[key]++;
+                }
+            });
+
+            // Agregar para o geral
+            for (const key in answeredInTopic) {
+                if (!topicsStats[key]) {
+                    topicsStats[key] = { studentsTried: 0, totalAnswersGiven: 0 };
+                }
+                topicsStats[key].studentsTried += 1;
+                topicsStats[key].totalAnswersGiven += answeredInTopic[key];
+            }
+        }
+    });
+
+    if (Object.keys(topicsStats).length === 0) {
+        topicsReportContent.innerHTML = '<p>Nenhum dado de Tópico/Habilidade encontrado.</p>';
+        return;
+    }
+
+    let html = '<ul style="list-style-type: none; padding: 0;">';
+    Object.keys(topicsStats).sort().forEach(key => {
+        const stats = topicsStats[key];
+        html += `
+            <li style="margin-bottom: 8px; padding: 10px; background: rgba(0,0,0,0.05); border-radius: 8px;">
+                <strong>${key}</strong><br>
+                <span style="font-size: 0.9em; color: #555;">
+                    Alunos que treinaram: ${stats.studentsTried} | Total de respostas dadas: ${stats.totalAnswersGiven}
+                </span>
+            </li>
+        `;
+    });
+    html += '</ul>';
+    topicsReportContent.innerHTML = html;
 }
 
 // Iniciar

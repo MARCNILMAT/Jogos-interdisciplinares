@@ -634,8 +634,8 @@ tr:last-child td {
 /* --- ADMIN CONTROLS --- */
 .admin-controls {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
+    gap: 15px;
     margin-bottom: 16px;
     padding: 16px;
 }
@@ -645,6 +645,13 @@ tr:last-child td {
     color: #475569;
 }
 
+.admin-filters-row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 #admin-active-filter {
     color: var(--primary);
 }
@@ -652,6 +659,27 @@ tr:last-child td {
 .admin-btn-group {
     display: flex;
     gap: 8px;
+    flex-wrap: wrap;
+}
+
+/* --- ADMIN AREAS --- */
+.chart-container, .topics-report {
+    margin-bottom: 16px;
+    padding: 16px;
+}
+
+.chart-container h3, .topics-report h3 {
+    margin-bottom: 12px;
+    color: var(--primary);
+    font-size: 1.1rem;
+}
+
+.btn-accent {
+    background: #475569;
+    color: white;
+}
+.btn-accent:hover {
+    background: #334155;
 }
 /* --- QUESTION COUNT BADGE --- */
 .question-count-badge {

@@ -16,6 +16,8 @@
     <!-- jsPDF -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
 
     <!-- Script de Modulo -->
     <script type="module" src="app.js" defer></script>
@@ -208,8 +210,30 @@
                     <div class="filter-header">
                         <span>Filtro: <strong id="admin-active-filter">Todas as Disciplinas</strong></span>
                     </div>
+                    <!-- NOVOS FILTROS SÉRIE/TURMA -->
+                    <div class="admin-filters-row">
+                        <div class="input-group" style="flex:1; min-width: 100px;">
+                            <label for="admin-filter-grade">Série:</label>
+                            <select id="admin-filter-grade">
+                                <option value="all">Todas</option>
+                                <option value="6º">6º Ano</option>
+                                <option value="7º">7º Ano</option>
+                                <option value="8º">8º Ano</option>
+                                <option value="9º">9º Ano</option>
+                            </select>
+                        </div>
+                        <div class="input-group" style="flex:1; min-width: 100px;">
+                            <label for="admin-filter-class">Turma:</label>
+                            <select id="admin-filter-class">
+                                <option value="all">Todas</option>
+                            </select>
+                        </div>
+                        <button class="btn btn-primary btn-small" id="btn-apply-filters" style="align-self: flex-end; margin-bottom: 2px;">Filtrar 🔍</button>
+                    </div>
                     <div class="admin-btn-group">
-                        <button class="btn btn-success btn-small" id="btn-export-pdf">Exportar PDF 📄</button>
+                        <button class="btn btn-accent btn-small" id="btn-toggle-chart">Gráfico 📊</button>
+                        <button class="btn btn-accent btn-small" id="btn-toggle-topics">Tópicos 📋</button>
+                        <button class="btn btn-success btn-small" id="btn-export-pdf">PDF 📄</button>
                         <button class="btn btn-danger btn-small" id="btn-clear-results">Limpar 🗑️</button>
                     </div>
                 </div>
@@ -229,6 +253,18 @@
                             <span class="stat-label">Taxa de Acerto</span>
                         </div>
                     </div>
+                </div>
+
+                <!-- GRÁFICO DE DESEMPENHO -->
+                <div class="chart-container card glass hidden" id="chart-section">
+                    <h3>📊 Gráfico de Desempenho</h3>
+                    <canvas id="performance-chart" height="300"></canvas>
+                </div>
+
+                <!-- DETALHAMENTO POR TÓPICOS -->
+                <div class="topics-report card glass hidden" id="topics-section">
+                    <h3>📋 Desempenho por Tópicos</h3>
+                    <div id="topics-report-content"></div>
                 </div>
 
                 <div class="table-container card">
