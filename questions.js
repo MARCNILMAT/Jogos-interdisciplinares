@@ -12,7 +12,7 @@ export const QUESTIONS_DB = [
     options: ["2/3", "4/8", "3/5", "2/5"],
     answer: "4/8",
     explanation: "Se dividirmos 4 e 8 por 4, encontramos 1 e 2. 4/8 é a metade!",
-    skill: "Frações Equivalentes"
+    skill: "Frações e Porcentagem"
   },
   {
     id: 2,
@@ -34,7 +34,7 @@ export const QUESTIONS_DB = [
     options: ["-13", "-3", "+3", "+13"],
     answer: "-3",
     explanation: "Se você deve 8 reais e paga 5, você ainda fica devendo 3 reais (-3).",
-    skill: "Operações com Inteiros"
+    skill: "Números Inteiros e Racionais"
   },
   {
     id: 12,
@@ -45,7 +45,7 @@ export const QUESTIONS_DB = [
     options: ["2", "4", "6", "8"],
     answer: "4",
     explanation: "Subtraindo 4 de ambos os lados: 2x = 8. Dividindo por 2: x = 4.",
-    skill: "Equações de 1º Grau"
+    skill: "Equação de 1º Grau"
   },
   {
     id: 13,
@@ -67,7 +67,7 @@ export const QUESTIONS_DB = [
     options: ["Δ = b² + 4ac", "Δ = b² - 4ac", "Δ = a² - 4bc", "Δ = c² - 4ab"],
     answer: "Δ = b² - 4ac",
     explanation: "A fórmula correta é b ao quadrado menos 4 vezes com a vezes c.",
-    skill: "Equação do 2º Grau"
+    skill: "Equação de 2º Grau"
   },
   {
     id: 15,
@@ -495,7 +495,7 @@ export const QUESTIONS_DB = [
     options: ["10 cm", "20 cm", "25 cm", "15 cm"],
     answer: "20 cm",
     explanation: "Perímetro é a soma dos lados. 5 + 5 + 5 + 5 = 20 cm.",
-    skill: "Geometria Básica"
+    skill: "Geometria"
   },
   {
     id: 44,
@@ -539,7 +539,7 @@ export const QUESTIONS_DB = [
     options: ["-50", "50", "-15", "15"],
     answer: "50",
     explanation: "Na multiplicação, menos com menos dá mais. 10 x 5 = 50.",
-    skill: "Números Inteiros"
+    skill: "Números Inteiros e Racionais"
   },
   {
     id: 48,
@@ -1981,7 +1981,7 @@ export const QUESTIONS_DB = [
     options: ["25", "30", "35", "50"],
     answer: "35",
     explanation: "Multiplicação primeiro: 5x5=25. Depois soma: 25+10 = 35.",
-    skill: "Operações"
+    skill: "Cálculo"
   },
   {
     id: 176,
@@ -3109,7 +3109,7 @@ export const QUESTIONS_DB = [
     options: ["899", "998", "1000", "1001"],
     answer: "1000",
     explanation: "O sucessor é o número que vem imediatamente depois (+1).",
-    skill: "Numeração"
+    skill: "Números e Operações"
   },
   {
     id: 272,
@@ -3508,7 +3508,7 @@ export const QUESTIONS_DB = [
     options: ["Número que pode ser escrito como fração", "Número que tem fim nas casas decimais", "Número com representação decimal infinita e não periódica (ex: Pi)", "Número negativo apenas"],
     answer: "Número com representação decimal infinita e não periódica (ex: Pi)",
     explanation: "Eles não podem ser expressos como razão de dois inteiros.",
-    skill: "Números"
+    skill: "Números Inteiros e Racionais"
   },
 
   // PORTUGUÊS
@@ -3700,7 +3700,7 @@ export const QUESTIONS_DB = [
     options: ["a = b + c", "a² = b² + c²", "a³ = b³ + c³", "a = b * c"],
     answer: "a² = b² + c²",
     explanation: "O quadrado da hipotenusa é igual à soma dos quadrados dos catetos.",
-    skill: "Teoremas"
+    skill: "Teorema de Tales"
   },
 
   // PORTUGUÊS
@@ -4653,7 +4653,7 @@ export const QUESTIONS_DB = [
     options: ["10000","20000","40","10002"],
     answer: "10000",
     explanation: "Basta multiplicar a base por ela mesma 4 vezes.",
-    skill: "Potências"
+    skill: "Potenciação"
   },
   {
     id: 402,
@@ -4664,7 +4664,7 @@ export const QUESTIONS_DB = [
     options: ["1/3","-3","1/8","-8"],
     answer: "1/8",
     explanation: "Expoente negativo inverte a fração: 1 sobre 2 elevada a 3.",
-    skill: "Potências"
+    skill: "Potenciação"
   },
   {
     id: 403,
@@ -4675,7 +4675,7 @@ export const QUESTIONS_DB = [
     options: ["0","O próprio número","Infinito","1"],
     answer: "1",
     explanation: "Por convenção e propriedade, qualquer número ^ 0 = 1.",
-    skill: "Potências"
+    skill: "Potenciação"
   },
   {
     id: 404,
@@ -4686,7 +4686,7 @@ export const QUESTIONS_DB = [
     options: ["Divisão de potências de mesma base","Potência de Potência","Inversão de base","Multiplicação de potências de mesma base"],
     answer: "Multiplicação de potências de mesma base",
     explanation: "Ex: 2³ * 2² = 2^(3+2) = 2⁵.",
-    skill: "Potências"
+    skill: "Potenciação"
   },
   {
     id: 405,
@@ -4697,7 +4697,7 @@ export const QUESTIONS_DB = [
     options: ["8","4","6","4"],
     answer: "4",
     explanation: "Basta multiplicar a base por ela mesma 2 vezes.",
-    skill: "Potências"
+    skill: "Potenciação"
   },
   {
     id: 406,
@@ -4708,7 +4708,7 @@ export const QUESTIONS_DB = [
     options: ["1/16","1/4","-4","-16"],
     answer: "1/16",
     explanation: "Expoente negativo inverte a fração: 1 sobre 2 elevada a 4.",
-    skill: "Potências"
+    skill: "Potenciação"
   },
   {
     id: 407,
@@ -4719,7 +4719,7 @@ export const QUESTIONS_DB = [
     options: ["1","O próprio número","Infinito","0"],
     answer: "1",
     explanation: "Por convenção e propriedade, qualquer número ^ 0 = 1.",
-    skill: "Potências"
+    skill: "Potenciação"
   },
   {
     id: 408,
@@ -4730,7 +4730,7 @@ export const QUESTIONS_DB = [
     options: ["Inversão de base","Multiplicação de potências de mesma base","Potência de Potência","Divisão de potências de mesma base"],
     answer: "Multiplicação de potências de mesma base",
     explanation: "Ex: 2³ * 2² = 2^(3+2) = 2⁵.",
-    skill: "Potências"
+    skill: "Potenciação"
   },
   {
     id: 409,
@@ -4741,7 +4741,7 @@ export const QUESTIONS_DB = [
     options: ["1000","30","2000","1002"],
     answer: "1000",
     explanation: "Basta multiplicar a base por ela mesma 3 vezes.",
-    skill: "Potências"
+    skill: "Potenciação"
   },
   {
     id: 410,
@@ -4752,7 +4752,7 @@ export const QUESTIONS_DB = [
     options: ["-2","-4","1/4","1/2"],
     answer: "1/4",
     explanation: "Expoente negativo inverte a fração: 1 sobre 2 elevada a 2.",
-    skill: "Potências"
+    skill: "Potenciação"
   },
   {
     id: 411,
@@ -4763,7 +4763,7 @@ export const QUESTIONS_DB = [
     options: ["Infinito","0","1","O próprio número"],
     answer: "1",
     explanation: "Por convenção e propriedade, qualquer número ^ 0 = 1.",
-    skill: "Potências"
+    skill: "Potenciação"
   },
   {
     id: 412,
@@ -4774,7 +4774,7 @@ export const QUESTIONS_DB = [
     options: ["Divisão de potências de mesma base","Inversão de base","Multiplicação de potências de mesma base","Potência de Potência"],
     answer: "Multiplicação de potências de mesma base",
     explanation: "Ex: 2³ * 2² = 2^(3+2) = 2⁵.",
-    skill: "Potências"
+    skill: "Potenciação"
   },
   {
     id: 413,
@@ -4785,7 +4785,7 @@ export const QUESTIONS_DB = [
     options: ["102","100","200","20"],
     answer: "100",
     explanation: "Basta multiplicar a base por ela mesma 2 vezes.",
-    skill: "Potências"
+    skill: "Potenciação"
   },
   {
     id: 414,
@@ -4796,7 +4796,7 @@ export const QUESTIONS_DB = [
     options: ["-8","1/3","1/8","-3"],
     answer: "1/8",
     explanation: "Expoente negativo inverte a fração: 1 sobre 2 elevada a 3.",
-    skill: "Potências"
+    skill: "Potenciação"
   },
   {
     id: 415,
@@ -4807,7 +4807,7 @@ export const QUESTIONS_DB = [
     options: ["0","1","O próprio número","Infinito"],
     answer: "1",
     explanation: "Por convenção e propriedade, qualquer número ^ 0 = 1.",
-    skill: "Potências"
+    skill: "Potenciação"
   },
   {
     id: 416,
@@ -4818,7 +4818,7 @@ export const QUESTIONS_DB = [
     options: ["Divisão de potências de mesma base","Multiplicação de potências de mesma base","Potência de Potência","Inversão de base"],
     answer: "Multiplicação de potências de mesma base",
     explanation: "Ex: 2³ * 2² = 2^(3+2) = 2⁵.",
-    skill: "Potências"
+    skill: "Potenciação"
   },
   {
     id: 417,
@@ -4829,7 +4829,7 @@ export const QUESTIONS_DB = [
     options: ["4","8","4","6"],
     answer: "4",
     explanation: "Basta multiplicar a base por ela mesma 2 vezes.",
-    skill: "Potências"
+    skill: "Potenciação"
   },
   {
     id: 418,
@@ -4840,7 +4840,7 @@ export const QUESTIONS_DB = [
     options: ["-16","1/16","-4","1/4"],
     answer: "1/16",
     explanation: "Expoente negativo inverte a fração: 1 sobre 2 elevada a 4.",
-    skill: "Potências"
+    skill: "Potenciação"
   },
   {
     id: 419,
@@ -4851,7 +4851,7 @@ export const QUESTIONS_DB = [
     options: ["0","O próprio número","1","Infinito"],
     answer: "1",
     explanation: "Por convenção e propriedade, qualquer número ^ 0 = 1.",
-    skill: "Potências"
+    skill: "Potenciação"
   },
   {
     id: 420,
@@ -4862,7 +4862,7 @@ export const QUESTIONS_DB = [
     options: ["Inversão de base","Multiplicação de potências de mesma base","Divisão de potências de mesma base","Potência de Potência"],
     answer: "Multiplicação de potências de mesma base",
     explanation: "Ex: 2³ * 2² = 2^(3+2) = 2⁵.",
-    skill: "Potências"
+    skill: "Potenciação"
   },
   {
     id: 421,
@@ -6633,7 +6633,7 @@ export const QUESTIONS_DB = [
     options: ["8","2","1/2","4"],
     answer: "2",
     explanation: "Expoente 1/2 equivale à raiz quadrada: √4 = 2.",
-    skill: "Potências e suas propriedades"
+    skill: "Potenciação"
   },
   {
     id: 582,
@@ -6644,7 +6644,7 @@ export const QUESTIONS_DB = [
     options: ["9/4","-9/4","-4/6","4/9"],
     answer: "9/4",
     explanation: "Invertemos a fração para (3/2) e elevamos ao quadrado: 3²/2² = 9/4.",
-    skill: "Potências e suas propriedades"
+    skill: "Potenciação"
   },
   {
     id: 583,
@@ -6655,7 +6655,7 @@ export const QUESTIONS_DB = [
     options: ["Somamos","Subtraímos","Multiplicamos","Dividimos"],
     answer: "Multiplicamos",
     explanation: "Multiplicamos: (2³)² = 2^(3*2) = 2⁶.",
-    skill: "Potências e suas propriedades"
+    skill: "Potenciação"
   },
   {
     id: 584,
@@ -6666,7 +6666,7 @@ export const QUESTIONS_DB = [
     options: ["50","1/5","25","5"],
     answer: "5",
     explanation: "Expoente 1/2 equivale à raiz quadrada: √25 = 5.",
-    skill: "Potências e suas propriedades"
+    skill: "Potenciação"
   },
   {
     id: 585,
@@ -6677,7 +6677,7 @@ export const QUESTIONS_DB = [
     options: ["9/4","4/9","-4/6","-9/4"],
     answer: "9/4",
     explanation: "Invertemos a fração para (3/2) e elevamos ao quadrado: 3²/2² = 9/4.",
-    skill: "Potências e suas propriedades"
+    skill: "Potenciação"
   },
   {
     id: 586,
@@ -6688,7 +6688,7 @@ export const QUESTIONS_DB = [
     options: ["Subtraímos","Somamos","Dividimos","Multiplicamos"],
     answer: "Multiplicamos",
     explanation: "Multiplicamos: (2³)² = 2^(3*2) = 2⁶.",
-    skill: "Potências e suas propriedades"
+    skill: "Potenciação"
   },
   {
     id: 587,
@@ -6699,7 +6699,7 @@ export const QUESTIONS_DB = [
     options: ["1/4","4","32","16"],
     answer: "4",
     explanation: "Expoente 1/2 equivale à raiz quadrada: √16 = 4.",
-    skill: "Potências e suas propriedades"
+    skill: "Potenciação"
   },
   {
     id: 588,
@@ -6710,7 +6710,7 @@ export const QUESTIONS_DB = [
     options: ["-4/6","4/9","9/4","-9/4"],
     answer: "9/4",
     explanation: "Invertemos a fração para (3/2) e elevamos ao quadrado: 3²/2² = 9/4.",
-    skill: "Potências e suas propriedades"
+    skill: "Potenciação"
   },
   {
     id: 589,
@@ -6721,7 +6721,7 @@ export const QUESTIONS_DB = [
     options: ["Dividimos","Somamos","Subtraímos","Multiplicamos"],
     answer: "Multiplicamos",
     explanation: "Multiplicamos: (2³)² = 2^(3*2) = 2⁶.",
-    skill: "Potências e suas propriedades"
+    skill: "Potenciação"
   },
   {
     id: 590,
@@ -6732,7 +6732,7 @@ export const QUESTIONS_DB = [
     options: ["9","18","3","1/3"],
     answer: "3",
     explanation: "Expoente 1/2 equivale à raiz quadrada: √9 = 3.",
-    skill: "Potências e suas propriedades"
+    skill: "Potenciação"
   },
   {
     id: 591,
@@ -6743,7 +6743,7 @@ export const QUESTIONS_DB = [
     options: ["-9/4","-4/6","9/4","4/9"],
     answer: "9/4",
     explanation: "Invertemos a fração para (3/2) e elevamos ao quadrado: 3²/2² = 9/4.",
-    skill: "Potências e suas propriedades"
+    skill: "Potenciação"
   },
   {
     id: 592,
@@ -6754,7 +6754,7 @@ export const QUESTIONS_DB = [
     options: ["Dividimos","Subtraímos","Multiplicamos","Somamos"],
     answer: "Multiplicamos",
     explanation: "Multiplicamos: (2³)² = 2^(3*2) = 2⁶.",
-    skill: "Potências e suas propriedades"
+    skill: "Potenciação"
   },
   {
     id: 593,
@@ -6765,7 +6765,7 @@ export const QUESTIONS_DB = [
     options: ["2","8","1/2","4"],
     answer: "2",
     explanation: "Expoente 1/2 equivale à raiz quadrada: √4 = 2.",
-    skill: "Potências e suas propriedades"
+    skill: "Potenciação"
   },
   {
     id: 594,
@@ -6776,7 +6776,7 @@ export const QUESTIONS_DB = [
     options: ["-9/4","-4/6","4/9","9/4"],
     answer: "9/4",
     explanation: "Invertemos a fração para (3/2) e elevamos ao quadrado: 3²/2² = 9/4.",
-    skill: "Potências e suas propriedades"
+    skill: "Potenciação"
   },
   {
     id: 595,
@@ -6787,7 +6787,7 @@ export const QUESTIONS_DB = [
     options: ["Somamos","Dividimos","Subtraímos","Multiplicamos"],
     answer: "Multiplicamos",
     explanation: "Multiplicamos: (2³)² = 2^(3*2) = 2⁶.",
-    skill: "Potências e suas propriedades"
+    skill: "Potenciação"
   },
   {
     id: 596,
@@ -6798,7 +6798,7 @@ export const QUESTIONS_DB = [
     options: ["50","1/5","25","5"],
     answer: "5",
     explanation: "Expoente 1/2 equivale à raiz quadrada: √25 = 5.",
-    skill: "Potências e suas propriedades"
+    skill: "Potenciação"
   },
   {
     id: 597,
@@ -6809,7 +6809,7 @@ export const QUESTIONS_DB = [
     options: ["-9/4","4/9","9/4","-4/6"],
     answer: "9/4",
     explanation: "Invertemos a fração para (3/2) e elevamos ao quadrado: 3²/2² = 9/4.",
-    skill: "Potências e suas propriedades"
+    skill: "Potenciação"
   },
   {
     id: 598,
@@ -6820,7 +6820,7 @@ export const QUESTIONS_DB = [
     options: ["Subtraímos","Somamos","Dividimos","Multiplicamos"],
     answer: "Multiplicamos",
     explanation: "Multiplicamos: (2³)² = 2^(3*2) = 2⁶.",
-    skill: "Potências e suas propriedades"
+    skill: "Potenciação"
   },
   {
     id: 599,
@@ -6831,7 +6831,7 @@ export const QUESTIONS_DB = [
     options: ["16","4","1/4","32"],
     answer: "4",
     explanation: "Expoente 1/2 equivale à raiz quadrada: √16 = 4.",
-    skill: "Potências e suas propriedades"
+    skill: "Potenciação"
   },
   {
     id: 600,
@@ -6842,7 +6842,7 @@ export const QUESTIONS_DB = [
     options: ["4/9","-4/6","9/4","-9/4"],
     answer: "9/4",
     explanation: "Invertemos a fração para (3/2) e elevamos ao quadrado: 3²/2² = 9/4.",
-    skill: "Potências e suas propriedades"
+    skill: "Potenciação"
   },
 
   // --- LÍNGUA PORTUGUESA (NOVAS QUESTÕES) ---
@@ -27118,7 +27118,7 @@ export const QUESTIONS_DB = [
     options: ["20","25","40","50"],
     answer: "25",
     explanation: "100 dividido em 4 partes iguais resulta em 25.",
-    skill: "Operações Fundamentais"
+    skill: "Cálculo"
   },
   {
     id: 2441,
@@ -27129,7 +27129,7 @@ export const QUESTIONS_DB = [
     options: ["-20","20","-9","9"],
     answer: "20",
     explanation: "Na multiplicação, menos com menos dá mais.",
-    skill: "Números Inteiros"
+    skill: "Números Inteiros e Racionais"
   },
   {
     id: 2442,
@@ -27173,7 +27173,7 @@ export const QUESTIONS_DB = [
     options: ["3","5","10","15"],
     answer: "5",
     explanation: "x = 15 / 3 = 5.",
-    skill: "Equações"
+    skill: "Equação de 1º Grau"
   },
   {
     id: 2446,
@@ -27184,7 +27184,7 @@ export const QUESTIONS_DB = [
     options: ["Equações de 1º Grau","Equações de 2º Grau","Soma de frações","Cálculo de áreas"],
     answer: "Equações de 2º Grau",
     explanation: "Resolve equações do tipo ax² + bx + c = 0.",
-    skill: "Equação do 2º Grau"
+    skill: "Equação de 2º Grau"
   },
   {
     id: 2447,
@@ -27904,7 +27904,7 @@ export const QUESTIONS_DB = [
     options: ["4/8","1","1/2","2/4"],
     answer: "1",
     explanation: "3/4 + 1/4 = 4/4 = 1 inteiro.",
-    skill: "Frações"
+    skill: "Frações e Porcentagem"
   },
   {
     id: 2512,
@@ -27926,7 +27926,7 @@ export const QUESTIONS_DB = [
     options: ["-4","4","20","-20"],
     answer: "-20",
     explanation: "Soma de débitos continua sendo um débito.",
-    skill: "Números Inteiros"
+    skill: "Números Inteiros e Racionais"
   },
   {
     id: 2514,
@@ -27981,7 +27981,7 @@ export const QUESTIONS_DB = [
     options: ["Apenas 4","Apenas -4","4 e -4","16 e -16"],
     answer: "4 e -4",
     explanation: "Ambos elevados ao quadrado resultam em 16.",
-    skill: "Equações de 2º Grau"
+    skill: "Equação de 2º Grau"
   },
   {
     id: 2519,
@@ -28081,7 +28081,7 @@ export const QUESTIONS_DB = [
     options: ["48","54","56","64"],
     answer: "56",
     explanation: "Tabuada básica.",
-    skill: "Operações Fundamentais"
+    skill: "Cálculo"
   },
   {
     id: 2528,
@@ -28092,7 +28092,7 @@ export const QUESTIONS_DB = [
     options: ["650","750","550","450"],
     answer: "650",
     explanation: "Subtração simples.",
-    skill: "Operações Fundamentais"
+    skill: "Cálculo"
   },
   {
     id: 2529,
@@ -28136,7 +28136,7 @@ export const QUESTIONS_DB = [
     options: ["-12","8","-8","12"],
     answer: "8",
     explanation: "10 - 2 = 8.",
-    skill: "Números Inteiros"
+    skill: "Números Inteiros e Racionais"
   },
   {
     id: 2533,
@@ -28180,7 +28180,7 @@ export const QUESTIONS_DB = [
     options: ["3","5","7","10"],
     answer: "5",
     explanation: "x + 2x = 15 => 3x = 15 => x = 5.",
-    skill: "Equações"
+    skill: "Equação de 1º Grau"
   },
   {
     id: 2537,
@@ -28722,7 +28722,7 @@ export const QUESTIONS_DB = [
     options: ["1/4","1","2/2","0,5"],
     answer: "1",
     explanation: "Meio mais meio é igual a um inteiro.",
-    skill: "Frações"
+    skill: "Frações e Porcentagem"
   },
   {
     id: 2586,
@@ -28744,7 +28744,7 @@ export const QUESTIONS_DB = [
     options: ["-50","50","15","-15"],
     answer: "50",
     explanation: "Na multiplicação, menos com menos dá mais.",
-    skill: "Números Inteiros"
+    skill: "Números Inteiros e Racionais"
   },
   {
     id: 2588,
@@ -28766,7 +28766,7 @@ export const QUESTIONS_DB = [
     options: ["5","10","15","20"],
     answer: "10",
     explanation: "2x = 20 => x = 10.",
-    skill: "Equações"
+    skill: "Equação de 1º Grau"
   },
   {
     id: 2590,
@@ -29188,7 +29188,7 @@ export const QUESTIONS_DB = [
     options: ["400","450","500","600"],
     answer: "500",
     explanation: "125 x 2 = 250; 250 x 2 = 500.",
-    skill: "Operações Fundamentais"
+    skill: "Cálculo"
   },
   {
     id: 2628,
@@ -29243,7 +29243,7 @@ export const QUESTIONS_DB = [
     options: ["Equações de 1º Grau","Equações de 2º Grau","Divisão de frações","Cálculo de áreas"],
     answer: "Equações de 2º Grau",
     explanation: "Resolve equações do tipo ax² + bx + c = 0.",
-    skill: "Equações de 2º Grau"
+    skill: "Equação de 2º Grau"
   },
   {
     id: 2633,
@@ -29521,7 +29521,7 @@ export const QUESTIONS_DB = [
     options: ["55","60","65","70"],
     answer: "65",
     explanation: "13 x 5 = 65.",
-    skill: "Operações Fundamentais"
+    skill: "Cálculo"
   },
   {
     id: 2658,
@@ -29898,7 +29898,7 @@ export const QUESTIONS_DB = [
     options: ["80","90","100","75"],
     answer: "90",
     explanation: "15 x 2 = 30; 30 x 3 = 90.",
-    skill: "Operações"
+    skill: "Cálculo"
   },
   {
     id: 2692,
@@ -29909,7 +29909,7 @@ export const QUESTIONS_DB = [
     options: ["-7","7","23","-23"],
     answer: "7",
     explanation: "15 - 8 = 7.",
-    skill: "Números Inteiros"
+    skill: "Números Inteiros e Racionais"
   },
   {
     id: 2693,
@@ -29931,7 +29931,7 @@ export const QUESTIONS_DB = [
     options: ["Agudo","Obtuso","Reto","Raso"],
     answer: "Reto",
     explanation: "No triângulo retângulo, a hipotenusa opõe-se ao ângulo de 90º.",
-    skill: "Pitágoras"
+    skill: "Teorema de Pitágoras"
   },
   {
     id: 2695,
@@ -30163,7 +30163,7 @@ export const QUESTIONS_DB = [
     options: ["2","3","6","12"],
     answer: "6",
     explanation: "6 é o maior número que divide ambos exatamente.",
-    skill: "Números"
+    skill: "Números e Operações"
   },
   {
     id: 2716,
@@ -30285,7 +30285,7 @@ export const QUESTIONS_DB = [
     options: ["2","3","6","12"],
     answer: "6",
     explanation: "6 é o maior número que divide ambos exatamente.",
-    skill: "Números"
+    skill: "Números e Operações"
   },
   {
     id: 2727,
@@ -30407,7 +30407,7 @@ export const QUESTIONS_DB = [
     options: ["2","3","6","12"],
     answer: "6",
     explanation: "6 é o maior número que divide ambos exatamente.",
-    skill: "Números"
+    skill: "Números e Operações"
   },
   {
     id: 2738,
@@ -30441,7 +30441,7 @@ export const QUESTIONS_DB = [
     options: ["350","400","450","500"],
     answer: "400",
     explanation: "50 x 8 = 400.",
-    skill: "Operações"
+    skill: "Cálculo"
   },
   {
     id: 2741,
@@ -30452,7 +30452,7 @@ export const QUESTIONS_DB = [
     options: ["3","7","10","15"],
     answer: "7",
     explanation: "x = 21 / 3 = 7.",
-    skill: "Equações"
+    skill: "Equação de 1º Grau"
   },
   {
     id: 2742,
@@ -30839,7 +30839,7 @@ export const QUESTIONS_DB = [
     options: ["2","3","6","12"],
     answer: "6",
     explanation: "6 é o maior número que divide ambos exatamente.",
-    skill: "Números"
+    skill: "Números e Operações"
   },
   {
     id: 2777,
@@ -30961,7 +30961,7 @@ export const QUESTIONS_DB = [
     options: ["2","3","6","12"],
     answer: "6",
     explanation: "6 é o maior número que divide ambos exatamente.",
-    skill: "Números"
+    skill: "Números e Operações"
   },
   {
     id: 2788,
@@ -31083,7 +31083,7 @@ export const QUESTIONS_DB = [
     options: ["2","3","6","12"],
     answer: "6",
     explanation: "6 é o maior número que divide ambos exatamente.",
-    skill: "Números"
+    skill: "Números e Operações"
   },
   {
     id: 2799,
@@ -31327,7 +31327,7 @@ export const QUESTIONS_DB = [
     options: ["25","50","75","80"],
     answer: "75",
     explanation: "100 dividido por 4 é 25; 25 multiplicado por 3 é 75.",
-    skill: "Frações"
+    skill: "Frações e Porcentagem"
   },
   {
     id: 2821,
@@ -31338,7 +31338,7 @@ export const QUESTIONS_DB = [
     options: ["-7","7","17","-17"],
     answer: "-17",
     explanation: "Soma de dois números negativos resulta em um negativo.",
-    skill: "Números Inteiros"
+    skill: "Números Inteiros e Racionais"
   },
   {
     id: 2822,
@@ -31926,7 +31926,7 @@ export const QUESTIONS_DB = [
     options: ["5","6","7","8"],
     answer: "8",
     explanation: "x = 40 / 5 = 8.",
-    skill: "Equações"
+    skill: "Equação de 1º Grau"
   },
   {
     id: 2875,
@@ -32446,7 +32446,7 @@ export const QUESTIONS_DB = [
     options: ["10","11","12","14"],
     answer: "12",
     explanation: "12 x 12 = 144.",
-    skill: "Operações"
+    skill: "Cálculo"
   },
   {
     id: 2922,
@@ -32468,7 +32468,7 @@ export const QUESTIONS_DB = [
     options: ["5","10","15","20"],
     answer: "15",
     explanation: "x = 25 - 10 = 15.",
-    skill: "Equações"
+    skill: "Equação de 1º Grau"
   },
   {
     id: 2924,
@@ -32800,7 +32800,7 @@ export const QUESTIONS_DB = [
     options: ["400","450","500","600"],
     answer: "500",
     explanation: "125 x 2 = 250; 250 x 2 = 500.",
-    skill: "Operações"
+    skill: "Cálculo"
   },
   {
     id: 2954,
@@ -32833,7 +32833,7 @@ export const QUESTIONS_DB = [
     options: ["2","5","8","10"],
     answer: "5",
     explanation: "A raiz quadrada positiva de 25 é 5.",
-    skill: "Equações de 2º Grau"
+    skill: "Equação de 2º Grau"
   },
   {
     id: 2957,
@@ -33375,7 +33375,7 @@ export const QUESTIONS_DB = [
     options: ["95","100","105","110"],
     answer: "105",
     explanation: "15 x 7 = 105.",
-    skill: "Operações"
+    skill: "Cálculo"
   },
   {
     id: 3006,
@@ -33796,7 +33796,7 @@ export const QUESTIONS_DB = [
     options: ["20","21","22","24"],
     answer: "21",
     explanation: "x = 42 / 2 = 21.",
-    skill: "Equações"
+    skill: "Equação de 1º Grau"
   },
   {
     id: 3044,
@@ -34505,7 +34505,7 @@ export const QUESTIONS_DB = [
     options: ["15","18","20","22"],
     answer: "18",
     explanation: "x = 30 - 12 = 18.",
-    skill: "Equações"
+    skill: "Equação de 1º Grau"
   },
   {
     id: 3108,
@@ -35424,7 +35424,7 @@ export const QUESTIONS_DB = [
     options: ["Sim","Não, é divisível por 5","Sim, só divide por 1","Não, é par"],
     answer: "Não, é divisível por 5",
     explanation: "Números primos só são divisíveis por 1 e por eles mesmos.",
-    skill: "Números"
+    skill: "Números e Operações"
   },
   {
     id: 3191,
@@ -35479,7 +35479,7 @@ export const QUESTIONS_DB = [
     options: ["-7","7","17","-17"],
     answer: "7",
     explanation: "Sinais diferentes: subtrai e dá o sinal do maior.",
-    skill: "Inteiros"
+    skill: "Números Inteiros e Racionais"
   },
   {
     id: 3196,
@@ -35490,7 +35490,7 @@ export const QUESTIONS_DB = [
     options: ["5","10","15","20"],
     answer: "10",
     explanation: "3x + 10 = 40 -> 3x = 30 -> x = 10.",
-    skill: "Equações"
+    skill: "Equação de 1º Grau"
   },
   {
     id: 3197,
@@ -35501,7 +35501,7 @@ export const QUESTIONS_DB = [
     options: ["Cateto oposto","Cateto adjacente","Hipotenusa","Bissetriz"],
     answer: "Hipotenusa",
     explanation: "Definição técnica da hipotenusa.",
-    skill: "Pitágoras"
+    skill: "Teorema de Pitágoras"
   },
   {
     id: 3198,
@@ -35954,7 +35954,7 @@ export const QUESTIONS_DB = [
     options: ["5","6","7","8"],
     answer: "8",
     explanation: "x = 40 / 5 = 8.",
-    skill: "Equações"
+    skill: "Equação de 1º Grau"
   },
   {
     id: 3239,
@@ -35976,7 +35976,7 @@ export const QUESTIONS_DB = [
     options: ["10","11","12","14"],
     answer: "12",
     explanation: "12 x 12 = 144.",
-    skill: "Operações"
+    skill: "Cálculo"
   },
   {
     id: 3241,
@@ -36616,7 +36616,7 @@ export const QUESTIONS_DB = [
     options: ["5","15","20","40"],
     answer: "20",
     explanation: "x = 30 - 10 = 20.",
-    skill: "Equações"
+    skill: "Equação de 1º Grau"
   },
   {
     id: 3299,
@@ -36649,7 +36649,7 @@ export const QUESTIONS_DB = [
     options: ["Maior","Menor","Igual","Nenhuma das anteriores"],
     answer: "Menor",
     explanation: "Números negativos ficam à esquerda do zero.",
-    skill: "Inteiros"
+    skill: "Números Inteiros e Racionais"
   },
   {
     id: 3302,
@@ -37167,7 +37167,7 @@ export const QUESTIONS_DB = [
     options: ["6","7","8","9"],
     answer: "8",
     explanation: "8x8=64.",
-    skill: "Raiz"
+    skill: "Radiciação"
   },
   {
     id: 3349,
@@ -37267,7 +37267,7 @@ export const QUESTIONS_DB = [
     options: ["10","12","15","20"],
     answer: "12",
     explanation: "x = 120 / 10 = 12.",
-    skill: "Equações"
+    skill: "Equação de 1º Grau"
   },
   {
     id: 3358,
@@ -37289,7 +37289,7 @@ export const QUESTIONS_DB = [
     options: ["Sim","Não, é par","Não, divide por 3","Só se for negativo"],
     answer: "Sim",
     explanation: "13 só possui dois divisores: 1 e ele mesmo.",
-    skill: "Números"
+    skill: "Números e Operações"
   },
   {
     id: 3360,
@@ -37333,7 +37333,7 @@ export const QUESTIONS_DB = [
     options: ["54","56","58","60"],
     answer: "56",
     explanation: "Tabuada básica.",
-    skill: "Operações"
+    skill: "Cálculo"
   },
   {
     id: 3364,
@@ -38626,7 +38626,7 @@ export const QUESTIONS_DB = [
     options: ["Maior","Menor","Igual","Nenhuma"],
     answer: "Menor",
     explanation: "Na reta numérica, -8 está mais à esquerda que -3.",
-    skill: "Inteiros"
+    skill: "Números Inteiros e Racionais"
   },
   {
     id: 3481,
@@ -39223,7 +39223,7 @@ export const QUESTIONS_DB = [
     options: ["10","15","20","25"],
     answer: "15",
     explanation: "x = 45 / 3 = 15.",
-    skill: "Equações"
+    skill: "Equação de 1º Grau"
   },
   {
     id: 3535,
@@ -39256,7 +39256,7 @@ export const QUESTIONS_DB = [
     options: ["Sim","Não, divide por 7","Não, é par","Sim, só divide por 1"],
     answer: "Não, divide por 7",
     explanation: "7 x 7 = 49.",
-    skill: "Números"
+    skill: "Números e Operações"
   },
   {
     id: 3538,
@@ -40095,7 +40095,7 @@ export const QUESTIONS_DB = [
     options: ["12","24","48","96"],
     answer: "24",
     explanation: "x = 48 / 2 = 24.",
-    skill: "Equações"
+    skill: "Equação de 1º Grau"
   },
   {
     id: 3614,
@@ -40161,7 +40161,7 @@ export const QUESTIONS_DB = [
     options: ["Sim","Não, é par","Não, divide por 3","Só nos domingos"],
     answer: "Sim",
     explanation: "Só possui como divisores o 1 e o próprio 7.",
-    skill: "Números"
+    skill: "Números e Operações"
   },
   {
     id: 3620,
@@ -40669,7 +40669,7 @@ export const QUESTIONS_DB = [
     options: ["Maior","Menor","Igual","Nenhuma"],
     answer: "Menor",
     explanation: "Na reta numérica, -8 está mais à esquerda que -3.",
-    skill: "Inteiros"
+    skill: "Números Inteiros e Racionais"
   },
   {
     id: 3666,
@@ -41496,7 +41496,7 @@ export const QUESTIONS_DB = [
     options: ["10","15","30","100"],
     answer: "30",
     explanation: "x = 300 / 10 = 30.",
-    skill: "Equações"
+    skill: "Equação de 1º Grau"
   },
   {
     id: 3741,
@@ -41805,7 +41805,7 @@ export const QUESTIONS_DB = [
     options: ["Maior","Menor","Igual","Nenhuma"],
     answer: "Menor",
     explanation: "Na reta numérica, -8 está mais à esquerda que -3.",
-    skill: "Inteiros"
+    skill: "Números Inteiros e Racionais"
   },
   {
     id: 3769,
@@ -45708,7 +45708,7 @@ export const QUESTIONS_DB = [
     options: ["2","3","4","5"],
     answer: "3",
     explanation: "Tri = três.",
-    skill: "Geometria Básica"
+    skill: "Geometria"
   },
   {
     id: 4123,
@@ -45719,7 +45719,7 @@ export const QUESTIONS_DB = [
     options: ["2","3","4","5"],
     answer: "4",
     explanation: "Todos os 4 ângulos medem 90°.",
-    skill: "Geometria Básica"
+    skill: "Geometria"
   },
   {
     id: 4124,
@@ -45730,7 +45730,7 @@ export const QUESTIONS_DB = [
     options: ["Triângulo","Círculo","Quadrado","Trapézio"],
     answer: "Quadrado",
     explanation: "Lados iguais e ângulos de 90°.",
-    skill: "Geometria Básica"
+    skill: "Geometria"
   },
   {
     id: 4125,
@@ -45741,7 +45741,7 @@ export const QUESTIONS_DB = [
     options: ["Área","Perímetro","Volume","Diagonal"],
     answer: "Perímetro",
     explanation: "É a soma de todos os lados.",
-    skill: "Geometria Básica"
+    skill: "Geometria"
   },
   {
     id: 4126,
@@ -45752,7 +45752,7 @@ export const QUESTIONS_DB = [
     options: ["Vértice","Lado","Centro","Ângulo"],
     answer: "Centro",
     explanation: "Essa distância constante é o raio.",
-    skill: "Geometria Básica"
+    skill: "Geometria"
   },
   {
     id: 4127,
@@ -45763,7 +45763,7 @@ export const QUESTIONS_DB = [
     options: ["Perpendiculares","Secantes","Paralelas","Coincidentes"],
     answer: "Paralelas",
     explanation: "Mantêm sempre a mesma distância entre si.",
-    skill: "Geometria Básica"
+    skill: "Geometria"
   },
   {
     id: 4128,
@@ -45774,7 +45774,7 @@ export const QUESTIONS_DB = [
     options: ["90°","180°","270°","360°"],
     answer: "180°",
     explanation: "Propriedade fundamental dos triângulos.",
-    skill: "Geometria Básica"
+    skill: "Geometria"
   },
   {
     id: 4129,
@@ -45785,7 +45785,7 @@ export const QUESTIONS_DB = [
     options: ["Diâmetro","Corda","Raio","Arco"],
     answer: "Raio",
     explanation: "O diâmetro é o dobro do raio.",
-    skill: "Geometria Básica"
+    skill: "Geometria"
   },
   {
     id: 4130,
@@ -45796,7 +45796,7 @@ export const QUESTIONS_DB = [
     options: ["4","5","6","8"],
     answer: "6",
     explanation: "Hexa = seis.",
-    skill: "Geometria Básica"
+    skill: "Geometria"
   },
   {
     id: 4131,
@@ -45807,7 +45807,7 @@ export const QUESTIONS_DB = [
     options: ["5","7","12","17"],
     answer: "7",
     explanation: "x = 12 - 5 = 7.",
-    skill: "Equações de 1º Grau"
+    skill: "Equação de 1º Grau"
   },
   {
     id: 4132,
@@ -45818,7 +45818,7 @@ export const QUESTIONS_DB = [
     options: ["2","5","10","20"],
     answer: "5",
     explanation: "x = 10/2 = 5.",
-    skill: "Equações de 1º Grau"
+    skill: "Equação de 1º Grau"
   },
   {
     id: 4133,
@@ -45829,7 +45829,7 @@ export const QUESTIONS_DB = [
     options: ["0","2","3","6"],
     answer: "2",
     explanation: "3x = 6, x = 2.",
-    skill: "Equações de 1º Grau"
+    skill: "Equação de 1º Grau"
   },
   {
     id: 4134,
@@ -45840,7 +45840,7 @@ export const QUESTIONS_DB = [
     options: ["3","4","7","12"],
     answer: "12",
     explanation: "x = 3 x 4 = 12.",
-    skill: "Equações de 1º Grau"
+    skill: "Equação de 1º Grau"
   },
   {
     id: 4135,
@@ -45851,7 +45851,7 @@ export const QUESTIONS_DB = [
     options: ["3","5","7","10"],
     answer: "5",
     explanation: "5x = 25, x = 5.",
-    skill: "Equações de 1º Grau"
+    skill: "Equação de 1º Grau"
   },
   {
     id: 4136,
@@ -45862,7 +45862,7 @@ export const QUESTIONS_DB = [
     options: ["0","2","4","8"],
     answer: "2",
     explanation: "4x = 8, x = 2.",
-    skill: "Equações de 1º Grau"
+    skill: "Equação de 1º Grau"
   },
   {
     id: 4137,
@@ -45873,7 +45873,7 @@ export const QUESTIONS_DB = [
     options: ["Somamos dos dois lados","Operações inversas dos dois lados","Ignoramos os números","Multiplicamos só de um lado"],
     answer: "Operações inversas dos dois lados",
     explanation: "Princípio da equivalência.",
-    skill: "Equações de 1º Grau"
+    skill: "Equação de 1º Grau"
   },
   {
     id: 4138,
@@ -45884,7 +45884,7 @@ export const QUESTIONS_DB = [
     options: ["-12","-6","6","12"],
     answer: "6",
     explanation: "x = -3 + 9 = 6.",
-    skill: "Equações de 1º Grau"
+    skill: "Equação de 1º Grau"
   },
   {
     id: 4139,
@@ -45895,7 +45895,7 @@ export const QUESTIONS_DB = [
     options: ["0","1","2","3"],
     answer: "1",
     explanation: "É por isso que se chama equação de primeiro grau.",
-    skill: "Equações de 1º Grau"
+    skill: "Equação de 1º Grau"
   },
   {
     id: 4140,
@@ -46204,7 +46204,7 @@ export const QUESTIONS_DB = [
     options: ["-5","5","11","-11"],
     answer: "5",
     explanation: "Sinais diferentes: subtrai e fica o sinal do maior.",
-    skill: "Operações com Inteiros"
+    skill: "Números Inteiros e Racionais"
   },
   {
     id: 4168,
@@ -46215,7 +46215,7 @@ export const QUESTIONS_DB = [
     options: ["-8","-4","4","8"],
     answer: "-4",
     explanation: "Menos com menos vira mais: -6 + 2 = -4.",
-    skill: "Operações com Inteiros"
+    skill: "Números Inteiros e Racionais"
   },
   {
     id: 4169,
@@ -46226,7 +46226,7 @@ export const QUESTIONS_DB = [
     options: ["21","-21","10","-10"],
     answer: "-21",
     explanation: "Sinais diferentes na multiplicação: resultado negativo.",
-    skill: "Operações com Inteiros"
+    skill: "Números Inteiros e Racionais"
   },
   {
     id: 4170,
@@ -46237,7 +46237,7 @@ export const QUESTIONS_DB = [
     options: ["-5","5","-16","16"],
     answer: "5",
     explanation: "Sinais iguais na divisão: resultado positivo.",
-    skill: "Operações com Inteiros"
+    skill: "Números Inteiros e Racionais"
   },
   {
     id: 4171,
@@ -46248,7 +46248,7 @@ export const QUESTIONS_DB = [
     options: ["9","0","-9","1/9"],
     answer: "-9",
     explanation: "Oposto: mesmo valor, sinal contrário.",
-    skill: "Operações com Inteiros"
+    skill: "Números Inteiros e Racionais"
   },
   {
     id: 4172,
@@ -46259,7 +46259,7 @@ export const QUESTIONS_DB = [
     options: ["+3","+1","0","-2"],
     answer: "-2",
     explanation: "Números negativos ficam à esquerda do zero.",
-    skill: "Operações com Inteiros"
+    skill: "Números Inteiros e Racionais"
   },
   {
     id: 4173,
@@ -46270,7 +46270,7 @@ export const QUESTIONS_DB = [
     options: ["-15","15","0","1"],
     answer: "15",
     explanation: "|−15| = 15. Módulo é a distância até o zero.",
-    skill: "Operações com Inteiros"
+    skill: "Números Inteiros e Racionais"
   },
   {
     id: 4174,
@@ -46281,7 +46281,7 @@ export const QUESTIONS_DB = [
     options: ["-9","9","-6","6"],
     answer: "9",
     explanation: "(-3) x (-3) = +9. Menos com menos dá mais.",
-    skill: "Operações com Inteiros"
+    skill: "Números Inteiros e Racionais"
   },
   {
     id: 4175,
@@ -46292,7 +46292,7 @@ export const QUESTIONS_DB = [
     options: ["0","16","-6","10"],
     answer: "0",
     explanation: "5 - 8 + 3 = 0.",
-    skill: "Operações com Inteiros"
+    skill: "Números Inteiros e Racionais"
   },
   {
     id: 4176,
@@ -47318,7 +47318,7 @@ export const QUESTIONS_DB = [
     options: ["2/4","1/4","3/4","2/2"],
     answer: "2/4",
     explanation: "Multiplicando o numerador e o denominador de 1/2 por 2, obtemos 2/4.",
-    skill: "Frações Equivalentes"
+    skill: "Frações e Porcentagem"
   },
   {
     id: 4269,
@@ -47329,7 +47329,7 @@ export const QUESTIONS_DB = [
     options: ["2","3","5","10"],
     answer: "2",
     explanation: "Como 5 x 2 = 10, multiplique o numerador por 2: 3 x 2 = 6.",
-    skill: "Frações Equivalentes"
+    skill: "Frações e Porcentagem"
   },
   {
     id: 4270,
@@ -47340,7 +47340,7 @@ export const QUESTIONS_DB = [
     options: ["1/2","2/2","5/10","1/10"],
     answer: "1/2",
     explanation: "10÷10=1 e 20÷10=2, resultando em 1/2.",
-    skill: "Frações Equivalentes"
+    skill: "Frações e Porcentagem"
   },
   {
     id: 4271,
@@ -47351,7 +47351,7 @@ export const QUESTIONS_DB = [
     options: ["Sim, pois 2x3=6 e 3x3=9","Não, os números são diferentes","Apenas se somarmos 4","Sim, pois 2+4=6"],
     answer: "Sim, pois 2x3=6 e 3x3=9",
     explanation: "Frações equivalentes são obtidas multiplicando ou dividindo termos pelo mesmo número.",
-    skill: "Frações Equivalentes"
+    skill: "Frações e Porcentagem"
   },
   {
     id: 4272,
@@ -47362,7 +47362,7 @@ export const QUESTIONS_DB = [
     options: ["1","2","4","0"],
     answer: "1",
     explanation: "4/8 simplificado por 4 é 1/2. Logo, x=1.",
-    skill: "Frações Equivalentes"
+    skill: "Frações e Porcentagem"
   },
   {
     id: 4273,
@@ -47373,7 +47373,7 @@ export const QUESTIONS_DB = [
     options: ["Equivalente","Maior","Menor","Inversa"],
     answer: "Equivalente",
     explanation: "Multiplicar ambos os termos pelo mesmo número mantém a equivalência.",
-    skill: "Frações Equivalentes"
+    skill: "Frações e Porcentagem"
   },
   {
     id: 4274,
@@ -47384,7 +47384,7 @@ export const QUESTIONS_DB = [
     options: ["1/2","1/4","1/5","1/10"],
     answer: "1/2",
     explanation: "50/100 simplificado é igual a 1/2.",
-    skill: "Frações Equivalentes"
+    skill: "Frações e Porcentagem"
   },
   {
     id: 4275,
@@ -47395,7 +47395,7 @@ export const QUESTIONS_DB = [
     options: ["Simplificamos a fração","Aumentamos o valor","Invertemos a fração","Anulamos a fração"],
     answer: "Simplificamos a fração",
     explanation: "Simplificar é encontrar uma fração equivalente com números menores.",
-    skill: "Frações Equivalentes"
+    skill: "Frações e Porcentagem"
   },
   {
     id: 4276,
@@ -47406,7 +47406,7 @@ export const QUESTIONS_DB = [
     options: ["9/12","6/10","4/3","1/2"],
     answer: "9/12",
     explanation: "3x3=9 e 4x3=12, portanto 9/12.",
-    skill: "Frações Equivalentes"
+    skill: "Frações e Porcentagem"
   },
   {
     id: 4277,
@@ -58318,7 +58318,7 @@ export const QUESTIONS_DB = [
     options: ["Agrupamos os elementos de 10 em 10","Usamos apenas os números de 1 a 9","Não existe o número zero","Usamos letras em vez de números"],
     answer: "Agrupamos os elementos de 10 em 10",
     explanation: "10 unidades = 1 dezena; 10 dezenas = 1 centena, etc.",
-    skill: "Numeração"
+    skill: "Números e Operações"
   },
   {
     id: 5268,
@@ -58329,7 +58329,7 @@ export const QUESTIONS_DB = [
     options: ["500","50","5.000","5"],
     answer: "500",
     explanation: "O 5 está na ordem das centenas simples.",
-    skill: "Numeração"
+    skill: "Números e Operações"
   },
   {
     id: 5269,
@@ -58340,7 +58340,7 @@ export const QUESTIONS_DB = [
     options: ["XIX","XVIIII","XVIV","XXI"],
     answer: "XIX",
     explanation: "X(10) + IX(9) = 19.",
-    skill: "Numeração"
+    skill: "Números e Operações"
   },
   {
     id: 5270,
@@ -58351,7 +58351,7 @@ export const QUESTIONS_DB = [
     options: ["Indicar a ausência de valor em uma determinada ordem","Apenas enfeitar o número","Ser usado apenas no final dos números","Representar o número um"],
     answer: "Indicar a ausência de valor em uma determinada ordem",
     explanation: "É um marcador de posição fundamental.",
-    skill: "Numeração"
+    skill: "Números e Operações"
   },
   {
     id: 5271,
@@ -58362,7 +58362,7 @@ export const QUESTIONS_DB = [
     options: ["6 ordens","2 ordens","3 ordens","5 ordens"],
     answer: "6 ordens",
     explanation: "Cada algarismo ocupa uma ordem (unidade, dezena, centena...).",
-    skill: "Numeração"
+    skill: "Números e Operações"
   },
   {
     id: 5272,
@@ -58373,7 +58373,7 @@ export const QUESTIONS_DB = [
     options: ["50","100","5","500"],
     answer: "50",
     explanation: "C=100, D=500, M=1000.",
-    skill: "Numeração"
+    skill: "Números e Operações"
   },
   {
     id: 5273,
@@ -58384,7 +58384,7 @@ export const QUESTIONS_DB = [
     options: ["1.000.000 (Um milhão)","999.998","1.000.001","10.000.000"],
     answer: "1.000.000 (Um milhão)",
     explanation: "Sucessor é o número + 1.",
-    skill: "Numeração"
+    skill: "Números e Operações"
   },
   {
     id: 5274,
@@ -58395,7 +58395,7 @@ export const QUESTIONS_DB = [
     options: ["9 vezes","3 vezes","10 vezes","Infinitas vezes"],
     answer: "9 vezes",
     explanation: "Ao chegar em 10, trocava-se pelo símbolo da próxima ordem.",
-    skill: "Numeração"
+    skill: "Números e Operações"
   },
   {
     id: 5275,
@@ -58406,7 +58406,7 @@ export const QUESTIONS_DB = [
     options: ["3 * 100 + 4 * 10 + 7 * 1","30 + 40 + 7","3 * 10 + 4 * 100 + 7","300 + 4 + 7"],
     answer: "3 * 100 + 4 * 10 + 7 * 1",
     explanation: "3 centenas, 4 dezenas e 7 unidades.",
-    skill: "Numeração"
+    skill: "Números e Operações"
   },
   {
     id: 5276,
@@ -59804,7 +59804,7 @@ export const QUESTIONS_DB = [
     options: ["Números positivos, negativos e o zero","Apenas números positivos","Apenas frações","Apenas números de 0 a 9"],
     answer: "Números positivos, negativos e o zero",
     explanation: "Expandem os naturais para representar perdas, dívidas ou profundidade.",
-    skill: "Números"
+    skill: "Números Inteiros e Racionais"
   },
   {
     id: 5403,
@@ -59815,7 +59815,7 @@ export const QUESTIONS_DB = [
     options: ["15","-15","0","1/15"],
     answer: "15",
     explanation: "O módulo é a distância do número até o zero, sendo sempre positivo.",
-    skill: "Números"
+    skill: "Números Inteiros e Racionais"
   },
   {
     id: 5404,
@@ -59826,7 +59826,7 @@ export const QUESTIONS_DB = [
     options: ["Estão à mesma distância do zero, mas em lados opostos","Um é o dobro do outro","A soma deles é sempre 10","São escritos de trás para frente"],
     answer: "Estão à mesma distância do zero, mas em lados opostos",
     explanation: "Ex: +4 e -4.",
-    skill: "Números"
+    skill: "Números Inteiros e Racionais"
   },
   {
     id: 5405,
@@ -59837,7 +59837,7 @@ export const QUESTIONS_DB = [
     options: ["Menor","Maior","Igual no valor","Inexistente"],
     answer: "Menor",
     explanation: "Ex: -10 é menor que -2.",
-    skill: "Números"
+    skill: "Números Inteiros e Racionais"
   },
   {
     id: 5406,
@@ -59848,7 +59848,7 @@ export const QUESTIONS_DB = [
     options: ["-4","+4","-10","+10"],
     answer: "-4",
     explanation: "Devo 7 e pago 3, continuo devendo 4.",
-    skill: "Números"
+    skill: "Números Inteiros e Racionais"
   },
   {
     id: 5407,
@@ -59859,7 +59859,7 @@ export const QUESTIONS_DB = [
     options: ["Positivo","Negativo","Zero sempre","Imaginário"],
     answer: "Positivo",
     explanation: "Regra de sinais: (-) * (-) = (+).",
-    skill: "Números"
+    skill: "Números Inteiros e Racionais"
   },
   {
     id: 5408,
@@ -59870,7 +59870,7 @@ export const QUESTIONS_DB = [
     options: ["Podem ser representados como fração de dois inteiros","São apenas dízimas periódicas","São todos maiores que mil","Não podem ser escritos"],
     answer: "Podem ser representados como fração de dois inteiros",
     explanation: "Inclui inteiros, decimais exatos e dízimas.",
-    skill: "Números"
+    skill: "Números Inteiros e Racionais"
   },
   {
     id: 5409,
@@ -59881,7 +59881,7 @@ export const QUESTIONS_DB = [
     options: ["2,75","2,60","3,00","2,25"],
     answer: "2,75",
     explanation: "1/4 = 0,25. 2,5 + 0,25 = 2,75.",
-    skill: "Números"
+    skill: "Números Inteiros e Racionais"
   },
   {
     id: 5410,
@@ -59892,7 +59892,7 @@ export const QUESTIONS_DB = [
     options: ["1/3","3/10","3/100","3/3"],
     answer: "1/3",
     explanation: "Fração geratriz simples.",
-    skill: "Números"
+    skill: "Números Inteiros e Racionais"
   },
   {
     id: 5411,
@@ -60795,7 +60795,7 @@ export const QUESTIONS_DB = [
     options: ["A soma dos quadrados dos catetos é igual ao quadrado da hipotenusa","A soma dos ângulos internos é 360 graus","A área é o dobro da base","Todos os lados são obrigatoriamente iguais"],
     answer: "A soma dos quadrados dos catetos é igual ao quadrado da hipotenusa",
     explanation: "Fórmula clássica: a² + b² = c².",
-    skill: "Teoremas"
+    skill: "Teorema de Tales"
   },
   {
     id: 5493,
@@ -60806,7 +60806,7 @@ export const QUESTIONS_DB = [
     options: ["a² + b² = c²","A = b * h","L³ = V","x = -b / 2a"],
     answer: "a² + b² = c²",
     explanation: "Onde 'c' é a hipotenusa (lado maior oposto ao ângulo de 90°).",
-    skill: "Teoremas"
+    skill: "Teorema de Tales"
   },
   {
     id: 5494,
@@ -60817,7 +60817,7 @@ export const QUESTIONS_DB = [
     options: ["Feixes de retas paralelas cortadas por transversais","Lados de um círculo perfeito","O peso e a altura de um objeto","Velocidade e tempo de viagem"],
     answer: "Feixes de retas paralelas cortadas por transversais",
     explanation: "Estabelece que segmentos correspondentes são proporcionais.",
-    skill: "Teoremas"
+    skill: "Teorema de Tales"
   },
   {
     id: 5495,
@@ -60828,7 +60828,7 @@ export const QUESTIONS_DB = [
     options: ["180°","90°","360°","45°"],
     answer: "180°",
     explanation: "Independente do tipo ou tamanho do triângulo.",
-    skill: "Teoremas"
+    skill: "Teorema de Tales"
   },
   {
     id: 5496,
@@ -60839,7 +60839,7 @@ export const QUESTIONS_DB = [
     options: ["O comportamento e as tendências de variação de grandezas","Apenas como somar números grandes","Como desenhar triângulos perfeitos","O preço do dólar"],
     answer: "O comportamento e as tendências de variação de grandezas",
     explanation: "Teoremas ajudam a prever resultados em modelos matemáticos.",
-    skill: "Teoremas"
+    skill: "Teorema de Tales"
   },
   {
     id: 5497,
@@ -60850,7 +60850,7 @@ export const QUESTIONS_DB = [
     options: ["5","7","12","25"],
     answer: "5",
     explanation: "3² + 4² = 9 + 16 = 25. Raiz de 25 é 5.",
-    skill: "Teoremas"
+    skill: "Teorema de Tales"
   },
   {
     id: 5498,
@@ -60861,7 +60861,7 @@ export const QUESTIONS_DB = [
     options: ["Afirmações demonstradas como verdadeiras através da lógica e prova","Apenas palpites de cientistas famosos","Leis que o governo inventou","Sugestões que podem estar erradas"],
     answer: "Afirmações demonstradas como verdadeiras através da lógica e prova",
     explanation: "Diferente de teorias, teoremas matemáticos são verdades absolutas no seu sistema.",
-    skill: "Teoremas"
+    skill: "Teorema de Tales"
   },
   {
     id: 5499,
@@ -60872,7 +60872,7 @@ export const QUESTIONS_DB = [
     options: ["Seus ângulos correspondentes são iguais e lados proporcionais","Têm a mesma cor","Têm a mesma área obrigatoriamente","Têm apenas um lado igual"],
     answer: "Seus ângulos correspondentes são iguais e lados proporcionais",
     explanation: "Um é uma ampliação ou redução do outro.",
-    skill: "Teoremas"
+    skill: "Teorema de Tales"
   },
   {
     id: 5500,
@@ -60883,7 +60883,7 @@ export const QUESTIONS_DB = [
     options: ["Criptografia e segurança digital (senhas)","Pintura de quadros","Construção de estradas","Educação física"],
     answer: "Criptografia e segurança digital (senhas)",
     explanation: "A matemática avançada protege nossos dados na internet.",
-    skill: "Teoremas"
+    skill: "Teorema de Tales"
   },
   {
     id: 5501,
@@ -63262,5 +63262,996 @@ export const QUESTIONS_DB = [
     answer: "Manter a prática religiosa viva no cotidiano da família",
     explanation: "Trazem o sagrado para o ambiente privado do lar.",
     skill: "Espaços"
+  },
+
+  {
+    id: 5717,
+    grade: "6º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "O que define um 'Polígono' na geometria?",
+    options: ["Uma figura plana fechada formada apenas por segmentos de reta que não se cruzam","Qualquer desenho circular","Uma linha reta infinita","Um sólido como um cubo"],
+    answer: "Uma figura plana fechada formada apenas por segmentos de reta que não se cruzam",
+    explanation: "Poli (muitos) + gono (ângulos). Devem ser linhas retas fechadas.",
+    skill: "Polígonos"
+  },
+  {
+    id: 5718,
+    grade: "6º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Como se chama um polígono que possui exatamente 5 lados?",
+    options: ["Pentágono","Hexágono","Quadrilátero","Heptágono"],
+    answer: "Pentágono",
+    explanation: "Penta significa cinco.",
+    skill: "Polígonos"
+  },
+  {
+    id: 5719,
+    grade: "6º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Um polígono 'Regular' é aquele que possui:",
+    options: ["Todos os lados e ângulos internos iguais","Apenas um lado reto","Pelo menos 10 lados","Lados de tamanhos todos diferentes"],
+    answer: "Todos os lados e ângulos internos iguais",
+    explanation: "Ex: Quadrado, Triângulo Equilátero.",
+    skill: "Polígonos"
+  },
+  {
+    id: 5720,
+    grade: "6º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Qual é o menor número de lados que um polígono pode ter?",
+    options: ["3","1","2","4"],
+    answer: "3",
+    explanation: "Com menos de 3 segmentos de reta não é possível fechar uma figura plana.",
+    skill: "Polígonos"
+  },
+  {
+    id: 5721,
+    grade: "6º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Um polígono de 8 lados é conhecido como:",
+    options: ["Octógono","Decágono","Hexágono","Dodecágono"],
+    answer: "Octógono",
+    explanation: "Octo refere-se a oito.",
+    skill: "Polígonos"
+  },
+  {
+    id: 5722,
+    grade: "6º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "O que são vértices em um polígono?",
+    options: ["Os pontos de encontro entre dois lados","As linhas que formam o desenho","O espaço de dentro da figura","A cor do polígono"],
+    answer: "Os pontos de encontro entre dois lados",
+    explanation: "São as 'quinas' ou bicos da figura.",
+    skill: "Polígonos"
+  },
+  {
+    id: 5723,
+    grade: "6º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Um quadrilátero que possui todos os quatro lados iguais e quatro ângulos de 90 graus é o:",
+    options: ["Quadrado","Trapézio","Losango apenas","Retângulo apenas"],
+    answer: "Quadrado",
+    explanation: "O quadrado é um polígono regular de 4 lados.",
+    skill: "Polígonos"
+  },
+  {
+    id: 5724,
+    grade: "6º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "O triângulo que possui todos os três lados com medidas diferentes é o:",
+    options: ["Escaleno","Isósceles","Equilátero","Retângulo"],
+    answer: "Escaleno",
+    explanation: "Escaleno = todos os lados desiguais.",
+    skill: "Polígonos"
+  },
+  {
+    id: 5725,
+    grade: "6º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "A soma dos ângulos internos de qualquer TRIÂNGULO é sempre:",
+    options: ["180°","360°","90°","270°"],
+    answer: "180°",
+    explanation: "Propriedade fundamental de todos os triângulos planos.",
+    skill: "Polígonos"
+  },
+  {
+    id: 5726,
+    grade: "6º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Qual é o valor da soma 12,5 + 3,42?",
+    options: ["15,92","15,7","16,00","15,52"],
+    answer: "15,92",
+    explanation: "Deve-se alinhar vírgula sob vírgula: 12,50 + 3,42 = 15,92.",
+    skill: "Números Decimais"
+  },
+  {
+    id: 5727,
+    grade: "6º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Como se escreve a fração 1/2 em forma decimal?",
+    options: ["0,5","0,2","1,2","0,05"],
+    answer: "0,5",
+    explanation: "1 dividido por 2 é igual a 0,5.",
+    skill: "Números Decimais"
+  },
+  {
+    id: 5728,
+    grade: "6º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Qual número é MAIOR: 0,7 ou 0,09?",
+    options: ["0,7","0,09","São iguais","Não é possível comparar"],
+    answer: "0,7",
+    explanation: "0,7 é o mesmo que 0,70. 70 centésimos é maior que 9 centésimos.",
+    skill: "Números Decimais"
+  },
+  {
+    id: 5729,
+    grade: "6º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Quanto é 10 multiplicado por 0,45?",
+    options: ["4,5","45","0,045","450"],
+    answer: "4,5",
+    explanation: "Ao multiplicar por 10, a vírgula anda uma casa para a direita.",
+    skill: "Números Decimais"
+  },
+  {
+    id: 5730,
+    grade: "6º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Na divisão de 5 por 2, o resultado decimal é:",
+    options: ["2,5","2,2","3,0","2,05"],
+    answer: "2,5",
+    explanation: "A metade de 5 é 2,5.",
+    skill: "Números Decimais"
+  },
+  {
+    id: 5731,
+    grade: "6º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "O número 3,075 lido por extenso é:",
+    options: ["Três inteiros e setenta e cinco milésimos","Três vírgula setenta e cinco","Três inteiros e setenta e cinco centésimos","Trinta e setenta e cinco milésimos"],
+    answer: "Três inteiros e setenta e cinco milésimos",
+    explanation: "A terceira casa após a vírgula representa os milésimos.",
+    skill: "Números Decimais"
+  },
+  {
+    id: 5732,
+    grade: "6º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Qual o resultado de 1,0 - 0,25?",
+    options: ["0,75","0,85","1,25","0,50"],
+    answer: "0,75",
+    explanation: "Pense em dinheiro: R$ 1,00 menos 25 centavos sobra 75 centavos.",
+    skill: "Números Decimais"
+  },
+  {
+    id: 5733,
+    grade: "6º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "O valor posicional do algarismo 8 no número 4,582 é:",
+    options: ["Centésimos","Décimos","Milésimos","Unidades"],
+    answer: "Centésimos",
+    explanation: "A segunda casa decimal é a dos centésimos.",
+    skill: "Números Decimais"
+  },
+  {
+    id: 5734,
+    grade: "6º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Quanto é 0,2 multiplicado por 0,3?",
+    options: ["0,06","0,6","6,0","0,006"],
+    answer: "0,06",
+    explanation: "2*3=6. Como há duas casas decimais no total nos fatores, o resultado deve ter duas: 0,06.",
+    skill: "Números Decimais"
+  },
+  {
+    id: 5735,
+    grade: "8º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "O que define uma 'Expressão Algébrica'?",
+    options: ["Uma combinação de números, letras (variáveis) e operações","Apenas uma sequência de números somados","Um desenho geométrico colorido","O resultado final de uma divisão"],
+    answer: "Uma combinação de números, letras (variáveis) e operações",
+    explanation: "Utiliza letras para representar valores desconhecidos.",
+    skill: "Expressões Algébricas"
+  },
+  {
+    id: 5736,
+    grade: "8º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Qual o valor numérico da expressão 3x + 5 quando x = 4?",
+    options: ["17","12","27","9"],
+    answer: "17",
+    explanation: "3*(4) + 5 = 12 + 5 = 17.",
+    skill: "Expressões Algébricas"
+  },
+  {
+    id: 5737,
+    grade: "8º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Como se representa algebricamente 'o dobro de um número somado com dez'?",
+    options: ["2x + 10","x² + 10","x/2 + 10","10x + 2"],
+    answer: "2x + 10",
+    explanation: "Dobro de x (2x) somado (+) com 10.",
+    skill: "Expressões Algébricas"
+  },
+  {
+    id: 5738,
+    grade: "8º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "O que são 'Termos Semelhantes' em uma expressão?",
+    options: ["Termos que possuem a mesma parte literal (letras e expoentes)","Termos que têm o mesmo número na frente","Termos que estão um ao lado do outro","Termos que são sempre positivos"],
+    answer: "Termos que possuem a mesma parte literal (letras e expoentes)",
+    explanation: "Ex: 2x e 5x são semelhantes e podem ser somados.",
+    skill: "Expressões Algébricas"
+  },
+  {
+    id: 5739,
+    grade: "8º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Simplifique a expressão: 5a + 2b - 3a + 4b.",
+    options: ["2a + 6b","8a + 6b","2a + 2b","10ab"],
+    answer: "2a + 6b",
+    explanation: "(5a - 3a) + (2b + 4b) = 2a + 6b.",
+    skill: "Expressões Algébricas"
+  },
+  {
+    id: 5740,
+    grade: "8º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Na expressão -4y³, o número -4 é chamado de:",
+    options: ["Coeficiente","Expoente","Variável","Incógnita"],
+    answer: "Coeficiente",
+    explanation: "O coeficiente é o número que multiplica a parte literal.",
+    skill: "Expressões Algébricas"
+  },
+  {
+    id: 5741,
+    grade: "8º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "O resultado da multiplicação de monômios (2x) * (3x²) é:",
+    options: ["6x³","5x³","6x²","5x²"],
+    answer: "6x³",
+    explanation: "Multiplica os coeficientes (2x3=6) e soma os expoentes das letras (1+2=3).",
+    skill: "Expressões Algébricas"
+  },
+  {
+    id: 5742,
+    grade: "8º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "A expressão que representa 'a diferença entre o quadrado de um número e cinco' é:",
+    options: ["x² - 5","(x - 5)²","2x - 5","5 - x²"],
+    answer: "x² - 5",
+    explanation: "Quadrado de x (x²) menos (-) 5.",
+    skill: "Expressões Algébricas"
+  },
+  {
+    id: 5743,
+    grade: "8º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "O que significa 'Fator Comum' em uma expressão como 2x + 2y?",
+    options: ["Um termo que multiplica todos os outros (neste caso, o 2)","O resultado da soma x + y","O número que vem por último","A letra x apenas"],
+    answer: "Um termo que multiplica todos os outros (neste caso, o 2)",
+    explanation: "Pode ser colocado em evidência: 2(x + y).",
+    skill: "Expressões Algébricas"
+  },
+  {
+    id: 5744,
+    grade: "7º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Na potência 5², o número 5 é o(a) _________ e o número 2 é o(a) _________.",
+    options: ["Base / Expoente","Expoente / Base","Produto / Fator","Resultado / Raiz"],
+    answer: "Base / Expoente",
+    explanation: "A base é multiplicada por si mesma quantas vezes o expoente mandar.",
+    skill: "Potenciação"
+  },
+  {
+    id: 5745,
+    grade: "7º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Qual o valor de 3 elevado ao cubo (3³)?",
+    options: ["27","9","6","81"],
+    answer: "27",
+    explanation: "3 * 3 * 3 = 27.",
+    skill: "Potenciação"
+  },
+  {
+    id: 5746,
+    grade: "7º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Qualquer número (diferente de zero) elevado ao expoente ZERO é igual a:",
+    options: ["1","0","O próprio número","Infinito"],
+    answer: "1",
+    explanation: "É uma convenção matemática fundamental.",
+    skill: "Potenciação"
+  },
+  {
+    id: 5747,
+    grade: "7º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Qual o resultado de (-2)³ (base negativa e expoente ímpar)?",
+    options: ["-8","+8","-6","+6"],
+    answer: "-8",
+    explanation: "(-2) * (-2) * (-2) = +4 * (-2) = -8.",
+    skill: "Potenciação"
+  },
+  {
+    id: 5748,
+    grade: "7º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Na multiplicação de potências de mesma base (ex: 2³ * 2²), o que devemos fazer?",
+    options: ["Repetir a base e somar os expoentes","Multiplicar as bases e os expoentes","Subtrair os expoentes","Dividir as bases"],
+    answer: "Repetir a base e somar os expoentes",
+    explanation: "2³ * 2² = 2^(3+2) = 2⁵.",
+    skill: "Potenciação"
+  },
+  {
+    id: 5749,
+    grade: "7º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Todo número elevado ao expoente 1 é igual a:",
+    options: ["Ele mesmo","1","0","O seu dobro"],
+    answer: "Ele mesmo",
+    explanation: "Ex: 10¹ = 10.",
+    skill: "Potenciação"
+  },
+  {
+    id: 5750,
+    grade: "7º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Qual o valor de 10 elevado à quarta potência (10⁴)?",
+    options: ["10.000","40","1.000","400"],
+    answer: "10.000",
+    explanation: "O 1 seguido de 4 zeros.",
+    skill: "Potenciação"
+  },
+  {
+    id: 5751,
+    grade: "7º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Na divisão de potências de mesma base (ex: 5⁷ : 5³), qual a regra?",
+    options: ["Repetir a base e subtrair os expoentes","Dividir as bases e os expoentes","Somar os expoentes","Multiplicar as bases"],
+    answer: "Repetir a base e subtrair os expoentes",
+    explanation: "5⁷ : 5³ = 5^(7-3) = 5⁴.",
+    skill: "Potenciação"
+  },
+  {
+    id: 5752,
+    grade: "7º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "O que acontece se elevarmos um número negativo a um expoente PAR (ex: (-3)²)?",
+    options: ["O resultado será sempre positivo","O resultado será sempre negativo","O resultado será zero","O resultado será ímpar"],
+    answer: "O resultado será sempre positivo",
+    explanation: "Menos com menos dá mais. (-3) * (-3) = +9.",
+    skill: "Potenciação"
+  },
+  {
+    id: 5753,
+    grade: "9º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "O que caracteriza uma 'Equação de 1º Grau'?",
+    options: ["Uma igualdade entre expressões onde o maior expoente da incógnita é 1","Uma conta que só usa números inteiros positivos","Uma figura geométrica com 4 lados","Uma divisão por zero"],
+    answer: "Uma igualdade entre expressões onde o maior expoente da incógnita é 1",
+    explanation: "Tem a forma geral ax + b = 0.",
+    skill: "Equações de 1º Grau"
+  },
+  {
+    id: 5754,
+    grade: "9º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Resolva: 3x - 12 = 0. Qual o valor de x?",
+    options: ["4","-4","12","3"],
+    answer: "4",
+    explanation: "3x = 12 => x = 12 / 3 = 4.",
+    skill: "Equações de 1º Grau"
+  },
+  {
+    id: 5755,
+    grade: "9º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Em uma equação, ao mudar um termo de lado da igualdade, devemos:",
+    options: ["Inverter sua operação (ex: mais vira menos)","Mudar a letra da incógnita","Multiplicar o termo por zero","Não fazer nada"],
+    answer: "Inverter sua operação (ex: mais vira menos)",
+    explanation: "É a propriedade da balança ou das operações inversas.",
+    skill: "Equações de 1º Grau"
+  },
+  {
+    id: 5756,
+    grade: "9º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Qual o valor de x na equação 2(x + 5) = 20?",
+    options: ["5","10","15","0"],
+    answer: "5",
+    explanation: "2x + 10 = 20 => 2x = 10 => x = 5.",
+    skill: "Equações de 1º Grau"
+  },
+  {
+    id: 5757,
+    grade: "9º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Resolva para x: x/4 = 5.",
+    options: ["20","9","1,25","1"],
+    answer: "20",
+    explanation: "O 4 que está dividindo passa multiplicando: x = 5 * 4 = 20.",
+    skill: "Equações de 1º Grau"
+  },
+  {
+    id: 5758,
+    grade: "9º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Se 5x + 2 = 3x + 10, qual o valor de x?",
+    options: ["4","6","2","8"],
+    answer: "4",
+    explanation: "5x - 3x = 10 - 2 => 2x = 8 => x = 4.",
+    skill: "Equações de 1º Grau"
+  },
+  {
+    id: 5759,
+    grade: "9º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Uma equação que não possui solução real é chamada de:",
+    options: ["Impossível","Determinada","Identidade","Polinomial"],
+    answer: "Impossível",
+    explanation: "Ex: 0x = 5 (não existe número que vezes zero dê 5).",
+    skill: "Equações de 1º Grau"
+  },
+  {
+    id: 5760,
+    grade: "9º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "O que significa 'conjunto solução' de uma equação?",
+    options: ["O valor (ou valores) que tornam a sentença verdadeira","A lista de todos os números do mundo","O nome dos termos da equação","Apenas o número zero"],
+    answer: "O valor (ou valores) que tornam a sentença verdadeira",
+    explanation: "É o resultado que satisfaz a igualdade.",
+    skill: "Equações de 1º Grau"
+  },
+  {
+    id: 5761,
+    grade: "9º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Na equação ax = b, se a for diferente de zero, x é igual a:",
+    options: ["b/a","a/b","a - b","b + a"],
+    answer: "b/a",
+    explanation: "Isola-se x passando o coeficiente 'a' dividindo.",
+    skill: "Equações de 1º Grau"
+  },
+  {
+    id: 5762,
+    grade: "6º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "O que significa a sigla 'MDC'?",
+    options: ["Máximo Divisor Comum","Mínimo Divisível Coletivo","Muitos Dados Curtos","Maior Dobro Comum"],
+    answer: "Máximo Divisor Comum",
+    explanation: "É o maior número que divide dois ou mais números ao mesmo tempo sem deixar resto.",
+    skill: "MDC"
+  },
+  {
+    id: 5763,
+    grade: "6º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Qual o MDC entre 10 e 15?",
+    options: ["5","2","3","30"],
+    answer: "5",
+    explanation: "Divisores de 10: {1, 2, 5, 10}. Divisores de 15: {1, 3, 5, 15}. O maior comum é 5.",
+    skill: "MDC"
+  },
+  {
+    id: 5764,
+    grade: "6º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "A técnica de decompor os números em fatores primos para achar o MDC consiste em pegar:",
+    options: ["Apenas os fatores comuns com os menores expoentes","Todos os fatores comuns e não comuns","Apenas o maior número primo","O resultado da multiplicação de todos os números"],
+    answer: "Apenas os fatores comuns com os menores expoentes",
+    explanation: "Ao multiplicar esses fatores, obtemos o MDC.",
+    skill: "MDC"
+  },
+  {
+    id: 5765,
+    grade: "6º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Qual o MDC entre dois números PRIMOS diferentes (ex: 7 e 11)?",
+    options: ["1","O produto deles","A soma deles","Não existe"],
+    answer: "1",
+    explanation: "Números primos só têm como divisor comum o número 1.",
+    skill: "MDC"
+  },
+  {
+    id: 5766,
+    grade: "6º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "O MDC entre 12 e 18 é:",
+    options: ["6","12","3","2"],
+    answer: "6",
+    explanation: "O 6 é o maior número que divide 12 (dá 2) e 18 (dá 3).",
+    skill: "MDC"
+  },
+  {
+    id: 5767,
+    grade: "6º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Em problemas de dividir objetos em grupos de mesmo tamanho (o maior possível), usamos:",
+    options: ["MDC","MMC","Raiz Quadrada","Porcentagem"],
+    answer: "MDC",
+    explanation: "Sempre que o objetivo é 'dividir' em partes 'máximas' iguais.",
+    skill: "MDC"
+  },
+  {
+    id: 5768,
+    grade: "6º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Qual o MDC entre 20, 30 e 40?",
+    options: ["10","5","2","20"],
+    answer: "10",
+    explanation: "10 é o maior divisor comum aos três números.",
+    skill: "MDC"
+  },
+  {
+    id: 5769,
+    grade: "6º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Se o MDC entre dois números é 1, dizemos que esses números são:",
+    options: ["Primos entre si","Iguais","Pares","Múltiplos"],
+    answer: "Primos entre si",
+    explanation: "Eles não compartilham nenhum divisor além do 1.",
+    skill: "MDC"
+  },
+  {
+    id: 5770,
+    grade: "6º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Como conferir se um número é divisor de outro?",
+    options: ["A divisão deve ser exata (resto igual a zero)","A soma deles deve ser par","O número deve terminar sempre em 1","Multiplicando por 10"],
+    answer: "A divisão deve ser exata (resto igual a zero)",
+    explanation: "Um número é divisor se couber um número exato de vezes no outro.",
+    skill: "MDC"
+  },
+  {
+    id: 5771,
+    grade: "8º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Qual a fórmula para calcular a área de um RETÂNGULO?",
+    options: ["Base * Altura (b * h)","(Base * Altura) / 2","Lado * 4","Raiz quadrada da base"],
+    answer: "Base * Altura (b * h)",
+    explanation: "Basta multiplicar as duas dimensões perpendiculares.",
+    skill: "Áreas"
+  },
+  {
+    id: 5772,
+    grade: "8º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "A área de um TRIÂNGULO é calculada por:",
+    options: ["(Base * Altura) / 2","Base * Altura","Soma de todos os lados","Base + Altura"],
+    answer: "(Base * Altura) / 2",
+    explanation: "Pois um triângulo é a metade de um paralelogramo de mesma base e altura.",
+    skill: "Áreas"
+  },
+  {
+    id: 5773,
+    grade: "8º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Qual a área de um quadrado que possui lados de 5 cm?",
+    options: ["25 cm²","10 cm²","20 cm²","50 cm²"],
+    answer: "25 cm²",
+    explanation: "Área = Lado * Lado => 5 * 5 = 25.",
+    skill: "Áreas"
+  },
+  {
+    id: 5774,
+    grade: "8º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Como se calcula a área de um TRAPÉZIO?",
+    options: ["((Base Maior + Base Menor) * Altura) / 2","Base * Altura","Lado ao cubo","Soma das diagonais"],
+    answer: "((Base Maior + Base Menor) * Altura) / 2",
+    explanation: "Considera-se a média das bases multiplicada pela altura.",
+    skill: "Áreas"
+  },
+  {
+    id: 5775,
+    grade: "8º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "A fórmula para calcular a área de um CÍRCULO é:",
+    options: ["π * r² (Pi vezes o raio ao quadrado)","2 * π * r","Base * Altura","Diâmetro * 2"],
+    answer: "π * r² (Pi vezes o raio ao quadrado)",
+    explanation: "Onde r é o raio e π vale aproximadamente 3,14.",
+    skill: "Áreas"
+  },
+  {
+    id: 5776,
+    grade: "8º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Se um retângulo tem área de 40 m² e sua base é 8 m, qual sua altura?",
+    options: ["5 m","32 m","4 m","10 m"],
+    answer: "5 m",
+    explanation: "40 / 8 = 5.",
+    skill: "Áreas"
+  },
+  {
+    id: 5777,
+    grade: "8º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "A área de um LOSANGO é calculada multiplicando:",
+    options: ["As diagonais e dividindo por 2 (D * d) / 2","Os lados e somando por 2","A base pelo perímetro","O raio pelo pi"],
+    answer: "As diagonais e dividindo por 2 (D * d) / 2",
+    explanation: "Diagonal maior vezes diagonal menor dividido por dois.",
+    skill: "Áreas"
+  },
+  {
+    id: 5778,
+    grade: "8º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Ao dobrarmos o lado de um quadrado, sua área aumenta em quantas vezes?",
+    options: ["4 vezes","2 vezes","8 vezes","Fica igual"],
+    answer: "4 vezes",
+    explanation: "Se o lado era L (L²) e vira 2L, a nova área é (2L)² = 4L².",
+    skill: "Áreas"
+  },
+  {
+    id: 5779,
+    grade: "8º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Para medir a área de um terreno grande, a unidade mais comum é o:",
+    options: ["Hectare (10.000 m²)","Centímetro quadrado","Litro","Metro linear"],
+    answer: "Hectare (10.000 m²)",
+    explanation: "Unidade agrária correspondente a um hectômetro quadrado.",
+    skill: "Áreas"
+  },
+  {
+    id: 5780,
+    grade: "7º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Qual o resultado de (-10) + (+15) - (-5)?",
+    options: ["10","30","0","20"],
+    answer: "10",
+    explanation: "(-10) + 15 + 5 => 5 + 5 = 10.",
+    skill: "Cálculo"
+  },
+  {
+    id: 5781,
+    grade: "7º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "O que significa 'ordem de precedência' em uma expressão numérica?",
+    options: ["A ordem correta de resolver as operações (Multiplicação antes de Adição, etc.)","O tamanho dos números","A cor em que o cálculo deve ser escrito","Sempre fazer da esquerda para a direita sem olhar o sinal"],
+    answer: "A ordem correta de resolver as operações (Multiplicação antes de Adição, etc.)",
+    explanation: "Garante que o resultado seja matematicamente correto.",
+    skill: "Cálculo"
+  },
+  {
+    id: 5782,
+    grade: "7º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Em uma expressão com parênteses ( ), colchetes [ ] e chaves { }, qual resolvemos primeiro?",
+    options: ["Parênteses ( )","Chaves { }","Colchetes [ ]","Não tem ordem"],
+    answer: "Parênteses ( )",
+    explanation: "Começa-se de dentro (parênteses) para fora.",
+    skill: "Cálculo"
+  },
+  {
+    id: 5783,
+    grade: "7º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Quanto vale 25% de 400?",
+    options: ["100","25","40","200"],
+    answer: "100",
+    explanation: "25% é o mesmo que 1/4. 400 dividido por 4 é 100.",
+    skill: "Cálculo"
+  },
+  {
+    id: 5784,
+    grade: "7º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Qual o valor de x na equação simples x/2 + 3 = 10?",
+    options: ["14","26","7","3,5"],
+    answer: "14",
+    explanation: "x/2 = 7 => x = 14.",
+    skill: "Cálculo"
+  },
+  {
+    id: 5785,
+    grade: "7º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "O quociente da divisão de -20 por -4 é:",
+    options: ["+5","-5","+80","-80"],
+    answer: "+5",
+    explanation: "Divisão de números com o mesmo sinal resulta em positivo.",
+    skill: "Cálculo"
+  },
+  {
+    id: 5786,
+    grade: "7º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "A propriedade distributiva da multiplicação (ex: 2 * (3 + 4)) diz que:",
+    options: ["O 2 deve multiplicar tanto o 3 quanto o 4","Devemos apenas somar 2 + 3 + 4","O resultado é sempre zero","Não podemos multiplicar somas"],
+    answer: "O 2 deve multiplicar tanto o 3 quanto o 4",
+    explanation: "2*3 + 2*4 = 6 + 8 = 14.",
+    skill: "Cálculo"
+  },
+  {
+    id: 5787,
+    grade: "7º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Quanto é a raiz quadrada de 49 somada com 3?",
+    options: ["10","7","52","13"],
+    answer: "10",
+    explanation: "Raiz de 49 é 7. 7 + 3 = 10.",
+    skill: "Cálculo"
+  },
+  {
+    id: 5788,
+    grade: "7º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "O que é o 'Módulo' ou 'Valor Absoluto' de um número?",
+    options: ["A sua distância até o zero na reta numérica, sendo sempre positivo","O número invertido com sinal negativo","O dobro desse número","Dividir o número por dez"],
+    answer: "A sua distância até o zero na reta numérica, sendo sempre positivo",
+    explanation: "Ex: |-5| = 5 e |+5| = 5.",
+    skill: "Cálculo"
+  },
+  {
+    id: 5789,
+    grade: "6º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "O que é um 'Divisor' de um número?",
+    options: ["Um número que divide o outro exatamente, sem deixar resto","Um número que é sempre maior que o outro","O resultado de qualquer soma","Um número primo apenas"],
+    answer: "Um número que divide o outro exatamente, sem deixar resto",
+    explanation: "Ex: 2 é divisor de 10 porque 10/2 = 5.",
+    skill: "Divisores"
+  },
+  {
+    id: 5790,
+    grade: "6º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Qual o conjunto de todos os divisores do número 6?",
+    options: ["{1, 2, 3, 6}","{2, 3, 6}","{1, 2, 4, 6}","{6, 12, 18}"],
+    answer: "{1, 2, 3, 6}",
+    explanation: "Estes são todos os números pelos quais você pode dividir 6 sem sobrar resto.",
+    skill: "Divisores"
+  },
+  {
+    id: 5791,
+    grade: "6º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "O número 1 é divisor de quais números?",
+    options: ["De todos os números","Apenas dele mesmo","Apenas números pares","Apenas números ímpares"],
+    answer: "De todos os números",
+    explanation: "Qualquer número dividido por 1 é ele mesmo (exata).",
+    skill: "Divisores"
+  },
+  {
+    id: 5792,
+    grade: "6º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Qual o único número par que é um número PRIMO?",
+    options: ["2","4","0","10"],
+    answer: "2",
+    explanation: "2 só tem dois divisores: 1 e ele mesmo.",
+    skill: "Divisores"
+  },
+  {
+    id: 5793,
+    grade: "6º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Um número é 'Divisível por 5' quando termina em:",
+    options: ["0 ou 5","Apenas 5","Qualquer número par","1"],
+    answer: "0 ou 5",
+    explanation: "Critério de divisibilidade por 5.",
+    skill: "Divisores"
+  },
+  {
+    id: 5794,
+    grade: "6º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Como conferimos se um número é 'Divisível por 3'?",
+    options: ["A soma de seus algarismos deve ser um múltiplo de 3","Ele deve terminar em 3","Ele deve ser um número ímpar","Basta ele ser maior que 10"],
+    answer: "A soma de seus algarismos deve ser um múltiplo de 3",
+    explanation: "Ex: 123 => 1+2+3 = 6 (é divisível).",
+    skill: "Divisores"
+  },
+  {
+    id: 5795,
+    grade: "6º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Qual destes números NÃO é divisor de 20?",
+    options: ["3","1","4","5"],
+    answer: "3",
+    explanation: "20 / 3 não é uma conta exata (sobra resto 2).",
+    skill: "Divisores"
+  },
+  {
+    id: 5796,
+    grade: "6º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "O maior divisor de qualquer número (além de si mesmo, se for o caso) é:",
+    options: ["Ele mesmo","1","Zero","O seu dobro"],
+    answer: "Ele mesmo",
+    explanation: "Todo número é divisor de si mesmo.",
+    skill: "Divisores"
+  },
+  {
+    id: 5797,
+    grade: "6º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "O que define um 'Número Composto'?",
+    options: ["Um número que possui mais de dois divisores","Um número feito de vários outros colados","Qualquer número negativo","Um número que termina em 1"],
+    answer: "Um número que possui mais de dois divisores",
+    explanation: "Diferente dos primos, que só têm dois divisores.",
+    skill: "Divisores"
+  },
+  {
+    id: 5798,
+    grade: "9º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Qual o nome do triângulo que possui um ângulo reto (90 graus)?",
+    options: ["Triângulo Retângulo","Triângulo Equilátero","Triângulo Obtusângulo","Triângulo Acutângulo"],
+    answer: "Triângulo Retângulo",
+    explanation: "Possui as partes chamadas catetos e hipotenusa.",
+    skill: "Triângulos"
+  },
+  {
+    id: 5799,
+    grade: "9º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Em um triângulo equilátero, todos os ângulos internos medem:",
+    options: ["60°","90°","45°","180°"],
+    answer: "60°",
+    explanation: "Como os lados são iguais, os ângulos também são: 180 / 3 = 60.",
+    skill: "Triângulos"
+  },
+  {
+    id: 5800,
+    grade: "9º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "O que diz a 'Condição de Existência' de um triângulo?",
+    options: ["Um lado deve ser sempre menor que a soma dos outros dois","Todos os lados devem ser iguais","Um ângulo deve ser sempre o dobro do outro","A área deve ser maior que 10"],
+    answer: "Um lado deve ser sempre menor que a soma dos outros dois",
+    explanation: "Caso contrário, os segmentos de reta não se encontram para fechar a figura.",
+    skill: "Triângulos"
+  },
+  {
+    id: 5801,
+    grade: "9º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "O triângulo que possui todos os três ângulos internos MENORES que 90° é o:",
+    options: ["Acutângulo","Obtusângulo","Isósceles","Escaleno"],
+    answer: "Acutângulo",
+    explanation: "Ângulos agudos (< 90°).",
+    skill: "Triângulos"
+  },
+  {
+    id: 5802,
+    grade: "9º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "O segmento de reta que liga um vértice ao ponto médio do lado oposto é a:",
+    options: ["Mediana","Bissetriz","Altura","Mediatriz"],
+    answer: "Mediana",
+    explanation: "O ponto onde as 3 medianas se encontram é o Baricentro (centro de massa).",
+    skill: "Triângulos"
+  },
+  {
+    id: 5803,
+    grade: "9º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "O que é o 'Incentro' de um triângulo?",
+    options: ["O ponto de encontro das bissetrizes internas (centro do círculo inscrito)","O ponto de encontro das alturas","O maior lado do triângulo","A soma das áreas internas"],
+    answer: "O ponto de encontro das bissetrizes internas (centro do círculo inscrito)",
+    explanation: "Fica sempre dentro do triângulo.",
+    skill: "Triângulos"
+  },
+  {
+    id: 5804,
+    grade: "9º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "Qual triângulo possui dois lados com a mesma medida e um diferente?",
+    options: ["Isósceles","Equilátero","Escaleno","Retângulo"],
+    answer: "Isósceles",
+    explanation: "Dois lados iguais = Isósceles.",
+    skill: "Triângulos"
+  },
+  {
+    id: 5805,
+    grade: "9º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "A 'Base' e a 'Altura' de um triângulo retângulo coincidem com os seus:",
+    options: ["Catetos","Hipotenusa","Medianas","Vértices apenas"],
+    answer: "Catetos",
+    explanation: "Como os catetos formam 90°, um pode ser a base e o outro a altura.",
+    skill: "Triângulos"
+  },
+  {
+    id: 5806,
+    grade: "9º",
+    discipline: "Matemática",
+    type: "multiple",
+    text: "O triângulo que possui um ângulo interno MAIOR que 90° é o:",
+    options: ["Obtusângulo","Retângulo","Acutângulo","Equilátero"],
+    answer: "Obtusângulo",
+    explanation: "Possui um ângulo obtuso.",
+    skill: "Triângulos"
   }
 ];
