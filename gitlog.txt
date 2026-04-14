@@ -1,0 +1,15 @@
+09e1b98 HEAD@{0}: reset: moving to 09e1b98
+35b9867 HEAD@{1}: commit: fix: Renomeia tópicos de vocabulário transversal em Inglês
+09e1b98 HEAD@{2}: commit: fix: Adiciona botão de Inglês na tela inicial e filtro admin
+a93110e HEAD@{3}: commit: feat: Adiciona questões de Arte (6º ao 9º Ano)
+957605c HEAD@{4}: commit: feat: Adiciona 75 questões de Inglês (9º Ano) em português. Meta de 300 atingida.
+aa27f9f HEAD@{5}: commit: feat: Adiciona 75 questões de Inglês (8º Ano) em português
+68f5790 HEAD@{6}: commit: feat: Adiciona 75 questões de Inglês (7º Ano) em português
+369470f HEAD@{7}: commit: feat: Adiciona 75 questões de Inglês (6º Ano) em português
+aa2ca76 HEAD@{8}: commit: feat: Adiciona 225 questões de Ciências (6º-9º Ano)
+9f580c3 HEAD@{9}: commit: feat: Exibe contagem de questões por disciplina na tela inicial
+13ca9ac HEAD@{10}: commit: feat: Adiciona 90 questões de História 9º Ano (Lote 8)
+57a2e71 HEAD@{11}: commit: feat: Adiciona 65 questões de História 8º Ano (Lote 7)
+406d924 HEAD@{12}: commit: feat: Adiciona 40 questões de História 7º Ano (Lote 6)
+e02985a HEAD@{13}: commit: feat: Adiciona 40 questões de História 6º Ano (Lote 5)
+6b7afa1 HEAD@{14}: commit: feat: Adiciona 20 questões de História 7º Ano (Lote 4)

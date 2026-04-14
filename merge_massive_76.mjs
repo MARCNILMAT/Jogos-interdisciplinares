@@ -1,0 +1,65 @@
+import fs from 'fs';
+
+const filePath = 'questions.js';
+
+function getNextId() {
+    const content = fs.readFileSync(filePath, 'utf-8');
+    const matches = content.match(/id:\s*(\d+)/g);
+    if (!matches) return 3564;
+    const ids = matches.map(m => parseInt(m.match(/\d+/)[0]));
+    return Math.max(...ids) + 1;
+}
+
+const startId = getNextId();
+console.log(`Lote Massive 76 (Multidiscip. - Volume) a partir do ID: ${startId}`);
+
+const batch = [
+  // --- INGLÊS (6º ao 9º) ---
+  { grade: "6º", discipline: "Inglês", type: "multiple", text: "How do you say 'maçã' in English?", options: ["Grape", "Apple", "Orange", "Banana"], answer: "Apple", explanation: "Apple é a tradução de maçã.", skill: "Vocabulary" },
+  { grade: "7º", discipline: "Inglês", type: "multiple", text: "The opposite of 'Big' is:", options: ["Large", "Small", "Tall", "Strong"], answer: "Small", explanation: "Big (grande) x Small (pequeno).", skill: "Adjectives" },
+  { grade: "8º", discipline: "Inglês", type: "multiple", text: "What is the plural of 'Foot'?", options: ["Foots", "Feet", "Footes", "Feets"], answer: "Feet", explanation: "Feet é o plural irregular de foot.", skill: "Plurals" },
+  { grade: "9º", discipline: "Inglês", type: "multiple", text: "I ___ to the cinema yesterday.", options: ["go", "goes", "went", "going"], answer: "went", explanation: "Went é o passado simples de 'to go'.", skill: "Past Tense" },
+  { grade: "6º", discipline: "Inglês", type: "multiple", text: "Qual destes números é o 'Twelve'?", options: ["2", "12", "20", "22"], answer: "12", explanation: "Twelve = 12.", skill: "Numbers" },
+  { grade: "7º", discipline: "Inglês", type: "multiple", text: "Which pronoun is used for a group where I am included?", options: ["He", "They", "We", "You"], answer: "We", explanation: "We = Nós.", skill: "Pronouns" },
+  { grade: "8º", discipline: "Inglês", type: "multiple", text: "The animal known as the 'King of the Jungle' is the:", options: ["Tiger", "Elephant", "Lion", "Monkey"], answer: "Lion", explanation: "Lion = Leão.", skill: "Animals" },
+  { grade: "9º", discipline: "Inglês", type: "multiple", text: "How do you say 'obrigado' in English?", options: ["Please", "Sorry", "Thank you", "Hello"], answer: "Thank you", explanation: "Expressão padrão de gratidão.", skill: "Greetings" },
+
+  // --- ARTE (6º ao 9º) ---
+  { grade: "6º", discipline: "Arte", type: "multiple", text: "Quais são as cores primárias?", options: ["Verde, Roxo, Laranja", "Vermelho, Azul, Amarelo", "Preto, Branco, Cinza", "Rosa, Marrom, Azul"], answer: "Vermelho, Azul, Amarelo", explanation: "Cores que não podem ser obtidas pela mistura de outras.", skill: "Cores" },
+  { grade: "7º", discipline: "Arte", type: "multiple", text: "O estilo que utiliza pontos de cor lado a lado é o:", options: ["Pontilhismo", "Cubismo", "Impressionismo", "Realismo"], answer: "Pontilhismo", explanation: "Georges Seurat foi o criador.", skill: "Técnicas" },
+  { grade: "8º", discipline: "Arte", type: "multiple", text: "A técnica de dobrar papel para criar objetos é o:", options: ["Mosaico", "Escultura", "Origami", "Grafite"], answer: "Origami", explanation: "Tradição japonesa secular.", skill: "Expressão" },
+  { grade: "9º", discipline: "Arte", type: "multiple", text: "O cinema é classificado como qual destas artes?", options: ["1ª Arte", "3ª Arte", "7ª Arte", "9ª Arte"], answer: "7ª Arte", explanation: "Denominação dada em 1912 por Ricciotto Canudo.", skill: "Linguagens" },
+  { grade: "6º", discipline: "Arte", type: "multiple", text: "O desenho feito rapidamente para capturar uma ideia é o:", options: ["Esboço", "Pintura a óleo", "Afresco", "Mosaico"], answer: "Esboço", explanation: "Também chamado de croqui.", skill: "Desenho" },
+  { grade: "7º", discipline: "Arte", type: "multiple", text: "Qual destes artistas é representante do Surrealismo?", options: ["Picasso", "Salvador Dalí", "Van Gogh", "Monet"], answer: "Salvador Dalí", explanation: "Explorava o subconsciente e sonhos.", skill: "Vanguardas" },
+  { grade: "8º", discipline: "Arte", type: "multiple", text: "A técnica de pintura que utiliza pigmentos em água sobre argamassa fresca é o:", options: ["Afresco", "Óleo", "Grafite", "Mosaico"], answer: "Afresco", explanation: "Muito usado no Renascimento.", skill: "Pintura" },
+
+  // --- EDUCAÇÃO FÍSICA ---
+  { grade: "6º", discipline: "Educação Física", type: "multiple", text: "Quantas pessoas jogam em uma equipe de Futsal em quadra?", options: ["4", "5", "6", "11"], answer: "5", explanation: "São 5 titulares por time.", skill: "Esportes" },
+  { grade: "7º", discipline: "Educação Física", type: "multiple", text: "O 'Saque' inicia a disputa em qual destes esportes?", options: ["Futebol", "Basquete", "Vôlei", "Handebol"], answer: "Vôlei", explanation: "O saque coloca a bola em jogo.", skill: "Voleibol" },
+  { grade: "8º", discipline: "Educação Física", type: "multiple", text: "A prática regular de alongamentos ajuda a melhorar a:", options: ["Velocidade", "Flexibilidade", "Resistência", "Miopia"], answer: "Flexibilidade", explanation: "Aumenta a amplitude das articulações.", skill: "Saúde" },
+  { grade: "9º", discipline: "Educação Física", type: "multiple", text: "As Olimpíadas da Era Moderna começaram em qual cidade?", options: ["Londres", "Paris", "Atenas", "Roma"], answer: "Atenas", explanation: "Em 1896, na capital da Grécia.", skill: "Olimpismo" },
+  { grade: "8º", discipline: "Educação Física", type: "multiple", text: "O índice IMC avalia a relação entre:", options: ["Tempo e Espaço", "Peso e Altura", "Força e Idade", "Salto e Corrida"], answer: "Peso e Altura", explanation: "Índice de Massa Corporal.", skill: "Nutrição" },
+
+  // --- ENSINO RELIGIOSO ---
+  { grade: "6º", discipline: "Ensino Religioso", type: "multiple", text: "Qual destes é um livro sagrado para o Islamismo?", options: ["Poli", "Bíblia", "Alcorão", "Vedas"], answer: "Alcorão", explanation: "Contém as revelações de Alá.", skill: "Livros" },
+  { grade: "7º", discipline: "Ensino Religioso", type: "multiple", text: "O respeito mútuo entre diferentes crenças chama-se:", options: ["Tolerância", "Intolerância", "Discriminação", "Individualismo"], answer: "Tolerância", explanation: "Garante a paz em sociedades diversas.", skill: "Diversidade" },
+  { grade: "8º", discipline: "Ensino Religioso", type: "multiple", text: "A liberdade de religião no Brasil é garantida pela:", options: ["Televisão", "Constituição Federal", "Internet", "Igreja Local"], answer: "Constituição Federal", explanation: "A lei máxima garante o Estado Laico.", skill: "Direitos" },
+  { grade: "9º", discipline: "Ensino Religioso", type: "multiple", text: "O diálogo entre religiões em busca de união é o:", options: ["Ecumenismo", "Dialética", "Conflitos", "Monólogos"], answer: "Ecumenismo", explanation: "Busca a cooperação inter-religiosa.", skill: "Tolerância" },
+  { grade: "7º", discipline: "Ensino Religioso", type: "multiple", text: "A 'Regra de Ouro' diz que devemos:", options: ["Vencer a todo custo", "Tratar os outros como gostaríamos de ser tratados", "Ignorar o próximo", "Pensar só em nós"], answer: "Tratar os outros como gostaríamos de ser tratados", explanation: "Princípio universal de ética.", skill: "Ética" }
+];
+
+// IDs automáticos
+const questionsWithIds = batch.map((q, index) => ({
+    id: startId + index,
+    ...q
+}));
+
+const newQuestionsStr = questionsWithIds.map(q => {
+    return `  {\n    id: ${q.id},\n    grade: "${q.grade}",\n    discipline: "${q.discipline}",\n    type: "${q.type}",\n    text: "${q.text}",\n    options: ${JSON.stringify(q.options)},\n    answer: "${q.answer}",\n    explanation: "${q.explanation}",\n    skill: "${q.skill}"\n  }`;
+}).join(',\n');
+
+const content = fs.readFileSync(filePath, 'utf-8');
+const updatedContent = content.replace(/\s*\];\s*$/, ',\n\n' + newQuestionsStr + '\n];\n');
+
+fs.writeFileSync(filePath, updatedContent, 'utf-8');
+console.log(`Sucesso! Super Batch 76 de ${batch.length} questões multidisciplinares adicionado.`);

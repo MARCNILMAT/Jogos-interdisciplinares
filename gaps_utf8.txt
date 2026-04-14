@@ -1,0 +1,51 @@
+--- TOP GAPS (EXISTING TOPICS < 10) ---
+6º | Português | Leitura (EF67LP01): 1 questões
+6º | Português | Análise Linguística (EF06LP04): 1 questões
+6º | Português | Leitura (EF67LP02): 1 questões
+6º | Português | Escrita (EF67LP03): 1 questões
+6º | Português | Análise Linguística (EF06LP05): 1 questões
+6º | Português | Leitura (EF67LP04): 1 questões
+6º | Português | Oralidade (EF06LP06): 1 questões
+6º | Português | Leitura (EF67LP05): 1 questões
+6º | Português | Análise Linguística (EF06LP07): 1 questões
+6º | Português | Escrita (EF67LP06): 1 questões
+7º | Português | Leitura (EF67LP07): 1 questões
+7º | Português | Análise Linguística (EF07LP08): 1 questões
+7º | Português | Leitura (EF67LP08): 1 questões
+7º | Português | Análise Linguística (EF07LP09): 1 questões
+7º | Português | Escrita (EF67LP09): 1 questões
+7º | Português | Leitura (EF67LP10): 1 questões
+7º | Português | Análise Linguística (EF07LP10): 1 questões
+7º | Português | Leitura (EF67LP11): 1 questões
+7º | Português | Análise Linguística (EF07LP11): 1 questões
+7º | Português | Escrita (EF67LP12): 1 questões
+8º | Português | Leitura (EF89LP01): 1 questões
+8º | Português | Análise Linguística (EF08LP02): 1 questões
+8º | Português | Leitura (EF89LP02): 1 questões
+8º | Português | Análise Linguística (EF08LP03): 1 questões
+8º | Português | Escrita (EF89LP03): 1 questões
+8º | Português | Leitura (EF89LP04): 1 questões
+8º | Português | Análise Linguística (EF08LP04): 1 questões
+8º | Português | Leitura (EF89LP05): 1 questões
+8º | Português | Análise Linguística (EF08LP05): 1 questões
+8º | Português | Escrita (EF89LP06): 1 questões
+9º | Português | Leitura (EF89LP07): 1 questões
+9º | Português | Análise Linguística (EF09LP01): 1 questões
+9º | Português | Leitura (EF89LP08): 1 questões
+9º | Português | Análise Linguística (EF09LP02): 1 questões
+9º | Português | Escrita (EF89LP09): 1 questões
+9º | Português | Leitura (EF89LP10): 1 questões
+9º | Português | Análise Linguística (EF09LP03): 1 questões
+9º | Português | Leitura (EF89LP11): 1 questões
+9º | Português | Análise Linguística (EF09LP04): 1 questões
+9º | Português | Escrita (EF89LP12): 1 questões
+6º | Português | Leitura (EF67LP13): 1 questões
+6º | Português | Análise Linguística (EF06LP08): 1 questões
+6º | Português | Leitura (EF67LP14): 1 questões
+6º | Português | Análise Linguística (EF06LP09): 1 questões
+6º | Português | Escrita (EF67LP15): 1 questões
+7º | Português | Leitura (EF67LP16): 1 questões
+7º | Português | Análise Linguística (EF07LP12): 1 questões
+7º | Português | Leitura (EF67LP17): 1 questões
+7º | Português | Análise Linguística (EF07LP13): 1 questões
+7º | Português | Escrita (EF67LP18): 1 questões

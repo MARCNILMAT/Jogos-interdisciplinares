@@ -1,0 +1,11 @@
+const {QUESTIONS_DB}=require('./questions.js');
+const g={};
+QUESTIONS_DB.forEach(q=>{const k=q.grade+' | '+q.discipline+' | '+q.skill;g[k]=(g[k]||0)+1;});
+const r=Object.entries(g).filter(([,v])=>v<10).sort((a,b)=>a[1]-b[1]);
+const fs = require('fs');
+const lines = r.map(([k,v])=>(10-v)+' faltam: '+k+' ('+v+'/10)');
+lines.push('---');
+lines.push('Total lacunas: '+r.length);
+lines.push('Total questoes faltando: '+r.reduce((s,[,v])=>s+(10-v),0));
+fs.writeFileSync('gaps_report.txt', lines.join('\n'), 'utf8');
+console.log('Salvo em gaps_report.txt');
